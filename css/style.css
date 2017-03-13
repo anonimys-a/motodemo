@@ -151,4 +151,5 @@ label#individual-person-label {
 span.error-message {
     font-size: 11px;
     color: #dd4b39;
+    display: none;
 }

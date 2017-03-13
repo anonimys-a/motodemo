@@ -85,31 +85,93 @@ $(document).ready(function () {
     
     //form validation
     function validate_second_step_form(embgFieldExist) {
+    	//common fields
     	var isFormSubmitted = true;
-    	var inputValues = {}; //empty object
     	
+    	var name = $("#input-name").val();
+    	if(name === "") {
+			$(".error-message.input-name").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var surname = $("#input-surname").val();
+    	if(surname === "") {
+    		$(".error-message.input-surname").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var address = $("#input-address").val();
+    	if(address === "") {
+    		$(".error-message.input-address").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var phoneNumber = $("#input-number").val();
+    	if(phoneNumber === "" || isNaN(phoneNumber)) {
+    		$(".error-message.input-number").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var personForContact = $("#input-contact-person").val();
+    	if(personForContact === "") {
+    		$(".error-message.input-contact-person").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var fax = $("#input-fax").val();
+    	if(fax === "" || isNaN(fax)) {
+    		$(".error-message.input-fax").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var emailAddress = $("#input-email").val();
+    	if(emailAddress === "") {
+    		$(".error-message.input-email").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	var applicant = $("#input-name-of-agent").val();
+    	if(applicant === "") {
+    		$(".error-message.input-name-of-agent").show();
+			isFormSubmitted = false;
+    	}
+    	
+    	//object with common input values
+    	var inputValues = {'name': name, 'surname' : surname, 'address' : address, 'phoneNumber' : phoneNumber, 'personForContact' : personForContact,
+    			           'fax' : fax, 'emailAddress' : emailAddress, 'applicant' : applicant};
+    	
+    	//validate fields for the first form
     	if(embgFieldExist) {
-    		//validate fields for the first form
-	    	var name = $("#input-name").val();
-	    	var surname = $("#input-surname").val();
-	    	inputValues = {'name': name, 'surname' : surname};
-	    	
-	    	if(name === "" || surname === "") {
-	    		//here we can put some error message or make frame form red
-//	    		$("#error-message").text("Ве молиме да ги пополните сите полиња");
-	    		isFormSubmitted = false;
-	    	}
+    		var embg = $("#input-embg").val();
+    		inputValues.embg = embg;
+    		
+    		if(embg === "" || isNaN(embg)) {
+    			$(".error-message.input-embg").show();
+    			isFormSubmitted = false;
+        	}
     	} else {
     		//validate fields for the second form
-    		var name = $("#input-name").val();
-	    	var surname = $("#input-surname").val();
-	    	inputValues = {'name': name, 'surname' : surname};
-	    	
-	    	if(name === "" || surname === "") {
-	    		//here we can put some error message or make frame form red
-//	    		$("#error-message").text("Ве молиме да ги пополните сите полиња");
-	    		isFormSubmitted = false;
-	    	}
+    		var emb = $("#emb-legal-entity").val();
+    		if(emb === "" || isNaN(emb)) {
+    			$(".error-message.emb-legal-entity").show();
+    			isFormSubmitted = false;
+        	}
+    		
+    		var nameLegalEntity = $("#name-legal-entity").val();
+    		if(nameLegalEntity === "") {
+    			$(".error-message.name-legal-entity").show();
+    			isFormSubmitted = false;
+        	}
+    		
+    		var taxNumber = $("#input-tax-identification-number").val();
+    		if(taxNumber === "" || isNaN(taxNumber)) {
+    			$(".error-message.input-tax-identification-number").show();
+    			isFormSubmitted = false;
+        	}
+    		
+    		inputValues.emb = emb;
+    		inputValues.nameLegalEntity = nameLegalEntity;
+    		inputValues.taxNumber = taxNumber;
     	}
     	
     	//send the request if the validation pass
