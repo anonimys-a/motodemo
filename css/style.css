@@ -1,0 +1,151 @@
+.process-step .btn:focus {
+	outline: none;
+}
+
+.process {
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+.process-row {
+	display: table-row;
+}
+
+.process-step button[disabled] {
+	opacity: 1!important;
+	filter: alpha(opacity=100)!important;
+}
+
+.process-row:before {
+	top: 40px;
+	bottom: 0;
+	position: absolute;
+	content: " ";
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+	z-order: 0;
+}
+
+.process-step {
+	display: table-cell;
+	text-align: center;
+	position: relative;
+}
+
+.process-step p {
+	margin-top: 4px;
+}
+
+.btn-circle {
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 50%;
+}
+
+#proccess-container {
+	display: none;	
+}
+
+.img-responsive {
+	padding: 27px;
+}
+
+#inputEmail {
+	width: 285px;
+}
+
+#inputPassword {
+	width: 285px;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+.main-subject-tab {
+    cursor: pointer;
+}
+
+.subject-padding {
+	padding-top: 100px;
+}
+
+.info-box-text-style {
+	font-size: 20px;
+    white-space: normal!important; 
+    text-transform: none!important;
+}
+
+.identification-height {
+    height: 94px;
+}
+
+section.content.padding-files {
+    padding-top: 74px;
+}
+
+label.checkbox-inline.checkbox-margin {
+    margin-left: 103px;
+}
+
+.dropdown-subject-style {
+    width: 449px;
+    top: 88px;
+    left: 106px;
+    color: #fff;
+    background-color: #009abf;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.dropdown-wrap-text {
+    white-space: normal!important;
+}
+ 
+a.dropdown-link-color {
+    color: #fff!important;
+}
+
+a.dropdown-link-color:hover {
+    color: #009abf!important;
+}
+
+#legal-entity-individual-person-label {
+    cursor: pointer !important;
+}
+
+.input-tax-identification-number-wrapper {
+	display: none;
+}
+
+.emb-legal-entity-wrapper {
+	display: none;
+}
+
+.name-legal-entity-wrapper {
+	display: none;
+}
+
+label#individual-person-label {
+    margin-left: 219px;
+}
+
+#error-message {
+	color: red;
+}
+
+
