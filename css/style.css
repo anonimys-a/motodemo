@@ -148,4 +148,7 @@ label#individual-person-label {
 	color: red;
 }
 
-
+span.error-message {
+    font-size: 11px;
+    color: #dd4b39;
+}
