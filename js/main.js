@@ -91,48 +91,56 @@ $(document).ready(function () {
     	var name = $("#input-name").val();
     	if(name === "") {
 			$(".error-message.input-name").show();
+			$(".form-control#input-name").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var surname = $("#input-surname").val();
     	if(surname === "") {
     		$(".error-message.input-surname").show();
+    		$(".form-control#input-surname").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var address = $("#input-address").val();
     	if(address === "") {
     		$(".error-message.input-address").show();
+    		$(".form-control#input-address").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var phoneNumber = $("#input-number").val();
     	if(phoneNumber === "" || isNaN(phoneNumber)) {
     		$(".error-message.input-number").show();
+    		$(".form-control#input-number").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var personForContact = $("#input-contact-person").val();
     	if(personForContact === "") {
     		$(".error-message.input-contact-person").show();
+    		$(".form-control#input-contact-person").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var fax = $("#input-fax").val();
     	if(fax === "" || isNaN(fax)) {
     		$(".error-message.input-fax").show();
+    		$(".form-control#input-fax").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var emailAddress = $("#input-email").val();
     	if(emailAddress === "") {
     		$(".error-message.input-email").show();
+    		$(".form-control#input-email").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var applicant = $("#input-name-of-agent").val();
     	if(applicant === "") {
     		$(".error-message.input-name-of-agent").show();
+    		$(".form-control#input-name-of-agent").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
@@ -147,6 +155,7 @@ $(document).ready(function () {
     		
     		if(embg === "" || isNaN(embg)) {
     			$(".error-message.input-embg").show();
+    			$(".form-control#input-embg").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
     	} else {
@@ -154,18 +163,21 @@ $(document).ready(function () {
     		var emb = $("#emb-legal-entity").val();
     		if(emb === "" || isNaN(emb)) {
     			$(".error-message.emb-legal-entity").show();
+    			$(".form-control#emb-legal-entity").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
     		
     		var nameLegalEntity = $("#name-legal-entity").val();
     		if(nameLegalEntity === "") {
     			$(".error-message.name-legal-entity").show();
+    			$(".form-control#name-legal-entity").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
     		
     		var taxNumber = $("#input-tax-identification-number").val();
     		if(taxNumber === "" || isNaN(taxNumber)) {
     			$(".error-message.input-tax-identification-number").show();
+    			$(".form-control#input-tax-identification-number").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
     		
