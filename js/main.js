@@ -16,12 +16,14 @@ $(document).ready(function () {
 
     //when click on a circle then that circle is blue
     $(document).on('click', '.btn-circle', function () {
+    	hideErrorMessagesForValidation();
         $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
         $(this).addClass('btn-info').removeClass('btn-default').blur();
     });
 
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
+    	hideErrorMessagesForValidation();
         var activeTab = $('.tab-pane.active');
         
         // If this returns true we know that we are validating individual_person_form
@@ -58,6 +60,9 @@ $(document).ready(function () {
     	var embLegalEntity = $(".emb-legal-entity-wrapper");
     	var taxIdentificationNumber = $(".input-tax-identification-number-wrapper");
     	
+    	//hide all error messages for validation
+    	hideErrorMessagesForValidation();
+    	
         if ($("#legal-entity-radio-button").is(':checked')) { // for legal-entity 
             //change the input names in the form when individual-person 
         	embgLegalEntity.hide();
@@ -74,6 +79,34 @@ $(document).ready(function () {
             placeOfResidence.insertAfter(".municipality-of-residence");
         }
     });
+    
+    function hideErrorMessagesForValidation() {
+    	$(".error-message.input-name").hide();
+    	$(".error-message.input-surname").hide();
+    	$(".error-message.input-address").hide();
+    	$(".error-message.input-number").hide();
+    	$(".error-message.input-contact-person").hide();
+    	$(".error-message.input-fax").hide();
+    	$(".error-message.input-email").hide();
+    	$(".error-message.input-name-of-agent").hide();
+    	$(".error-message.input-embg").hide();
+    	$(".error-message.emb-legal-entity").hide();
+    	$(".error-message.name-legal-entity").hide();
+    	$(".error-message.input-tax-identification-number").hide();
+    	
+    	$(".form-control#input-name").css("border-color", "#d2d6de");
+    	$(".form-control#input-surname").css("border-color", "#d2d6de");
+    	$(".form-control#input-address").css("border-color", "#d2d6de");
+    	$(".form-control#input-number").css("border-color", "#d2d6de");
+    	$(".form-control#input-contact-person").css("border-color", "#d2d6de");
+    	$(".form-control#input-fax").css("border-color", "#d2d6de");
+    	$(".form-control#input-email").css("border-color", "#d2d6de");
+    	$(".form-control#input-name-of-agent").css("border-color", "#d2d6de");
+    	$(".form-control#input-embg").css("border-color", "#d2d6de");
+    	$(".form-control#emb-legal-entity").css("border-color", "#d2d6de");
+    	$(".form-control#name-legal-entity").css("border-color", "#d2d6de");
+    	$(".form-control#input-tax-identification-number").css("border-color", "#d2d6de");
+    }
 
     //show menu on hover for every subject
     $('.main-subject-tab').hover(function () {
@@ -82,6 +115,12 @@ $(document).ready(function () {
     }, function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
+    
+    //regex for email validation
+    function isEmail(email) {
+	  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	  return regex.test(email);
+	}
     
     //form validation
     function validate_second_step_form(embgFieldExist) {
@@ -131,7 +170,7 @@ $(document).ready(function () {
     	}
     	
     	var emailAddress = $("#input-email").val();
-    	if(emailAddress === "") {
+    	if(emailAddress === "" || !isEmail(emailAddress)) {
     		$(".error-message.input-email").show();
     		$(".form-control#input-email").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
@@ -203,6 +242,7 @@ $(document).ready(function () {
     			data: inputValues,
     			success: function(response) {
     				//what we will do on success case?
+    				hideErrorMessagesForValidation();
     				isFormSubmitted = true;
     			},
     			error: function(response) { 
