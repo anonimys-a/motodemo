@@ -24,17 +24,30 @@ $(document).ready(function () {
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
     	hideErrorMessagesForValidation();
-        var activeTab = $('.tab-pane.active');
+    	var activeTab = $('.tab-pane.active');
+    	var activeTabId = activeTab[0].id;
         
         // If this returns true we know that we are validating individual_person_form
         var embgFieldExist =  $('#embg-legal-entity').is(":visible"); 
         
         //if activeTab is div#menu2 we call a fucntion for sending a request to the backend with validation 
         //for ex. activeTab = <div id="menu2" class="tab-pane fade active in">
-        if(activeTab[0].id === "menu2" && $(e.target).hasClass('next-step')) {
+        if(activeTabId === "menu2" && $(e.target).hasClass('next-step')) {
+        	
         	//validate the form and send a request
         	if(!validate_second_step_form(embgFieldExist)) {
         		//if validation not pass or the response is with error we do not go to the third step(cirlce)
+        		return;
+        	};
+        }
+        
+        //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
+        if(activeTabId === "menu3" && $(e.target).hasClass('next-step')) {
+        	var checkSubjectName = $("p.chosenSubjectName").text();
+        	
+        	//validate the form before going to the fourth cicrcle
+        	if(!validate_third_step_form(checkSubjectName)) {
+        		//if validation not pass or the response is with error we do not go to the fourth step(cirlce)
         		return;
         	};
         }
@@ -45,6 +58,13 @@ $(document).ready(function () {
             var nextTab = activeTab.next('.tab-pane').attr('id');
             $('[href="#' + nextTab + '"]').addClass('btn-info').removeClass('btn-default');
             $('[href="#' + nextTab + '"]').tab('show');
+            
+            if(nextTab === "menu3") {
+            	var checkSubjectName = $("p#subject-type").text();
+            	//change the form layout depending of the clicked subject
+            	changeFormLayout(checkSubjectName);
+            }
+            
         } else {
             var prevTab = activeTab.prev('.tab-pane').attr('id');
             $('[href="#' + prevTab + '"]').addClass('btn-info').removeClass('btn-default');
@@ -116,11 +136,18 @@ $(document).ready(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
     
+    $('.main-subject-tab').click(function () {
+    	var chosenSubjectName = $(this).find("span.hidden-subject-name").text();
+    	$("p#subject-type").text(chosenSubjectName);
+    });
+    
     //regex for email validation
     function isEmail(email) {
 	  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	  return regex.test(email);
 	}
+    
+    /*=========SECOND FORM VALIDATION=======*/
     
     //form validation
     function validate_second_step_form(embgFieldExist) {
@@ -251,7 +278,25 @@ $(document).ready(function () {
     			}
     		});
     	}
-    	return isFormSubmitted;
+    	return true;
     }
-	
+    
+    function changeFormLayout(changeFormLayout) {
+		//create the appropriate form layout
+    	if(changeFormLayout === "Единечно одобрување и преправки") {
+    		//add the needed fields and remove the ones that do not need
+    	}
+	}
+    
+    /*=========THIRD FORM VALIDATION=======*/
+    
+    //form validation
+    function validate_third_step_form(checkSubjectName) {
+    	if(checkSubjectName === "Единечно одобрување и преправки") {
+    		//we have to validate 
+    	}
+    }
+    	
+    	//return isFormSubmitted;
+    	return true;
 });

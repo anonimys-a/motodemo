@@ -161,3 +161,7 @@ span.error-message {
 #input-surname::-webkit-input-placeholder {
 	color: red !important;
 }
+
+.hidden-subject-name {
+	display: none;
+}
