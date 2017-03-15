@@ -153,3 +153,11 @@ span.error-message {
     color: #dd4b39;
     display: none;
 }
+
+#input-name::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-surname::-webkit-input-placeholder {
+	color: red !important;
+}

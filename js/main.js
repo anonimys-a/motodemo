@@ -81,18 +81,18 @@ $(document).ready(function () {
     });
     
     function hideErrorMessagesForValidation() {
-    	$(".error-message.input-name").hide();
-    	$(".error-message.input-surname").hide();
-    	$(".error-message.input-address").hide();
-    	$(".error-message.input-number").hide();
-    	$(".error-message.input-contact-person").hide();
-    	$(".error-message.input-fax").hide();
-    	$(".error-message.input-email").hide();
-    	$(".error-message.input-name-of-agent").hide();
-    	$(".error-message.input-embg").hide();
-    	$(".error-message.emb-legal-entity").hide();
-    	$(".error-message.name-legal-entity").hide();
-    	$(".error-message.input-tax-identification-number").hide();
+    	$('#input-name').removeAttr('placeholder','');
+    	$("#input-surname").removeAttr('placeholder','');
+    	$("#input-address").removeAttr('placeholder','');
+    	$("#input-number").removeAttr('placeholder','');
+    	$("#input-contact-person").removeAttr('placeholder','');
+    	$("#input-fax").removeAttr('placeholder','');
+    	$("#input-email").removeAttr('placeholder','');
+    	$("#input-name-of-agent").removeAttr('placeholder','');
+    	$("#input-embg").removeAttr('placeholder','');
+    	$("#emb-legal-entity").removeAttr('placeholder','');
+    	$("#name-legal-entity").removeAttr('placeholder','');
+    	$("#input-tax-identification-number").removeAttr('placeholder','');
     	
     	$(".form-control#input-name").css("border-color", "#d2d6de");
     	$(".form-control#input-surname").css("border-color", "#d2d6de");
@@ -129,21 +129,21 @@ $(document).ready(function () {
     	
     	var name = $("#input-name").val();
     	if(name === "") {
-			$(".error-message.input-name").show();
+    		$('#input-name').attr('placeholder','Внеси Име').val('');
 			$(".form-control#input-name").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var surname = $("#input-surname").val();
     	if(surname === "") {
-    		$(".error-message.input-surname").show();
+    		$('#input-surname').attr('placeholder','Внеси Презиме').val('');
     		$(".form-control#input-surname").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var address = $("#input-address").val();
     	if(address === "") {
-    		$(".error-message.input-address").show();
+    		$('#input-address').attr('placeholder','Внеси ЕМБГ').val('');
     		$(".form-control#input-address").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
