@@ -165,3 +165,7 @@ span.error-message {
 .hidden-subject-name {
 	display: none;
 }
+
+.input-type-vehicle-wrapper {
+	display: none;
+}

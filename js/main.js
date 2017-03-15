@@ -136,6 +136,7 @@ $(document).ready(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
     });
     
+    //take the subject name when click event is triggered
     $('.main-subject-tab').click(function () {
     	var chosenSubjectName = $(this).find("span.hidden-subject-name").text();
     	$("p#subject-type").text(chosenSubjectName);
@@ -278,6 +279,7 @@ $(document).ready(function () {
     			}
     		});
     	}
+//    	return isFormSubmitted;
     	return true;
     }
     
@@ -285,6 +287,10 @@ $(document).ready(function () {
 		//create the appropriate form layout
     	if(changeFormLayout === "Единечно одобрување и преправки") {
     		//add the needed fields and remove the ones that do not need
+    	}
+    	
+    	if(changeFormLayout === "ПТЕУ") {
+    		$(".input-type-vehicle-wrapper").show();
     	}
 	}
     
@@ -296,7 +302,4 @@ $(document).ready(function () {
     		//we have to validate 
     	}
     }
-    	
-    	//return isFormSubmitted;
-    	return true;
 });
