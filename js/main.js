@@ -43,7 +43,7 @@ $(document).ready(function () {
         
         //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
         if(activeTabId === "menu3" && $(e.target).hasClass('next-step')) {
-        	var checkSubjectName = $("p.chosenSubjectName").text();
+        	var checkSubjectName = $("p#subject-type").text();
         	
         	//validate the form before going to the fourth cicrcle
         	if(!validate_third_step_form(checkSubjectName)) {
@@ -80,7 +80,7 @@ $(document).ready(function () {
     	var embLegalEntity = $(".emb-legal-entity-wrapper");
     	var taxIdentificationNumber = $(".input-tax-identification-number-wrapper");
     	
-    	//hide all error messages for validation
+    	//hide all error messages for validation before switch to another form
     	hideErrorMessagesForValidation();
     	
         if ($("#legal-entity-radio-button").is(':checked')) { // for legal-entity 
@@ -171,42 +171,42 @@ $(document).ready(function () {
     	
     	var address = $("#input-address").val();
     	if(address === "") {
-    		$('#input-address').attr('placeholder','Внеси ЕМБГ').val('');
+    		$("#input-address").attr("placeholder", "Внеси адреса").val("");
     		$(".form-control#input-address").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var phoneNumber = $("#input-number").val();
     	if(phoneNumber === "" || isNaN(phoneNumber)) {
-    		$(".error-message.input-number").show();
+    		$("#input-number").attr("placeholder", "Внеси контакт телефон").val("");
     		$(".form-control#input-number").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var personForContact = $("#input-contact-person").val();
     	if(personForContact === "") {
-    		$(".error-message.input-contact-person").show();
+    		$("#input-contact-person").attr("placeholder", "Внеси контакт лице").val("");
     		$(".form-control#input-contact-person").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var fax = $("#input-fax").val();
     	if(fax === "" || isNaN(fax)) {
-    		$(".error-message.input-fax").show();
+    		$("#input-fax").attr("placeholder", "Внеси факс").val("");
     		$(".form-control#input-fax").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var emailAddress = $("#input-email").val();
     	if(emailAddress === "" || !isEmail(emailAddress)) {
-    		$(".error-message.input-email").show();
+    		$("#input-email").attr("placeholder", "Внеси Е-маил").val("");
     		$(".form-control#input-email").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
     	
     	var applicant = $("#input-name-of-agent").val();
     	if(applicant === "") {
-    		$(".error-message.input-name-of-agent").show();
+    		$("#input-name-of-agent").attr("placeholder", "Внеси име и презиме на агент - подносител на барањето").val("");
     		$(".form-control#input-name-of-agent").css("border-color", "#dd4b39");
 			isFormSubmitted = false;
     	}
@@ -221,7 +221,7 @@ $(document).ready(function () {
     		inputValues.embg = embg;
     		
     		if(embg === "" || isNaN(embg)) {
-    			$(".error-message.input-embg").show();
+    			$("#input-embg").attr("placeholder", "Внеси ЕМБГ").val("");
     			$(".form-control#input-embg").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
@@ -229,21 +229,21 @@ $(document).ready(function () {
     		//validate fields for the second form
     		var emb = $("#emb-legal-entity").val();
     		if(emb === "" || isNaN(emb)) {
-    			$(".error-message.emb-legal-entity").show();
+    			$("#emb-legal-entity").attr("placeholder", "Внеси ЕМБ").val("");
     			$(".form-control#emb-legal-entity").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
     		
     		var nameLegalEntity = $("#name-legal-entity").val();
     		if(nameLegalEntity === "") {
-    			$(".error-message.name-legal-entity").show();
+    			$("#name-legal-entity").attr("placeholder", "Внеси назив").val("");
     			$(".form-control#name-legal-entity").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
     		
     		var taxNumber = $("#input-tax-identification-number").val();
     		if(taxNumber === "" || isNaN(taxNumber)) {
-    			$(".error-message.input-tax-identification-number").show();
+    			$("#input-tax-identification-number").attr("placeholder", "Внеси ЕДБ (даночен број)").val("");
     			$(".form-control#input-tax-identification-number").css("border-color", "#dd4b39");
     			isFormSubmitted = false;
         	}
@@ -279,8 +279,8 @@ $(document).ready(function () {
     			}
     		});
     	}
-//    	return isFormSubmitted;
-    	return true;
+    	return isFormSubmitted;
+//    	return true;
     }
     
     function changeFormLayout(changeFormLayout) {

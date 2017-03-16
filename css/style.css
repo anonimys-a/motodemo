@@ -162,6 +162,46 @@ span.error-message {
 	color: red !important;
 }
 
+#input-address::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-number::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-contact-person::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-fax::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-email::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-name-of-agent::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-embg::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#emb-legal-entity::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#name-legal-entity::-webkit-input-placeholder {
+	color: red !important;
+}
+
+#input-tax-identification-number::-webkit-input-placeholder {
+	color: red !important;
+}
+
 .hidden-subject-name {
 	display: none;
 }
