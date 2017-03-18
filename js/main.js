@@ -300,19 +300,82 @@ $(document).ready(function () {
     			}
     		});
     	}
-    	return isFormSubmitted;
-//    	return true;
+//    	return isFormSubmitted;
+    	return true;
     }
     
     function changeFormLayout(changeFormLayout) {
-		//create the appropriate form layout
-    	if(changeFormLayout === "Единечно одобрување и преправки") {
-    		//add the needed fields and remove the ones that do not need
-    	}
-    	
-    	if(changeFormLayout === "ПТЕУ") {
-    		$(".input-type-vehicle-wrapper").show();
-    	}
+    	//create the appropriate form layout
+        if (changeFormLayout === "Единечно одобрување и преправки") {
+            //add the needed fields and remove the ones that do not need
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-vehicle-category-wrapper").show();
+            $(".input-kind-of-renovation-wrapper").show();
+        }
+
+        if (changeFormLayout === "Втиснување на идентификациски ознаки") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-vehicle-category-wrapper").show();
+            $(".input-kind-of-renovation-wrapper").show();
+        }
+
+        if (changeFormLayout === "Потврда за технички карактеристики") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-vehicle-category-wrapper").show();
+            $(".input-kind-of-renovation-wrapper").show();
+        }
+
+        if (changeFormLayout === "Одобрување на тип на возило") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-vehicle-category-wrapper").show();
+            $(".input-kind-of-renovation-wrapper").show();
+        }
+
+        if (changeFormLayout === "Идентификација на возило и идентификација и оцена на техничката состојба") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-vehicle-category-wrapper").show();
+        }
+
+        if (changeFormLayout === "АДР") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-vehicle-category-wrapper").show();
+            $(".input-registration-number-of-the-vehicle-wrapper").show();
+            $(".input-number-of-adr-certificate-wrapper").show();
+
+        }
+
+        if (changeFormLayout === "ЦЕМТ") {
+            $(".input-type-vehicle-wrapper").show();
+            $(".input-type-number-of-engine-wrapper").show();
+            $(".input-mileage-wrapper").show();
+        }
+
+        if (changeFormLayout === "Калибрација на тахографи") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-registration-mark-of-the-vehicle-wrapper").show();
+        }
+
+        if (changeFormLayout === "ПТЕУ") {
+            $(".input-manufacturer-of-vehicle-wrapper").show();
+            $(".input-type-of-vehicle-shipping-requiring-confirmation-wrapper").show();
+            $(".input-class-of-the-vehicle-wrapper").show();
+            $(".input-model-of-the-vehicle-wrapper").show();
+            $(".input-number-of-seats-according-to-vehicle-license-wrapper").show();
+            $(".input-registration-number-of-the-vehicle-wrapper").show();
+            $(".input-year-of-first-registration-wrapper").show();
+            $(".input-year-of-production-wrapper").show();
+        }
+
+        if (changeFormLayout === "АТП") {
+            $(".input-type-vehicle-wrapper").show();
+            $(".input-examination-for-class-wrapper").show();
+        }
 	}
     
     /*=========THIRD FORM VALIDATION=======*/
