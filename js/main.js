@@ -22,9 +22,8 @@ $(document).ready(function () {
     });
 
     //this is the behaviour when click on next or back buttons
-    $(document).on('click', '.next-step, .prev-step', function (e) {
+    $('.next-step, .prev-step').click(function (e) {
     	hideErrorMessagesForValidation();
-    	clearSecondCircleForm();
     	var activeTab = $('.tab-pane.active');
     	var activeTabId = activeTab[0].id;
         
@@ -39,6 +38,9 @@ $(document).ready(function () {
         	if(!validate_second_step_form(embgFieldExist)) {
         		//if validation not pass or the response is with error we do not go to the third step(cirlce)
         		return;
+        	} else {
+        		//clear all fields if validation passed and if we have success response
+        		clearSecondCircleForm();
         	};
         }
         
