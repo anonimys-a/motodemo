@@ -24,6 +24,7 @@ $(document).ready(function () {
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
     	hideErrorMessagesForValidation();
+    	clearSecondCircleForm();
     	var activeTab = $('.tab-pane.active');
     	var activeTabId = activeTab[0].id;
         
@@ -126,6 +127,24 @@ $(document).ready(function () {
     	$(".form-control#emb-legal-entity").css("border-color", "#d2d6de");
     	$(".form-control#name-legal-entity").css("border-color", "#d2d6de");
     	$(".form-control#input-tax-identification-number").css("border-color", "#d2d6de");
+    }
+    
+    function clearSecondCircleForm(){
+    	$('#input-name').val('');
+    	$("#input-surname").val('');
+    	$("#input-address").val('');
+    	$("#input-number").val('');
+    	$("#input-contact-person").val('');
+    	$("#input-fax").val('');
+    	$("#input-email").val('');
+    	$("#input-name-of-agent").val('');
+    	$("#input-embg").val('');
+    	$("#emb-legal-entity").val('');
+    	$("#name-legal-entity").val('');
+    	$("#input-tax-identification-number").val('');
+    	$("#input-municipality-of-residence").val('');
+    	$("#input-place-of-residence").val('');
+    	$("#input-municipality-of-residence").val('');
     }
 
     //show menu on hover for every subject
