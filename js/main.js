@@ -63,9 +63,9 @@ $(document).ready(function () {
             $('[href="#' + nextTab + '"]').tab('show');
             
             if(nextTab === "menu3") {
-            	var checkSubjectName = $("p#subject-type").text();
+            	var chosenView = $("p#subject-type").text();
             	//change the form layout depending of the clicked subject
-            	changeFormLayout(checkSubjectName);
+            	changeFormLayout(chosenView);
             }
             
         } else {
@@ -304,77 +304,70 @@ $(document).ready(function () {
     	return true;
     }
     
-    function changeFormLayout(changeFormLayout) {
+    function changeFormLayout(chosenView) {
     	//create the appropriate form layout
-        if (changeFormLayout === "Единечно одобрување и преправки") {
+    	
+    	var manufacturerOfVehicle = $(".input-manufacturer-of-vehicle-wrapper");
+    	var typeNumberOfEngine = $(".input-type-number-of-engine-wrapper");
+    	var vehicleCategory = $(".input-vehicle-category-wrapper");
+    	var kindOfRenovation =  $(".input-kind-of-renovation-wrapper");
+    	var registrationNumberOfTheVehicle = $(".input-registration-number-of-the-vehicle-wrapper");
+    	var numberOfAdrCertificate = $(".input-number-of-adr-certificate-wrapper");
+    	var typeVehicle = $(".input-type-vehicle-wrapper");
+    	var mileage = $(".input-mileage-wrapper");
+    	var registrationMarkOfTheVehicle =  $(".input-registration-mark-of-the-vehicle-wrapper");
+    	var typeOfVehicleShippingRequiringConfirmation = $(".input-type-of-vehicle-shipping-requiring-confirmation-wrapper");
+    	var classOfTheVehicle = $(".input-class-of-the-vehicle-wrapper");
+    	var modelOfTheVehicle = $(".input-model-of-the-vehicle-wrapper");
+    	var numberOfSeats = $(".input-number-of-seats-according-to-vehicle-license-wrapper");
+    	var yearOfFirstRegistration = $(".input-year-of-first-registration-wrapper");
+    	var yearOfProduction = $(".input-year-of-production-wrapper");
+    	var examinationForClass = $(".input-examination-for-class-wrapper");
+    	//common input fields
+    	var chassisNumber = $(".input-chassis-number-wrapper"); 
+    	
+        if (chosenView === "Единечно одобрување и преправки" || chosenView === "Втиснување на идентификациски ознаки" ||
+        		chosenView === "Потврда за технички карактеристики" || chosenView === "Одобрување на тип на возило") {
             //add the needed fields and remove the ones that do not need
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-vehicle-category-wrapper").show();
-            $(".input-kind-of-renovation-wrapper").show();
-        }
-
-        if (changeFormLayout === "Втиснување на идентификациски ознаки") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-vehicle-category-wrapper").show();
-            $(".input-kind-of-renovation-wrapper").show();
-        }
-
-        if (changeFormLayout === "Потврда за технички карактеристики") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-vehicle-category-wrapper").show();
-            $(".input-kind-of-renovation-wrapper").show();
-        }
-
-        if (changeFormLayout === "Одобрување на тип на возило") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-vehicle-category-wrapper").show();
-            $(".input-kind-of-renovation-wrapper").show();
-        }
-
-        if (changeFormLayout === "Идентификација на возило и идентификација и оцена на техничката состојба") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-vehicle-category-wrapper").show();
-        }
-
-        if (changeFormLayout === "АДР") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-vehicle-category-wrapper").show();
-            $(".input-registration-number-of-the-vehicle-wrapper").show();
-            $(".input-number-of-adr-certificate-wrapper").show();
-
-        }
-
-        if (changeFormLayout === "ЦЕМТ") {
-            $(".input-type-vehicle-wrapper").show();
-            $(".input-type-number-of-engine-wrapper").show();
-            $(".input-mileage-wrapper").show();
-        }
-
-        if (changeFormLayout === "Калибрација на тахографи") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-registration-mark-of-the-vehicle-wrapper").show();
-        }
-
-        if (changeFormLayout === "ПТЕУ") {
-            $(".input-manufacturer-of-vehicle-wrapper").show();
-            $(".input-type-of-vehicle-shipping-requiring-confirmation-wrapper").show();
-            $(".input-class-of-the-vehicle-wrapper").show();
-            $(".input-model-of-the-vehicle-wrapper").show();
-            $(".input-number-of-seats-according-to-vehicle-license-wrapper").show();
-            $(".input-registration-number-of-the-vehicle-wrapper").show();
-            $(".input-year-of-first-registration-wrapper").show();
-            $(".input-year-of-production-wrapper").show();
-        }
-
-        if (changeFormLayout === "АТП") {
-            $(".input-type-vehicle-wrapper").show();
-            $(".input-examination-for-class-wrapper").show();
+        	manufacturerOfVehicle.show();
+        	typeNumberOfEngine.show();
+        	vehicleCategory.show();
+        	kindOfRenovation.show();
+        } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
+        	manufacturerOfVehicle.show();
+        	typeNumberOfEngine.show();
+        	vehicleCategory.show();
+        	chassisNumber.insertBefore(typeNumberOfEngine);
+        } else if (chosenView === "АДР") {
+        	manufacturerOfVehicle.show();
+        	typeNumberOfEngine.show();
+        	vehicleCategory.show();
+        	registrationNumberOfTheVehicle.show();
+        	numberOfAdrCertificate.show();
+        } else if (chosenView === "ЦЕМТ") {
+        	typeVehicle.show();
+        	typeNumberOfEngine.show();
+        	mileage.show();
+        	typeVehicle.insertBefore(typeNumberOfEngine);
+        } else if (chosenView === "Калибрација на тахографи") {
+        	manufacturerOfVehicle.show();
+        	registrationMarkOfTheVehicle.show();
+        	chassisNumber.insertBefore(registrationMarkOfTheVehicle);
+        } else if (chosenView === "ПТЕУ") {
+        	manufacturerOfVehicle.show();
+        	typeOfVehicleShippingRequiringConfirmation.show();
+        	classOfTheVehicle.show();
+        	modelOfTheVehicle.show();
+        	numberOfSeats.show();
+        	registrationNumberOfTheVehicle.show();
+        	yearOfFirstRegistration.show();
+        	yearOfProduction.show();
+        	registrationNumberOfTheVehicle.insertAfter(chassisNumber);
+        	typeOfVehicleShippingRequiringConfirmation.insertAfter(registrationNumberOfTheVehicle);
+        } else if (chosenView === "АТП") {
+        	typeVehicle.show();
+        	examinationForClass.show();
+        	typeVehicle.insertBefore(examinationForClass);
         }
 	}
     
