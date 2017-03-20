@@ -46,10 +46,10 @@ $(document).ready(function () {
         
         //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
         if(activeTabId === "menu3" && $(e.target).hasClass('next-step')) {
-        	var checkSubjectName = $("p#subject-type").text();
+        	var chosenView = $("p#subject-type").text();
         	
         	//validate the form before going to the fourth cicrcle
-        	if(!validate_third_step_form(checkSubjectName)) {
+        	if(!validate_third_step_form(chosenView)) {
         		//if validation not pass or the response is with error we do not go to the fourth step(cirlce)
         		return;
         	};
@@ -374,9 +374,266 @@ $(document).ready(function () {
     /*=========THIRD FORM VALIDATION=======*/
     
     //form validation
-    function validate_third_step_form(checkSubjectName) {
-    	if(checkSubjectName === "Единечно одобрување и преправки") {
-    		//we have to validate 
+    function validate_third_step_form(chosenView) {
+    	//common fields
+    	var isFormValid = true;
+    	var inputMarkVehicle = $("#input-mark-vehicle").val();
+    	if(inputMarkVehicle === ""){
+    		$("#input-mark-vehicle").attr("placeholder", "Внеси марка на возило").val("");
+    		$(".form-control#input-mark-vehicle").css("border-color", "#dd4b39");
+    		isFormValid = false;
     	}
+    	
+    	var inputType = $("#input-type").val();
+    	if(inputType === ""){
+    		$("#input-type").attr("placeholder", "Внеси тип").val("");
+    		$(".form-control#input-type").css("border-color", "#dd4b39");
+    		isFormValid = false;
+    	}
+    	
+    	var inputChassisNumber = $("#input-chassis-number").val();
+    	if(inputChassisNumber === ""){
+    		$("#input-chassis-number").attr("placeholder", "Внеси број на шасија").val("");
+    		$(".form-control#input-chassis-number").css("border-color", "#dd4b39");
+    		isFormValid = false;
+    	}
+    	
+    	var vehicleData = {'inputMarkVehicle':inputMarkVehicle, 'inputType':inputType, 'inputChassisNumber':inputChassisNumber};
+    	
+    	if(chosenView === "Единечно одобрување и преправки" || chosenView === "Втиснување на идентификациски ознаки" || 
+    			chosenView === "Потврда за технички карактеристики" || chosenView === "Одобрување на тип на возило" ) {
+    		//we have to validate 
+    		var inputManufacturerOfVehicle = $("#input-manufacturer-of-vehicle").val();
+    		if(inputManufacturerOfVehicle === ""){
+    			$("#input-manufacturer-of-vehicle").attr("placeholder", "Внеси производител на возило").val("");
+    			$(".form-control#input-manufacturer-of-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputTypeNumberOfEngine = $("#input-type-number-of-engine")
+    		if(inputTypeNumberOfEngine === ""){
+    			$("#input-type-number-of-engine").attr("placeholder", "Внеси тип/број на моторот").val("");
+    			$(".form-control#input-type-number-of-engine").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputVehicleCategory = $("#input-vehicle-category").val();
+    		if(inputVehicleCategory === ""){
+    			$("#input-vehicle-category").attr("placeholder", "Внеси категорија на возило").val("");
+    			$(".form-control#input-vehicle-category").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputKindOfRenovation = $("#input-kind-of-renovation").val();
+    		if(inputKindOfRenovation === ""){
+    			$("#input-kind-of-renovation").attr("placeholder", "Внеси вид на преправката").val("");
+    			$(".form-control#input-kind-of-renovation").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inputManufacturerOfVehicle = inputManufacturerOfVehicle;
+        	vehicleData.inputTypeNumberOfEngine = inputTypeNumberOfEngine;
+        	vehicleData.inputVehicleCategory = inputVehicleCategory;
+        	vehicleData.inputKindOfRenovation = inputKindOfRenovation;
+    		
+    		
+    	} else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
+    		var inputManufacturerOfVehicle = $("#input-manufacturer-of-vehicle").val();
+    		if(inputManufacturerOfVehicle === ""){
+    			$("#input-manufacturer-of-vehicle").attr("placeholder", "Внеси производител на возило").val("");
+    			$(".form-control#input-manufacturer-of-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputTypeNumberOfEngine = $("#input-type-number-of-engine")
+    		if(inputTypeNumberOfEngine === ""){
+    			$("#input-type-number-of-engine").attr("placeholder", "Внеси тип/број на моторот").val("");
+    			$(".form-control#input-type-number-of-engine").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputVehicleCategory = $("#input-vehicle-category").val();
+    		if(inputVehicleCategory === ""){
+    			$("#input-vehicle-category").attr("placeholder", "Внеси категорија на возило").val("");
+    			$(".form-control#input-vehicle-category").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inputManufacturerOfVehicle = inputManufacturerOfVehicle;
+        	vehicleData.inputTypeNumberOfEngine = inputTypeNumberOfEngine;
+        	vehicleData.inputVehicleCategory = inputVehicleCategory;
+    		
+    	} else if (chosenView === "АДР"){
+    		var inputManufacturerOfVehicle = $("#input-manufacturer-of-vehicle").val();
+    		if(inputManufacturerOfVehicle === ""){
+    			$("#input-manufacturer-of-vehicle").attr("placeholder", "Внеси производител на возило").val("");
+    			$(".form-control#input-manufacturer-of-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputTypeNumberOfEngine = $("#input-type-number-of-engine")
+    		if(inputTypeNumberOfEngine === ""){
+    			$("#input-type-number-of-engine").attr("placeholder", "Внеси тип/број на моторот").val("");
+    			$(".form-control#input-type-number-of-engine").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputVehicleCategory = $("#input-vehicle-category").val();
+    		if(inputVehicleCategory === ""){
+    			$("#input-vehicle-category").attr("placeholder", "Внеси категорија на возило").val("");
+    			$(".form-control#input-vehicle-category").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputRegistrationNumberOfTheVehicle = $("#input-registration-number-of-the-vehicle").val();
+    		if(inputRegistrationNumberOfTheVehicle === ""){
+    			$("#input-registration-number-of-the-vehicle").attr("placeholder", "Внеси регистарски број на возило").val("");
+    			$(".form-control#input-registration-number-of-the-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputNumberOfAdrCertificate = $("#input-number-of-adr-certificate").val();
+    		if(inputNumberOfAdrCertificate === ""){
+    			$("#input-number-of-adr-certificate").attr("placeholder", "Внеси број на АДР сертификат и институција која го издала").val("");
+    			$(".form-control#input-number-of-adr-certificate").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inputManufacturerOfVehicle = inputManufacturerOfVehicle;
+        	vehicleData.inputTypeNumberOfEngine = inputTypeNumberOfEngine;
+        	vehicleData.inputVehicleCategory = inputVehicleCategory;
+        	vehicleData.inputRegistrationNumberOfTheVehicle = inputRegistrationNumberOfTheVehicle;
+        	vehicleData.inputNumberOfAdrCertificate = inputNumberOfAdrCertificate;
+    		
+    		
+    	} else if (chosenView === "ЦЕМТ"){
+    		var inpuTypeVehicle = $("#input-type-vehicle").val();
+    		if(inpuTypeVehicle === ""){
+    			$("#input-type-vehicle").attr("placeholder", "Внеси вид на возилото").val("");
+    			$(".form-control#input-type-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputTypeNumberOfEngine = $("#input-type-number-of-engine")
+    		if(inputTypeNumberOfEngine === ""){
+    			$("#input-type-number-of-engine").attr("placeholder", "Внеси тип/број на моторот").val("");
+    			$(".form-control#input-type-number-of-engine").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputMileage = $("#input-mileage").val();
+    		if(inputMileage === ""){
+    			$("#input-mileage").attr("placeholder", "Внеси километража").val("");
+    			$(".form-control#input-mileage").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inpuTypeVehicle = inpuTypeVehicle;
+    		vehicleData.inputTypeNumberOfEngine = inputTypeNumberOfEngine;
+        	vehicleData.inputMileage = inputMileage;
+    		
+    	} else if (chosenView === "Калибрација на тахографи"){
+    		var inputManufacturerOfVehicle = $("#input-manufacturer-of-vehicle").val();
+    		if(inputManufacturerOfVehicle === ""){
+    			$("#input-manufacturer-of-vehicle").attr("placeholder", "Внеси производител на возило").val("");
+    			$(".form-control#input-manufacturer-of-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputRegistrationMarkOfTheVehicle = $("#input-registration-mark-of-the-vehicle").val();
+    		if(inputRegistrationMarkOfTheVehicle === ""){
+    			$("#input-registration-mark-of-the-vehicle").attr("placeholder", "Внеси регистарска ознака на возилото").val("");
+    			$(".form-control#input-registration-mark-of-the-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inputManufacturerOfVehicle = inputManufacturerOfVehicle;
+    		vehicleData.inputRegistrationMarkOfTheVehicle = inputRegistrationMarkOfTheVehicle;
+    		
+    	} else if (chosenView === "ПТЕУ"){
+    		var inputManufacturerOfVehicle = $("#input-manufacturer-of-vehicle").val();
+    		if(inputManufacturerOfVehicle === ""){
+    			$("#input-manufacturer-of-vehicle").attr("placeholder", "Внеси производител на возило").val("");
+    			$(".form-control#input-manufacturer-of-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputTypeOfVehicleShippingRequiringConfirmation = $("#input-type-of-vehicle-shipping-requiring-confirmation").val();
+    		if(inputTypeOfVehicleShippingRequiringConfirmation === ""){
+    			$("#input-type-of-vehicle-shipping-requiring-confirmation").attr("placeholder", "Внеси вид на возило за превозот за кој се бара Потврда").val("");
+    			$(".form-control#input-type-of-vehicle-shipping-requiring-confirmation").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputClassOfTheVehicle = $("#input-class-of-the-vehicle").val();
+    		if(inputClassOfTheVehicle === ""){
+    			$("#input-class-of-the-vehicle").attr("placeholder", "Внеси класа на возило").val("");
+    			$(".form-control#input-class-of-the-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputModelOfTheVehicle = $("#input-model-of-the-vehicle").val();
+    		if(inputModelOfTheVehicle === ""){
+    			$("#input-model-of-the-vehicle").attr("placeholder", "Внеси модел на возило (комерцијална ознака)").val("");
+    			$(".form-control#input-model-of-the-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputNumberOfSeatsAccordingToVehicleLicense = $("#input-number-of-seats-according-to-vehicle-license").val();
+    		if (inputNumberOfSeatsAccordingToVehicleLicense === ""){
+    			$("#input-number-of-seats-according-to-vehicle-license").attr("placeholder", "Внеси број на седишта според сообраќајна дозвола").val("");
+    			$(".form-control#input-number-of-seats-according-to-vehicle-license").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputRegistrationNumberOfTheVehicle = $("#input-registration-number-of-the-vehicle").val();
+    		if (inputRegistrationNumberOfTheVehicle === ""){
+    			$("#input-registration-number-of-the-vehicle").attr("placeholder", "Внеси регистарски број на возило").val("");
+    			$(".form-control#input-registration-number-of-the-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputYearOfFirstRegistration = $("#input-year-of-first-registration").val();
+    		if (inputYearOfFirstRegistration === ""){
+    			$("#input-year-of-first-registration").attr("placeholder", "Внеси година на прва регистрација во РМ").val("");
+    			$(".form-control#input-year-of-first-registration").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputYearOfProduction = $("#input-year-of-production").val();
+    		if (inputYearOfProduction === ""){
+    			$("#input-year-of-production").attr("placeholder", "Внеси година на производство").val("");
+    			$(".form-control#input-year-of-production").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inputManufacturerOfVehicle = inputManufacturerOfVehicle;
+    		vehicleData.inputTypeOfVehicleShippingRequiringConfirmation = inputTypeOfVehicleShippingRequiringConfirmation;
+    		vehicleData.inputClassOfTheVehicle = inputClassOfTheVehicle;
+    		vehicleData.inputModelOfTheVehicle = inputModelOfTheVehicle;
+    		vehicleData.inputNumberOfSeatsAccordingToVehicleLicense = inputNumberOfSeatsAccordingToVehicleLicense;
+    		vehicleData.inputRegistrationNumberOfTheVehicle = inputRegistrationNumberOfTheVehicle;
+    		vehicleData.inputYearOfFirstRegistration = inputYearOfFirstRegistration;
+    		vehicleData.inputYearOfProduction = inputYearOfProduction;
+    		
+    	} else if (chosenView === "АТП"){
+    		var inpuTypeVehicle = $("#input-type-vehicle").val();
+    		if(inpuTypeVehicle === ""){
+    			$("#input-type-vehicle").attr("placeholder", "Внеси вид на возилото").val("");
+    			$(".form-control#input-type-vehicle").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		var inputExaminationForClass = $("#input-examination-for-class").val();
+    		if(inputExaminationForClass === ""){
+    			$("#input-examination-for-class").attr("placeholder", "Внеси испитување за класа").val("");
+    			$(".form-control#input-examination-for-class").css("border-color", "#dd4b39");
+    			isFormValid = false;
+    		}
+    		
+    		vehicleData.inpuTypeVehicle = inpuTypeVehicle;
+    		vehicleData.inputExaminationForClass = inputExaminationForClass;
+    	}
+    	return isFormValid;
     }
 });
