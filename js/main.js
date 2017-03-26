@@ -27,7 +27,7 @@ $(document).ready(function () {
             $("#input-class-of-the-vehicle").prop("disabled", false);
             $("#input-model-of-the-vehicle").prop("disabled", false);
             $("#input-number-of-seats-according-to-vehicle-license").prop("disabled", false);
-            $("#input-registration-number-of-the-vehicle").prop("disabled", false);
+            //$("#input-registration-number-of-the-vehicle").prop("disabled", false);
             $("#input-year-of-first-registration").prop("disabled", false);
             $("#input-year-of-production").prop("disabled", false);
         } else {
@@ -91,6 +91,7 @@ $(document).ready(function () {
                 var chosenView = $("p#subject-type").text();
                 //change the form layout depending of the clicked subject
                 changeFormLayout(chosenView);
+                changeFormLayoutForRecordingOfContributionsForm(chosenView);
             }
 
         } else {
@@ -462,6 +463,34 @@ $(document).ready(function () {
             typeVehicle.show();
             examinationForClass.show();
             typeVehicle.insertBefore(examinationForClass);
+        }
+    }
+
+    function changeFormLayoutForRecordingOfContributionsForm(chosenView) {
+        if (chosenView === "Единечно одобрување и преправки") {
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-first-view").show();
+            $(".box-primary-first-view-wrapper").show();
+        } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-second-view").show();
+            $(".box-primary-second-view-wrapper").show();
+        } else if (chosenView === "АДР") {
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-fourth-view").show();
+            $(".box-primary-fourth-view-wrapper").show();
+        } else if (chosenView === "ЦЕМТ") {
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-sixth-view").show();
+            $(".box-primary-sixth-view-wrapper").show();
+        } else if (chosenView === "ПТЕУ") {
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-eighth-view").show();
+            $(".box-primary-eighth-view-wrapper").show();
+        } else if (chosenView === "АТП") {
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-tenth-view").show();
+            $(".box-primary-tenth-view-wrapper").show();
         }
     }
 

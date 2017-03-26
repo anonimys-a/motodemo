@@ -441,30 +441,149 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-manufacturer-of-vehicle-wrapper">
-                                            <label for="input-manufacturer-of-vehicle">Производител на возилото:</label>
-                                            <input type="text" class="form-control" id="input-manufacturer-of-vehicle">
+                                            <label for="input-manufacturer-of-vehicle" class="col-sm-6 control-label">Производител на возилото:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-manufacturer-of-vehicle">
+                                            </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="input-mark-vehicle">Марка на возилото:</label>
-                                            <input type="text" class="form-control" id="input-mark-vehicle">
+                                            <label for="input-mark-vehicle" class="col-sm-6 control-label">(D.1) Марка</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="input-mark-vehicle">
+                                                    <a href="#markModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="markModal" role="dialog">
+                                                <div class="modal-dialog">
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Марка на возило</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <label for="identification" class="col-md-offset-1 col-md-5">Шифра</label>
+                                                                <input type="text" class="col-md-5" id="identification" />
+                                                            </div>
+                                                            <br />
+                                                            <div class="row">
+                                                                <label for="description" class="col-md-offset-1 col-md-5">Опис</label>
+                                                                <input type="text" class="col-md-5" id="description" />
+                                                            </div>
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                            <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-model-of-the-vehicle-wrappe">
+                                            <label for="model-of-the-vehicle" class="col-sm-6 control-label">(D.3) Комерцијална(и) ознака(и)</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="model-of-the-vehicle">
+                                                    <a href="#tipVozilo" type="button" class="input-group-addon btn btn-default" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                </div>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="tipVozilo" role="dialog">
+                                                    <div class="modal-dialog">
+
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Тип на возило</h4>
+                                                            </div>
+                                                            <div id="kom-oz-mod" class="modal-body">
+                                                                <div class="row">
+                                                                    <label for="modal-vid-vozilo" class="col-md-offset-1 col-md-5">Вид возило</label>
+                                                                    <input type="text" id="modal-vid-vozilo" name="modal-vid-vozilo" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-marka" class="col-md-offset-1 col-md-5">(D.1) Марка</label>
+                                                                    <input type="text" id="modal-marka" name="modal-marka" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-kom-oznaka" class="col-md-offset-1 col-md-5">(D3) Комерцијална ознака</label>
+                                                                    <input type="text" id="modal-kom-oznaka" name="modal-kom-oznaka" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-tip-vozilo" class="col-md-offset-1 col-md-5">(D2) Тип возило</label>
+                                                                    <input type="text" id="modal-tip-vozilo" name="modal-tip-vozilo" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-varijanta" class="col-md-offset-1 col-md-5">(D2) Варијанта</label>
+                                                                    <input type="text" id="modal-varijanta" name="modal-varijanta" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-izvedba" class="col-md-offset-1 col-md-5">(D2) Изведба</label>
+                                                                    <input type="text" id="modal-izvedba" name="modal-izvedba" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-forma" class="col-md-offset-1 col-md-5">Форма</label>
+                                                                    <input type="text" id="modal-forma" name="modal-forma" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="modal-namena" class="col-md-offset-1 col-md-5">Намена</label>
+                                                                    <input type="text" id="modal-namena" name="modal-namena" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                                <button id="save-kom-oz" type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     	<div class="form-group">
+                                            <label for="input-type" class="col-sm-6 control-label">(D2) Тип</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-type">
+                                            </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="input-type">Тип на возило:</label>
-                                            <input type="text" class="form-control" id="input-type">
+                                            <label for="input-variant" class="col-sm-3 control-label">(D2) Варијанта</label>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="input-variant">
+                                            </div>
+                                            <label for="input-performance" class="col-sm-3 control-label">(D2) Изведба</label>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="input-performance">
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-type-vehicle-wrapper">
+                                            <label for="input-type-vehicle" class="col-sm-6 control-label">Вид на возилото:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-type-vehicle">
+                                            </div>
                                         </div>
                                         <div class="form-group input-chassis-number-wrapper">
-                                            <label for="input-chassis-number">Број на шасија:</label>
-                                            <input type="text" class="form-control" id="input-chassis-number">
+                                            <label for="input-chassis-number" class="col-sm-6 control-label">Број на шасија:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-chassis-number">
+                                            </div>
                                         </div>
-                                        <div class="form-group input-type-number-of-engine-wrapper">
-                                            <label for="input-type-number-of-engine">Тип/број на моторот:</label>
-                                            <input type="text" class="form-control" id="input-type-number-of-engine">
-                                        </div>
+                                        <!-- /.box-body -->
                                     </div>
-                                    <!-- /.box-body -->
                                 </form>
                             </div>
                         </div>
@@ -477,44 +596,337 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
-                                        <div class="form-group input-vehicle-category-wrapper">
-                                            <label for="input-vehicle-category">Категорија на возило:</label>
-                                            <input type="text" class="form-control" id="input-vehicle-category">
+                                        <div class="form-group input-type-of-engine-wrapper">
+                                            <label for="input-type-of-engine" class="col-sm-6 control-label">(21) Тип на моторот</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="input-type-of-engine">
+                                                    <a href="#tipMotor" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                </div>
+                                                <div class="modal fade" id="tipMotor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title" id="myModalLabel">Тип мотор</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <label class="col-md-offset-1 col-md-5">(21) Тип мотор</label>
+                                                                    <input type="text" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label class="col-md-offset-1 col-md-5">(P2) Снага</label>
+                                                                    <input type="text" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label class="col-md-offset-1 col-md-5">(P1) Зафатнина</label>
+                                                                    <input type="text" class="col-md-5" />
+                                                                    <div class="col-md-offset-1"></div>
+                                                                </div><br />
+                                                                <div class="row">
+                                                                    <label for="fuel" class="col-md-offset-1 col-md-5">(P3) Гориво</label>
+                                                                    <div class="input-group dropdown col-md-5">
+                                                                        <input type="text" class="form-control " id="fuel" name="fuel" placeholder="Изберете вид на гориво" required>
+                                                                        <a href="#" id="fuel" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-chevron-down"></i></a>
+                                                                        <div class="col-md-offset-1"></div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="fuel">
+                                                                            <li><a href="">Не користи</a></li>
+                                                                            <li><a href="">Бензин</a></li>
+                                                                            <li><a href="">Нафта</a></li>
+                                                                            <li><a href="">Мешавина</a></li>
+                                                                            <li><a href="">Гас</a></li>
+                                                                            <li><a href="">Електрична енергија</a></li>
+                                                                            <li><a href="">Алкохол</a></li>
+                                                                            <li><a href="">Дизел</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                                <button type="button" class="btn btn-success">Сними</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group input-kind-of-renovation-wrapper">
-                                            <label for="input-kind-of-renovation">
+                                        <div class="form-group input-number-of-engine-wrapper">
+                                            <label for="input-number-of-engine" class="col-sm-6 control-label">Број на мотор</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-number-of-engine">
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-vehicle-category-wrapper">
+                                            <label for="input-vehicle-category" class="col-sm-6 control-label">Категорија на возило:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-vehicle-category">
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-kind-of-renovation-wrapper dropdown">
+                                            <label for="input-kind-of-renovation" class="col-sm-6 control-label">
                                                 Вид на преправката:
                                             </label>
-                                            <select class="form-control" id="input-kind-of-renovation">
-                                                <option></option>
-                                                <option>option 2</option>
-                                                <option>option 2</option>
-                                                <option>option 3</option>
-                                                <option>option 4</option>
-                                                <option>option 5</option>
-                                            </select>
+                                            <div class="col-sm-6">
+                                                <button class="btn btn-default dropdown-toggle button-choose-renovation-style" type="button" data-toggle="dropdown">
+                                                    Одбери преправка
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-choose-renovation-style">
+                                                    <li><a class="dropdown-choose-renovation-link-color dropdown-wrap-text" data-toggle="modal" href="#firstGroup">1. ГРУПА – возила со променета, или преправена каросерија, кабина, или заштитна рамка</a></li>
+                                                    <li><a class="dropdown-choose-renovation-link-color" data-toggle="modal" href="#secondGroup">2. ГРУПА - преправки или поправки во системите на возилото</a></li>
+                                                    <li><a class="dropdown-choose-renovation-link-color dropdown-wrap-text" data-toggle="modal" href="#thirdGroup">3. ГРУПА - возила со доградени или отстранети системи, делови, самостојни технички единици и уреди</a></li>
+                                                    <li><a class="dropdown-choose-renovation-link-color" data-toggle="modal" href="#fourthGroup">4. ГРУПА – утврдување на технички податоци</a></li>
+                                                </ul>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="firstGroup" role="dialog">
+                                                    <div class="modal-dialog modal-dialog-width">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <section class="content">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <div class="box">
+                                                                            <div class="modal-header">
+                                                                                <div class="box-header with-border">
+                                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                    <h4 class="modal-title">1. ГРУПА – возила со променета, или преправена каросерија, кабина, или заштитна рамка</h4>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="box-body">
+                                                                                    <table class="table table-bordered table-responsive">
+                                                                                        <tr>
+                                                                                            <th style="width: 10px">Р.<br />бр.</th>
+                                                                                            <th>Активност</th>
+                                                                                            <th style="width: 120px">категорија</th>
+                                                                                            <th>цена</th>
+                                                                                            <th style="width: 350px">вид на преправка</th>
+                                                                                            <th style="width: 40px">Label</th>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td rowspan="2">1.1</td>
+                                                                                            <td rowspan="2">
+                                                                                                Испитување на докомплетирано (надградено) возило, или возило со
+                                                                                                променета каросерија. Надградената каросерија е од вид/тип кој e
+                                                                                                одобрен и е опција за вградување на производителот.
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                M1,N1, O1, O2, <br/>
+                                                                                                R1, R2, S1
+                                                                                            </td>
+                                                                                            <td>11.200</td>
+                                                                                            <td></td>
+                                                                                            <td rowspan="2">
+                                                                                                <div class="checkbox checkbox-margin">
+                                                                                                    <label>
+                                                                                                        <input type="checkbox" value="">
+                                                                                                        <span class="cr"><i class="cr-icon fa fa-check" aria-hidden="true"></i></span>
+                                                                                                    </label>
+                                                                                                </div>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                M2, M3, N2, N3,
+                                                                                                O3, O4, R3, R4, S2
+                                                                                            </td>
+                                                                                            <td>14.000</td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td rowspan="2">1.2</td>
+                                                                                            <td rowspan="2">
+                                                                                                Испитување на возило преправено во друга категорија, друг тип,
+                                                                                                варијанта, или изведба со адаптирање и доопремување на постоечката
+                                                                                                каросерија <br/>
+                                                                                                (Објаснение: промена на категоријата или обликот и намената на
+                                                                                                каросеријата, преправка само со интервенции во ентериерот на
+                                                                                                возилото)
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                M1,N1, O1, O2,
+                                                                                                R1, R2, S1
+                                                                                            </td>
+                                                                                            <td>8.400</td>
+                                                                                            <td rowspan="2">
+                                                                                                - Од (Патничко) М1 и М2 во N1 и N2 (Товарно) и
+                                                                                                обратно <br/>
+                                                                                                - Минибуси (без продолжување) <br/>
+                                                                                                - Амбулантни, Погребни, Канцеларии,
+                                                                                                Библиотеки,<br/>
+                                                                                                - Ладилник
+                                                                                            </td>
+                                                                                            <td rowspan="2">
+                                                                                                <span class="input-group-addon btn btn-outline-primary"><input class="checkbox-primary" id="input-technical-requirements" type="checkbox"></span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                M2, M3, N2, N3,
+                                                                                                O3, O4, R3, R4, S2
+                                                                                            </td>
+                                                                                            <td>11.200</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td rowspan="2">1.3</td>
+                                                                                            <td rowspan="2">
+                                                                                                Испитување на возило со преправена каросерија во однос на
+                                                                                                димензиите и/или положбата на возилото (заради дополнително
+                                                                                                вградување на одделни уреди и слично)
+                                                                                                <br/>
+                                                                                                (Објаснение: преправка со интервенции во носечката структура,
+                                                                                                промена на димензиите, вградени нови уреди наместо постојните)
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                M₁, N₁, O₁, O₂
+                                                                                                R1, R2, S1
+                                                                                            </td>
+                                                                                            <td>6.300</td>
+                                                                                            <td rowspan="2">
+                                                                                                - Отворен и Затворен сандак (Фургон) <br/>
+                                                                                                - Кипер, Дигалка, Мешалка, Дупчалка, Трупчар, <br/>
+                                                                                                - Рамка за стакла и профили, <br/>
+                                                                                                - Шлеп служба, Пајак, <br/>
+                                                                                                - Цистерна
+                                                                                            </td>
+                                                                                            <td rowspan="2">
+                                                                                                <span class="input-group-addon btn btn-outline-primary"><input class="checkbox-primary" id="input-technical-requirements" type="checkbox"></span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                M₂ M₃, N ₂, N₃
+                                                                                                O₃, O₄, R3, R4, S2
+                                                                                            </td>
+                                                                                            <td>8.400</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td rowspan="4">1.4</td>
+                                                                                            <td>
+                                                                                                Испитување на докомплетирано возило (или возило на кое се врши
+                                                                                                промена со вградување) кабина која:
+                                                                                            </td>
+                                                                                            <td colspan="3"></td>
+                                                                                            <td rowspan="4"><span class="input-group-addon btn btn-outline-primary"><input class="checkbox-primary" id="input-technical-requirements" type="checkbox"></span></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                1.4.1 е од одобрен тип и е опција за вградување во предметниот тип
+                                                                                                возило
+
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                L, N, T, C
+                                                                                            </td>
+                                                                                            <td>6300</td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                1.4.2 е од одобрен тип, но не е опција за предметниот тип возило
+                                                                                            </td>
+                                                                                            <td>L, N, T, C</td>
+                                                                                            <td>8.400</td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                1.4.3 не е од одобрен тип, односно е поединечно новопроизведена
+                                                                                            </td>
+                                                                                            <td>L, N, T, C</td>
+                                                                                            <td>14.000</td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>1.5</td>
+                                                                                            <td>
+                                                                                                Испитување на возило со преправка на постоечката кабина во однос на
+                                                                                                димензии, број на места за седење и број на места за лежење.
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                L, N, T, C
+                                                                                            </td>
+                                                                                            <td>8.400</td>
+                                                                                            <td></td>
+                                                                                            <td>
+                                                                                                <span class="input-group-addon btn btn-outline-primary"><input class="checkbox-primary" id="input-technical-requirements" type="checkbox"></span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td rowspan="3">1.6</td>
+                                                                                            <td>
+                                                                                                Испитување на докомплетирано возило (или возило на кое се врши
+                                                                                                промена со вградување)заштитна рамка која е
+                                                                                            </td>
+                                                                                            <td colspan="3"></td>
+                                                                                            <td rowspan="3">
+                                                                                                <span class="input-group-addon btn btn-outline-primary"><input class="checkbox-primary" id="input-technical-requirements" type="checkbox"></span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                е од одобрен тип за предметниот тип на возило
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                L, T, C
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                4.340
+                                                                                            </td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                - не е одобрен тип за предметниот тип на возило
+                                                                                            </td>
+                                                                                            <td>L, T,C</td>
+                                                                                            <td>8.400</td>
+                                                                                            <td></td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div><!--/end modal body-->
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </div>
+                                                </div><!--/end modal-->
+                                            </div>
                                         </div>
                                         <div class="form-group input-number-of-adr-certificate-wrapper">
-                                            <label for="input-number-of-adr-certificate">Број на АДР сертификат и институција која го издала:</label>
-                                            <input type="text" class="form-control" id="input-number-of-adr-certificate">
-                                        </div>
-                                        <div class="form-group input-type-vehicle-wrapper">
-                                            <label for="input-type-vehicle">Вид на возилото:</label>
-                                            <input type="text" class="form-control" id="input-type-vehicle">
+                                            <label for="input-number-of-adr-certificate" class="col-sm-6 control-label">Број на АДР сертификат и институција која го издала:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-number-of-adr-certificate">
+                                            </div>
                                         </div>
                                         <div class="form-group input-mileage-wrapper">
-                                            <label for="input-mileage">Километража:</label>
-                                            <input type="text" class="form-control" id="input-mileage">
+                                            <label for="input-mileage" class="col-sm-6 control-label">Километража:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-mileage">
+                                            </div>
                                         </div>
                                         <div class="form-group input-examination-for-class-wrapper">
-                                            <label for="input-examination-for-class">Испитување за класа:</label>
-                                            <input type="text" class="form-control" id="input-examination-for-class">
+                                            <label for="input-examination-for-class" class="col-sm-6 control-label">Испитување за класа:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-examination-for-class">
+                                            </div>
                                         </div>
                                         <div class="form-group input-registration-mark-of-the-vehicle-wrapper">
-                                            <label for="input-registration-mark-of-the-vehicle">Регистарска ознака на возилото:</label>
-                                            <input type="text" class="form-control" id="input-registration-mark-of-the-vehicle">
+                                            <label for="input-registration-mark-of-the-vehicle" class="col-sm-6 control-label">Регистарска ознака на возилото:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-registration-mark-of-the-vehicle">
+                                            </div>
                                         </div>
                                         <div class="form-group input-type-of-vehicle-shipping-requiring-confirmation-wrapper">
                                             <label for="input-type-of-vehicle-shipping-requiring-confirmation">Вид на возило за превозот за кој се бара Потврда:</label>
@@ -526,7 +938,8 @@
                                             </select>
                                         </div>
                                         <div class="form-group input-class-of-the-vehicle-wrapper">
-                                            <label for="input-class-of-the-vehicle">Класа на возило:</label>&nbsp;&nbsp;<span>(само за Возило за јавен превоз на патници)</span>
+                                            <label for="input-class-of-the-vehicle">Класа на возило:</label>&nbsp;&nbsp;
+                                            <span>(само за Возило за јавен превоз на патници)</span>
                                             <select disabled class="form-control" id="input-class-of-the-vehicle">
                                                 <option selected>Одбери класа</option>
                                                 <option>I</option>
@@ -538,27 +951,30 @@
                                                 <option>8+1</option>
                                             </select>
                                         </div>
-                                        <div class="form-group input-model-of-the-vehicle-wrapper">
-                                            <label for="input-model-of-the-vehicle">Комерцијална ознака:</label>
-                                            <input disabled type="text" class="form-control" id="input-model-of-the-vehicle">
-                                        </div>
                                         <div class="form-group input-number-of-seats-according-to-vehicle-license-wrapper">
-                                            <label for="input-number-of-seats-according-to-vehicle-license">Број на седишта:</label>
-                                            <input disabled type="text" class="form-control" id="input-number-of-seats-according-to-vehicle-license">
+                                            <label for="input-number-of-seats-according-to-vehicle-license" class="col-sm-6 control-label">(S.1) Бр.Седишта (М2/М3 без возач):</label>
+                                            <div class="col-sm-6">
+                                                <input disabled type="text" class="form-control" id="input-number-of-seats-according-to-vehicle-license">
+                                            </div>
                                         </div>
                                         <div class="form-group input-registration-number-of-the-vehicle-wrapper">
-                                            <label for="input-registration-number-of-the-vehicle">Регистарски број на возило:</label>
-                                            <input type="text" class="form-control" id="input-registration-number-of-the-vehicle">
+                                            <label for="input-registration-number-of-the-vehicle" class="col-sm-6 control-label">Регистарски број на возило:</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="input-registration-number-of-the-vehicle">
+                                            </div>
                                         </div>
                                         <div class="form-group input-year-of-first-registration-wrapper">
-                                            <label for="input-year-of-first-registration">Година на прва регистрација во РМ:</label>
-                                            <input disabled type="text" class="form-control" id="input-year-of-first-registration">
+                                            <label for="input-year-of-first-registration" class="col-sm-6 control-label">Година на прва регистрација во РМ:</label>
+                                            <div class="col-sm-6">
+                                                <input disabled type="text" class="form-control" id="input-year-of-first-registration">
+                                            </div>
                                         </div>
                                         <div class="form-group input-year-of-production-wrapper">
-                                            <label for="input-year-of-production">Година на производство:</label>
-                                            <input disabled type="text" class="form-control" id="input-year-of-production">
+                                            <label for="input-year-of-production" class="col-sm-6 control-label">(5A) Година на производство:</label>
+                                            <div class="col-sm-6">
+                                                <input disabled type="text" class="form-control" id="input-year-of-production">
+                                            </div>
                                         </div>
-
                                     </div>
                                     <!-- /.box-body -->
                                 </form>
@@ -567,43 +983,77 @@
                         </div>
                     </div>
                 </section>
-                <section class="content-header">
-                    <h1>
+                <section class="content-header content-header-recording-of-contributions">
+                    <h1 class="recording-of-contributions">
                         Евидентирање на прилози:
                     </h1>
                 </section>
                 <!-- Main content Second form - Third circle(first) -->
-                <section class="content">
+                <section class="content content-recording-of-contributions-first-view">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-first-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-technical-requirements-wrapper">
-                                            <label for="input-technical-requirements">Потврда за исполнување на техничките барања:</label>
-                                            <label>
-                                                <input type="checkbox" class="minimal" checked>
-                                            </label>
-                                            <input type="text" class="form-control" id="input-technical-requirements">
+                                            <label for="input-technical-requirements" class="col-sm-9 control-label">Потврда за исполнување на техничките барања:</label>
+                                            <div class="col-sm-2">
+                                               	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                                	<a href="#" type="button" class="btn btn-default input-group-addon file-border"><i class="fa fa-file-text fa-file-text-size" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="input-customs-duties">Доказ за подмирени царински обврски:</label>
-                                            <input type="text" class="form-control" id="input-customs-duties">
+                                        <div class="form-group input-customs-duties-wrapper">
+                                        	<label for="input-customs-duties" class="col-sm-9 control-label">Доказ за подмирени царински обврски:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                            	</div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="input-copy-purchase-agreement-or-invoice">Фотокопија од купопродажен договор или фактура:</label>
-                                            <input type="text" class="form-control" id="input-copy-purchase-agreement-or-invoice">
+                                        <div class="form-group input-copy-purchase-agreement-or-invoice-wrapper">
+                                        	 <label for="input-copy-purchase-agreement-or-invoice" class="col-sm-9 control-label">Фотокопија од купопродажен договор или фактура:</label>
+                                        	 <div class="col-sm-1">
+                                            	<div class="input-group">
+                                               		<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-copy-of-the-driving-license-wrapper">
-                                            <label for="input-copy-of-the-driving-license">Фотокопија од сообраќајна дозвола за возилото:</label>
-                                            <input type="text" class="form-control" id="input-copy-of-the-driving-license">
+                                        	<label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Фотокопија од сообраќајна дозвола за возилото:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -613,29 +1063,68 @@
                         <!-- /.box -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-first-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
-                                        <div class="form-group input-orders-from-the-interior-ministry-wrapper">
-                                            <label for="input-orders-from-the-interior-ministry">Упатница од МВР:</label>
-                                            <input type="text" class="form-control" id="input-orders-from-the-interior-ministry">
+                                    	<div class="form-group input-orders-from-the-interior-ministry-wrapper">
+                                        	<label for="input-orders-from-the-interior-ministry" class="col-sm-5 control-label">Упатница од МВР:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-certificate-of-incorporation-wrapper">
-                                            <label for="input-certificate-of-incorporation">Потврда за вградување:</label>
-                                            <input type="text" class="form-control" id="input-certificate-of-incorporation">
+                                        	<label for="input-certificate-of-incorporation" class="col-sm-5 control-label">Потврда за вградување:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-other-documentation-wrapper">
-                                            <label for="input-other-documentation">Останата документација (да се остави можност да се допише):</label>
-                                            <input type="text" class="form-control" id="input-other-documentation">
+                                            <label for="input-other-documentation" class="col-sm-5 control-label">Останата документација:</label>
+                                            <div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                        <label>
+                                                        <input type="checkbox" value="">
+                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                 	</div>
+                                            	</div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                            	<input type="text" class="form-control" id="input-other-documentation" />
+                                            </div>
                                         </div>
                                         <div class="form-group input-vehicle-review-wrapper">
-                                            <label for="input-vehicle-review">Возило за преглед :</label>
-                                            <input type="text" class="form-control" id="input-vehicle-review">
+                                        	<label for="input-vehicle-review" class="col-sm-5 control-label">Возило за преглед:</label>
+                                        	<div class="col-sm-1">
+                                            <div class="input-group">
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -646,32 +1135,59 @@
                     </div>
                 </section>
                 <!-- Main content Second form - Third circle(second) -->
-                <section class="content">
+                <section class="content content-recording-of-contributions-second-view">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-second-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-sos-document-wrapper">
-                                            <label for="input-sos-document">Потврда за исполнување на техн. барања/СОС документ:</label>
-                                            <input type="text" class="form-control" id="input-sos-document">
+                                        	<label for="input-sos-document" class="col-sm-9 control-label">Потврда за исполнување на техн. барања/СОС документ:</label>
+                                        	<div class="col-sm-1">
+                                            <div class="input-group">
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="input-procedure-for-identification">Потврда за отварање на постапка за идентификација:</label>
-                                            <input type="text" class="form-control" id="input-procedure-for-identification">
+                                        <div class="form-group input-procedure-for-identification-wrapper">
+                                        	<label for="input-procedure-for-identification" class="col-sm-9 control-label">Потврда за отварање на постапка за идентификација:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="input-customs-duties">Доказ за подмирени царински обврски:</label>
-                                            <input type="text" class="form-control" id="input-customs-duties">
-                                        </div>
-                                    </div>
+                                        <div class="form-group input-customs-duties-wrapper">
+                                        	<label for="input-customs-duties" class="col-sm-9 control-label">Доказ за подмирени царински обврски:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                        	</div>
+                                    	</div>
+                                   	</div>
                                     <!-- /.box-body -->
                                 </form>
                             </div>
@@ -679,25 +1195,52 @@
                         <!-- /.box -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-second-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-copy-purchase-agreement-or-invoice-wrapper">
-                                            <label for="input-copy-purchase-agreement-or-invoice">Фотокопија од купопродажен договор или фактура:</label>
-                                            <input type="text" class="form-control" id="input-copy-purchase-agreement-or-invoice">
+                                        	 <label for="input-copy-purchase-agreement-or-invoice" class="col-sm-9 control-label">Фотокопија од купопродажен договор или фактура:</label>
+                                        	 <div class="col-sm-1">
+                                            	<div class="input-group">
+                                               		<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-copy-of-the-driving-license-wrapper">
-                                            <label for="input-copy-of-the-driving-license">Фотокопија од сообраќајна дозвола за возилото:</label>
-                                            <input type="text" class="form-control" id="input-copy-of-the-driving-license">
+                                        	<label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Фотокопија од сообраќајна дозвола за возилото:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-vehicle-review-wrapper">
-                                            <label for="input-vehicle-review">Возило за преглед :</label>
-                                            <input type="text" class="form-control" id="input-vehicle-review">
+                                        	<label for="input-vehicle-review" class="col-sm-9 control-label">Возило за преглед:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -708,34 +1251,72 @@
                     </div>
                 </section>
                 <!-- Main content Second form - Third circle(fourth) -->
-                <section class="content">
+                <section class="content content-recording-of-contributions-fourth-view">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-fourth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-technical-requirements-wrapper">
-                                            <label for="input-technical-requirements">Потврда за исполнување на техничките барања:</label>
-                                            <input type="text" class="form-control" id="input-technical-requirements">
+                                        	<label for="input-technical-requirements" class="col-sm-9 control-label">Потврда за исполнување на техничките барања:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                                	<a href="#" type="button" class="btn btn-default input-group-addon file-border"><i class="fa fa-file-text fa-file-text-size" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-copy-of-the-driving-license-wrapper">
-                                            <label for="input-copy-of-the-driving-license">Фотокопија од сообраќајна дозвола за возилото:</label>
-                                            <input type="text" class="form-control" id="input-copy-of-the-driving-license">
+                                        	<label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Фотокопија од сообраќајна дозвола за возилото:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-other-documentation-wrapper">
-                                            <label for="input-other-documentation">Останата документација (да се остави можност да се допише):</label>
-                                            <input type="text" class="form-control" id="input-other-documentation">
-                                        </div>
+          									<label for="input-other-documentation" class="col-sm-5 control-label">Останата документација:</label>
+                       						<div class="col-sm-1">
+                       							<div class="input-group">
+                       								<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<input class="form-control" type="text" id="input-other-documentation">
+											</div>
+										</div>
                                         <div class="form-group input-earlier-certificate-wrapper">
-                                            <label for="input-earlier-certificate">Претходно издаден сертификат:</label>
-                                            <input type="text" class="form-control" id="input-earlier-certificate">
+                                        	<label for="input-earlier-certificate" class="col-sm-9 control-label">Претходно издаден сертификат:</label>
+                                            <div class="col-sm-1">
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -745,29 +1326,68 @@
                         <!-- /.box -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-fourth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-previously-issued-certificate-wrapper">
-                                            <label for="input-previously-issued-certificate">Претходно издадено уверение:</label>
-                                            <input type="text" class="form-control" id="input-previously-issued-certificate">
+                                        	<label for="input-previously-issued-certificate" class="col-sm-9 control-label">Претходно издадено уверение:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-checked-reservoir-wrapper">
-                                            <label for="input-checked-reservoir">Извештај/сертификат за извршена проверка на резервоар:</label>
-                                            <input type="text" class="form-control" id="input-checked-reservoir">
+                                        	<label for="input-checked-reservoir" class="col-sm-9 control-label">Извештај/сертификат за извршена проверка на резервоар:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-technical-documentation-wrapper">
-                                            <label for="input-technical-documentation">Техничка документација: (да се остави простор да се допише текст):</label>
-                                            <input type="text" class="form-control" id="input-technical-documentation">
+                                            <label for="input-technical-documentation" class="col-sm-5 control-label">Техничка документација:</label>
+                                            <div class="col-sm-1">
+												<div class="input-group">
+													<div class="checkbox checkbox-margin">
+														<label>
+															<input type="checkbox" value="">
+					 										<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+                                            	<input type="text" class="form-control" id="input-technical-documentation">
+                                            </div>
                                         </div>
                                         <div class="form-group input-vehicle-review-wrapper">
-                                            <label for="input-vehicle-review">Возило за преглед :</label>
-                                            <input type="text" class="form-control" id="input-vehicle-review">
+                                        	<label for="input-vehicle-review" class="col-sm-9 control-label">Возило за преглед:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -778,28 +1398,51 @@
                     </div>
                 </section>
                 <!-- Main content Second form - Third circle(sixth) -->
-                <section class="content">
+                <section class="content content-recording-of-contributions-sixth-view">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-sixth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-driving-license-photocopy-wrapper">
-                                            <label for="input-driving-license-photocopy">Фотокопија од сообраќајна дозвола за возилото:</label>
-                                            <input type="text" class="form-control" id="input-driving-license-photocopy">
+                                        	<label for="input-driving-license-photocopy" class="col-sm-9 control-label">Фотокопија од сообраќајна дозвола за возилото:</label>
+                                        	<div class="col-sm-1">
+                                            	<div class="input-group">
+                                                	<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-certificate-of-conformity-wrapper">
-                                            <label for="input-certificate-of-conformity">Сертификат за сообразност бр.:</label>
-                                            <input type="text" class="form-control" id="input-certificate-of-conformity">
+                                        	 <label for="input-certificate-of-conformity" class="col-sm-6 control-label">Сертификат за сообразност бр.:</label>
+                                             <div class="col-sm-4">
+                                             	<div class="input-group">
+                                                	<input type="text" class="form-control" id="input-certificate-of-conformity">
+                                            	</div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                            	<div class="input-group">
+                                            		<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                                	<a href="#" type="button" class="btn btn-default input-group-addon file-border"><i class="fa fa-file-text fa-file-text-size" aria-hidden="true"></i></a>
+                                            	</div>
+                                            </div>
                                         </div>
-
                                     </div>
                                     <!-- /.box-body -->
                                 </form>
@@ -808,23 +1451,46 @@
                         <!-- /.box -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-sixth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-tachograph-wrapper">
-                                            <label for="input-tachograph">Потврда за исправност на тахографот бр.:</label>
-                                            <input type="text" class="form-control" id="input-tachograph">
+                                        	<label for="input-tachograph" class="col-sm-7 control-label">Потврда за исправност на тахографот бр.:</label>
+                                        	<div class="col-sm-4">
+                                            	<div class="input-group">
+                                                	<input type="text" class="form-control" id="input-tachograph">
+                                            	</div>
+                                            </div>
+                                            <div class="col-sm-1">
+                                            	<div class="input-group">
+                                            		<div class="checkbox checkbox-margin">
+                                                    	<label>
+                                                        	<input type="checkbox" value="">
+                                                        	<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    	</label>
+                                                	</div>
+                                            	</div>
+                                            </div>
                                         </div>
                                         <div class="form-group input-earlier-certificate-wrapper">
-                                            <label for="input-earlier-certificate">Возило за преглед:</label>
-                                            <input type="text" class="form-control" id="input-earlier-certificate">
-                                        </div>
-                                    </div>
+                                        	<label for="input-earlier-certificate" class="col-sm-7 control-label">Возило за преглед:</label>
+                                        		<div class="col-sm-1">
+                                            		<div class="input-group">
+                                                		<div class="checkbox checkbox-margin">
+                                                    		<label>
+                                                        		<input type="checkbox" value="">
+                                                        		<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    		</label>
+                                                    	</div>
+                                                	</div>
+                                            	</div>
+                                         </div>
+                                   	</div>
                                     <!-- /.box-body -->
                                 </form>
                             </div>
@@ -833,22 +1499,24 @@
                     </div>
                 </section>
                 <!-- Main content Second form - Third circle(eighth) -->
-                <section class="content">
+                <section class="content content-recording-of-contributions-eighth-view">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-eighth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-copy-of-the-driving-license-wrapper">
-                                            <label for="input-copy-of-the-driving-license">Сообраќајна дозвола од возилото-фотокопија:</label>
-                                            <input type="text" class="form-control" id="input-copy-of-the-driving-license">
+                                            <div class="input-group">
+                                                <label for="input-copy-of-the-driving-license">Сообраќајна дозвола од возилото-фотокопија:</label>
+                                                <span class="input-group-addon btn btn-outline-primary checkbox-bordr-left"><input class="checkbox-primary" id="input-copy-of-the-driving-license" type="checkbox"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -858,17 +1526,19 @@
                         <!-- /.box -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-eighth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-earlier-certificate-wrapper">
-                                            <label for="input-earlier-certificate">Возило за преглед:</label>
-                                            <input type="text" class="form-control" id="input-earlier-certificate">
+                                            <div class="input-group">
+                                                <label for="input-earlier-certificate">Возило за преглед:</label>
+                                                <span class="input-group-addon btn btn-outline-primary checkbox-bordr-left"><input class="checkbox-primary" id="input-earlier-certificate" type="checkbox"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -879,26 +1549,30 @@
                     </div>
                 </section>
                 <!-- Main content Second form - Third circle(tenth) -->
-                <section class="content">
+                <section class="content content-recording-of-contributions-tenth-view">
                     <div class="row">
                         <!-- left column -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-tenth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-copy-of-the-driving-license-wrapper">
-                                            <label for="input-copy-of-the-driving-license">Сообраќајна дозвола од возилото-фотокопија:</label>
-                                            <input type="text" class="form-control" id="input-copy-of-the-driving-license">
+                                            <div class="input-group">
+                                                <label for="input-copy-of-the-driving-license">Сообраќајна дозвола од возилото-фотокопија:</label>
+                                                <span class="input-group-addon btn btn-outline-primary checkbox-bordr-left"><input class="checkbox-primary" id="input-copy-of-the-driving-license" type="checkbox"></span>
+                                            </div>
                                         </div>
                                         <div class="form-group input-atp-certificate-wrapper">
-                                            <label for="input-atp-certificate">Претходно издаден АТП Сертификат:</label>
-                                            <input type="text" class="form-control" id="input-atp-certificate">
+                                            <div class="input-group">
+                                                <label for="input-atp-certificate">Претходно издаден АТП Сертификат:</label>
+                                                <span class="input-group-addon btn btn-outline-primary checkbox-bordr-left"><input class="checkbox-primary" id="input-atp-certificate" type="checkbox"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -908,21 +1582,23 @@
                         <!-- /.box -->
                         <div class="col-md-6">
                             <!-- general form elements -->
-                            <div class="box box-primary">
+                            <div class="box box-primary box-primary-tenth-view-wrapper">
                                 <div class="box-header with-border">
 
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group input-technical-documentation-wrapper">
-                                            <label for="input-technical-documentation">Техничка документација: (да се остави место за набројување):</label>
+                                            <label for="input-technical-documentation">Техничка документација: (да се остави простор да се допише текст):</label>
                                             <input type="text" class="form-control" id="input-technical-documentation">
                                         </div>
                                         <div class="form-group input-earlier-certificate-wrapper">
-                                            <label for="input-earlier-certificate">Возило за преглед:</label>
-                                            <input type="text" class="form-control" id="input-earlier-certificate">
+                                            <div class="input-group">
+                                                <label for="input-earlier-certificate">Возило за преглед:</label>
+                                                <span class="input-group-addon btn btn-outline-primary checkbox-bordr-left"><input class="checkbox-primary" id="input-earlier-certificate" type="checkbox"></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
@@ -985,16 +1661,24 @@
                     </div>
                 </section>
                 <ul class="list-unstyled list-inline pull-left">
-                    <li><button type="button" class="btn btn-danger">Delete</button></li>
+                    <li>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </li>
                 </ul>
                 <ul class="list-unstyled list-inline pull-left">
-                    <li><button type="button" class="btn btn-danger">Delete all</button></li>
+                    <li>
+                        <button type="button" class="btn btn-danger">Delete all</button>
+                    </li>
                 </ul>
                 <ul class="list-unstyled list-inline pull-right">
-                    <li><button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button></li>
-                    <li><button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button></li>
+                    <li>
+                        <button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button>
+                    </li>
                 </ul>
-            </div>
+            </div>		
        <!--/menu4-->
             <div id="menu4" class="tab-pane fade">
                 <h3>Единечно одобрување на возило - запленето</h3>
