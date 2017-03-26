@@ -21,6 +21,26 @@ $(document).ready(function () {
         $(this).addClass('btn-info').removeClass('btn-default').blur();
     });
 
+    //add behaviour on the select input for the Entering vehicle data form
+    $("#input-type-of-vehicle-shipping-requiring-confirmation").change(function () {
+        if ($("#input-type-of-vehicle-shipping-requiring-confirmation option:selected").val() === "public") {
+            $("#input-class-of-the-vehicle").prop("disabled", false);
+            $("#input-model-of-the-vehicle").prop("disabled", false);
+            $("#input-number-of-seats-according-to-vehicle-license").prop("disabled", false);
+            $("#input-registration-number-of-the-vehicle").prop("disabled", false);
+            $("#input-year-of-first-registration").prop("disabled", false);
+            $("#input-year-of-production").prop("disabled", false);
+        } else {
+            $("#input-class-of-the-vehicle").prop("disabled", true);
+            $("#input-model-of-the-vehicle").prop("disabled", true);
+            $("#input-number-of-seats-according-to-vehicle-license").prop("disabled", true);
+            $("#input-year-of-first-registration").prop("disabled", true);
+            $("#input-year-of-production").prop("disabled", true);
+        }
+        
+        
+    });
+
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
         hideErrorMessagesForValidation();
@@ -45,9 +65,10 @@ $(document).ready(function () {
             };
         }
 
+        var chosenView = $("p#subject-type").text();
         //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
         if (activeTabId === "menu3" && $(e.target).hasClass('next-step')) {
-            var chosenView = $("p#subject-type").text();
+            
 
             //validate the form before going to the fourth cicrcle
             if (!validate_third_step_form(chosenView)) {
@@ -199,7 +220,25 @@ $(document).ready(function () {
     }
 
     function clearThirdCircleForm() {
-        
+        $("#input-manufacturer-of-vehicle").val('');
+        $("#input-mark-vehicle").val('');
+        $("#input-type").val('');
+        $("#input-chassis-number").val('');
+        $("#input-type-number-of-engine").val('');
+        $("#input-vehicle-category").val('');
+        $("#input-kind-of-renovation").val('');
+        $("#input-number-of-adr-certificate").val('');
+        $("#input-type-vehicle").val('');
+        $("#input-mileage").val('');
+        $("#input-examination-for-class").val('');
+        $("#input-registration-mark-of-the-vehicle").val('');
+        $("#input-type-of-vehicle-shipping-requiring-confirmation").val('');
+        $("#input-class-of-the-vehicle").val('');
+        $("#input-model-of-the-vehicle").val('');
+        $("#input-number-of-seats-according-to-vehicle-license").val('');
+        $("#input-registration-number-of-the-vehicle").val('');
+        $("#input-year-of-first-registration").val('');
+        $("#input-year-of-production").val('');
     }
 
     //show menu on hover for every subject
