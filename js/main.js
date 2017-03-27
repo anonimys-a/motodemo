@@ -51,38 +51,34 @@ $(document).ready(function () {
 
         // If this returns true we know that we are validating individual_person_form
         var embgFieldExist = $('#embg-legal-entity').is(":visible");
-
-        //if activeTab is div#menu2 we call a fucntion for sending a request to the backend with validation 
-        //for ex. activeTab = <div id="menu2" class="tab-pane fade active in">
-        if (activeTabId === "menu2" && $(e.target).hasClass('next-step')) {
-
-            //validate the form and send a request
-            if (!validate_second_step_form(embgFieldExist)) {
-                //if validation not pass or the response is with error we do not go to the third step(cirlce)
-                return;
-            } else {
-                clearSecondCircleForm();
-            };
-        }
-
         var chosenView = $("p#subject-type").text();
-        //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
-        if (activeTabId === "menu3" && $(e.target).hasClass('next-step')) {
-            
-
-            //validate the form before going to the fourth cicrcle
-            if (!validate_third_step_form(chosenView)) {
-                //if validation not pass or the response is with error we do not go to the fourth step(cirlce)
-                return;
-            } else {
-                clearThirdCircleForm();
-            };
-
-        }
-
+        
         $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
 
-        if ($(e.target).hasClass('next-step')) {
+        if ($(this).hasClass('next-step')) {
+        	//if activeTab is div#menu2 we call a fucntion for sending a request to the backend with validation 
+            //for ex. activeTab = <div id="menu2" class="tab-pane fade active in">
+            if (activeTabId === "menu2") {
+                //validate the form and send a request
+                if (!validate_second_step_form(embgFieldExist)) {
+                    //if validation not pass or the response is with error we do not go to the third step(cirlce)
+                    return;
+                } else {
+                    clearSecondCircleForm();
+                };
+            }
+            
+          //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
+            if (activeTabId === "menu3") {
+                //validate the form before going to the fourth cicrcle
+                if (!validate_third_step_form(chosenView)) {
+                    //if validation not pass or the response is with error we do not go to the fourth step(cirlce)
+                    return;
+                } else {
+                    clearThirdCircleForm();
+                };
+            }
+            
             var nextTab = activeTab.next('.tab-pane').attr('id');
             $('[href="#' + nextTab + '"]').addClass('btn-info').removeClass('btn-default');
             $('[href="#' + nextTab + '"]').tab('show');
