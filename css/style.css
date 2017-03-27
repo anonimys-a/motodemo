@@ -546,10 +546,20 @@ a.btn.btn-default.input-group-addon.file-border {
 	border:0;
 }
 
+.form-control {
+    font-size: 12px!important;
+}
 
 
+.imprint-identification-marks-margin {
+    margin-left: 8px!important;
+}
 
+.individual-approval-margin {
+        margin-left: -37px;
+}
 
-
-
+.vehicle-on-site-margin {
+    margin-left: -28px;
+}
 

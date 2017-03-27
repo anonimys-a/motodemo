@@ -399,7 +399,8 @@ $(document).ready(function () {
         //create the appropriate form layout
 
         var manufacturerOfVehicle = $(".input-manufacturer-of-vehicle-wrapper");
-        var typeNumberOfEngine = $(".input-type-number-of-engine-wrapper");
+        var typeOfEngine = $(".input-type-of-engine-wrapper");
+        var numberOfEngine = $(".input-number-of-engine-wrapper");
         var vehicleCategory = $(".input-vehicle-category-wrapper");
         var kindOfRenovation = $(".input-kind-of-renovation-wrapper");
         var registrationNumberOfTheVehicle = $(".input-registration-number-of-the-vehicle-wrapper");
@@ -414,34 +415,41 @@ $(document).ready(function () {
         var yearOfFirstRegistration = $(".input-year-of-first-registration-wrapper");
         var yearOfProduction = $(".input-year-of-production-wrapper");
         var examinationForClass = $(".input-examination-for-class-wrapper");
+        var type = $(".input-type-wrapper");
+        var markVehicle = $(".input-mark-vehicle-wrapper");
+       
         //common input fields
         var chassisNumber = $(".input-chassis-number-wrapper");
 
-        if (chosenView === "Единечно одобрување и преправки" || chosenView === "Втиснување на идентификациски ознаки" ||
-        		chosenView === "Потврда за технички карактеристики" || chosenView === "Одобрување на тип на возило") {
+        if (chosenView === "Единечно одобрување и преправки" || chosenView === "Потврда за технички карактеристики" || chosenView === "Одобрување на тип на возило") {
             //add the needed fields and remove the ones that do not need
             manufacturerOfVehicle.show();
-            typeNumberOfEngine.show();
+            typeOfEngine.show();
+            numberOfEngine.show();
             vehicleCategory.show();
             kindOfRenovation.show();
         } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
             manufacturerOfVehicle.show();
-            typeNumberOfEngine.show();
+            typeOfEngine.show();
+            numberOfEngine.show();
             vehicleCategory.show();
-            chassisNumber.insertBefore(typeNumberOfEngine);
+            chassisNumber.insertAfter(type);
         } else if (chosenView === "АДР") {
             manufacturerOfVehicle.show();
-            typeNumberOfEngine.show();
+            typeOfEngine.insertAfter(chassisNumber);
+            numberOfEngine.show();
             vehicleCategory.show();
             registrationNumberOfTheVehicle.show();
             numberOfAdrCertificate.show();
         } else if (chosenView === "ЦЕМТ") {
             typeVehicle.show();
-            typeNumberOfEngine.show();
+            typeOfEngine.show();
+            numberOfEngine.show();
             mileage.show();
-            typeVehicle.insertBefore(typeNumberOfEngine);
         } else if (chosenView === "Калибрација на тахографи") {
             manufacturerOfVehicle.show();
+            typeOfEngine.hide();
+            numberOfEngine.hide();
             registrationMarkOfTheVehicle.show();
             chassisNumber.insertBefore(registrationMarkOfTheVehicle);
         } else if (chosenView === "ПТЕУ") {
@@ -459,6 +467,8 @@ $(document).ready(function () {
             typeVehicle.show();
             examinationForClass.show();
             typeVehicle.insertBefore(examinationForClass);
+            typeOfEngine.hide();
+            numberOfEngine.hide();
         }
     }
 
@@ -467,28 +477,51 @@ $(document).ready(function () {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-first-view").show();
             $(".box-primary-first-view-wrapper").show();
+           
+            $(".content-recording-of-contributions-third-view").hide();
+            $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-second-view").show();
             $(".box-primary-second-view-wrapper").show();
+
+            $(".content-recording-of-contributions-third-view").hide();
+            $(".box-primary-third-view-wrapper").hide();
+        } else if (chosenView === "Втиснување на идентификациски ознаки") {
+             $(".content-header-recording-of-contributions").show();
+             $(".content-recording-of-contributions-third-view").show();
+             $(".box-primary-third-view-wrapper").show();
         } else if (chosenView === "АДР") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-fourth-view").show();
             $(".box-primary-fourth-view-wrapper").show();
+
+            $(".content-recording-of-contributions-third-view").hide();
+            $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "ЦЕМТ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-sixth-view").show();
             $(".box-primary-sixth-view-wrapper").show();
+
+            $(".content-recording-of-contributions-third-view").hide();
+            $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "ПТЕУ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-eighth-view").show();
             $(".box-primary-eighth-view-wrapper").show();
+
+            $(".content-recording-of-contributions-third-view").hide();
+            $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "АТП") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-tenth-view").show();
             $(".box-primary-tenth-view-wrapper").show();
+
+            $(".content-recording-of-contributions-third-view").hide();
+            $(".box-primary-third-view-wrapper").hide();
         }
     }
+
 
     /*=========THIRD FORM VALIDATION=======*/
 
