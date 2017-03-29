@@ -444,7 +444,7 @@ li.renovation:hover {
     top: 31px;
     left: -278px;
     color: #fff;
-    background-color: #009abf;
+    background-color: #3c8dbc!important;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -455,7 +455,7 @@ a.dropdown-choose-renovation-link-color {
 }
 
 a.dropdown-choose-renovation-link-color:hover {
-    color: #009abf!important;
+    color: #3c8dbc!important;
 }
 
 .btn-outline-primary {
@@ -497,7 +497,7 @@ a.dropdown-choose-renovation-link-color:hover {
 .checkbox .cr {
     position: relative;
     display: inline-block;
-    border: 1px solid #a9a9a9;
+    border: 1px solid #3c8dbc;
     border-radius: .25em;
     width: 1.3em;
     height: 1.3em;
@@ -563,3 +563,36 @@ a.btn.btn-default.input-group-addon.file-border {
     margin-left: -28px;
 }
 
+.box-border-top-color {
+    border-top: 3px solid #3c8dbc;
+}
+
+.addon-color {
+    border-color: #3c8dbc!important;
+    border-left: 1px solid #3c8dbc!important;
+    border-right: 1px solid #3c8dbc!important;
+}
+
+.input-addon-border-right {
+    border-right: 0;
+}
+
+.input-addon-border-left {
+    border-left: 0;
+}
+
+label.driving-license-photocopy-label {
+    margin-left: 17px;
+}
+
+label.earlier-certificate-checkbox {
+    margin-left: 41px;
+}
+
+label.earlier-certificate-label {
+    margin-left: 39px;
+}
+
+.form-group.input-place-of-residence-wrapper {
+    margin-top: 37px;
+}

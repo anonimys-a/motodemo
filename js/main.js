@@ -37,26 +37,26 @@ $(document).ready(function () {
             $("#input-year-of-first-registration").prop("disabled", true);
             $("#input-year-of-production").prop("disabled", true);
         }
-        
-        
+
+
     });
 
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
         hideErrorMessagesForValidation();
         hideErrorMessagesForVehicleDataValidation();
-       
+
         var activeTab = $('.tab-pane.active');
         var activeTabId = activeTab[0].id;
 
         // If this returns true we know that we are validating individual_person_form
         var embgFieldExist = $('#embg-legal-entity').is(":visible");
         var chosenView = $("p#subject-type").text();
-        
+
         $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
 
         if ($(this).hasClass('next-step')) {
-        	//if activeTab is div#menu2 we call a fucntion for sending a request to the backend with validation 
+            //if activeTab is div#menu2 we call a fucntion for sending a request to the backend with validation 
             //for ex. activeTab = <div id="menu2" class="tab-pane fade active in">
             if (activeTabId === "menu2") {
                 //validate the form and send a request
@@ -67,8 +67,8 @@ $(document).ready(function () {
                     clearSecondCircleForm();
                 };
             }
-            
-          //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
+
+            //if we are on the third circle then the active tab is <div id="menu3" class="tab-pane fade active in">
             if (activeTabId === "menu3") {
                 //validate the form before going to the fourth cicrcle
                 if (!validate_third_step_form(chosenView)) {
@@ -78,7 +78,7 @@ $(document).ready(function () {
                     clearThirdCircleForm();
                 };
             }
-            
+
             var nextTab = activeTab.next('.tab-pane').attr('id');
             $('[href="#' + nextTab + '"]').addClass('btn-info').removeClass('btn-default');
             $('[href="#' + nextTab + '"]').tab('show');
@@ -107,6 +107,8 @@ $(document).ready(function () {
         var nameLegalEntity = $(".name-legal-entity-wrapper");
         var embLegalEntity = $(".emb-legal-entity-wrapper");
         var taxIdentificationNumber = $(".input-tax-identification-number-wrapper");
+        var name = $(".input-name-wrapper");
+        var surname = $(".input-surname-wrapper");
 
         //hide all error messages for validation before switch to another form
         hideErrorMessagesForValidation();
@@ -118,13 +120,26 @@ $(document).ready(function () {
             embLegalEntity.show();
             nameLegalEntity.show();
             placeOfResidence.insertBefore(".state-of-residence");
+            name.hide();
+            surname.hide();
         } else {
             //change the input names in the form when legal-entity 
             taxIdentificationNumber.hide();
             embLegalEntity.hide();
             nameLegalEntity.hide();
             embgLegalEntity.show();
-            placeOfResidence.insertAfter(".municipality-of-residence");
+            placeOfResidence.insertBefore(".state-of-residence");
+            name.show();
+            surname.show();
+        }
+    });
+
+    $('#agent-podnositel-modal-button').click(function() {
+        //set the values from the modal to the input fields
+        if (!$("#legal-entity-radio-button").is(':checked')) {
+            $('#input-name').val($('#input-name-modal-agent-podnositel').val());
+            $('#input-surname').val($('#input-surname-modal-agent-podnositel').val());
+            $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
         }
     });
 
@@ -417,7 +432,7 @@ $(document).ready(function () {
         var examinationForClass = $(".input-examination-for-class-wrapper");
         var type = $(".input-type-wrapper");
         var markVehicle = $(".input-mark-vehicle-wrapper");
-       
+
         //common input fields
         var chassisNumber = $(".input-chassis-number-wrapper");
 
@@ -434,6 +449,9 @@ $(document).ready(function () {
             numberOfEngine.show();
             vehicleCategory.show();
             chassisNumber.insertAfter(type);
+        } else if (chosenView === "Втиснување на идентификациски ознаки") {
+            $(".content-header.data-entry-vehicle-header").hide();
+            $(".content.data-entry-vehicle").hide();
         } else if (chosenView === "АДР") {
             manufacturerOfVehicle.show();
             typeOfEngine.insertAfter(chassisNumber);
@@ -441,6 +459,10 @@ $(document).ready(function () {
             vehicleCategory.show();
             registrationNumberOfTheVehicle.show();
             numberOfAdrCertificate.show();
+        } else if (chosenView === "Потврда за технички карактеристики") {
+            $(".content-header.data-entry-vehicle-header").hide();
+            $(".content.data-entry-vehicle").hide();
+            $(".content-recording-of-contributions-third-view").hide();
         } else if (chosenView === "ЦЕМТ") {
             typeVehicle.show();
             typeOfEngine.show();
@@ -452,6 +474,7 @@ $(document).ready(function () {
             numberOfEngine.hide();
             registrationMarkOfTheVehicle.show();
             chassisNumber.insertBefore(registrationMarkOfTheVehicle);
+            $(".content-recording-of-contributions-third-view").hide();
         } else if (chosenView === "ПТЕУ") {
             manufacturerOfVehicle.show();
             typeOfVehicleShippingRequiringConfirmation.show();
@@ -463,6 +486,10 @@ $(document).ready(function () {
             yearOfProduction.show();
             registrationNumberOfTheVehicle.insertAfter(chassisNumber);
             typeOfVehicleShippingRequiringConfirmation.insertAfter(registrationNumberOfTheVehicle);
+        } else if (chosenView === "Одобрување на тип на возило") {
+            $(".content-header.data-entry-vehicle-header").hide();
+            $(".content.data-entry-vehicle").hide();
+            $(".content-recording-of-contributions-third-view").hide();
         } else if (chosenView === "АТП") {
             typeVehicle.show();
             examinationForClass.show();
@@ -477,7 +504,7 @@ $(document).ready(function () {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-first-view").show();
             $(".box-primary-first-view-wrapper").show();
-           
+
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
@@ -488,9 +515,9 @@ $(document).ready(function () {
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "Втиснување на идентификациски ознаки") {
-             $(".content-header-recording-of-contributions").show();
-             $(".content-recording-of-contributions-third-view").show();
-             $(".box-primary-third-view-wrapper").show();
+            $(".content-header-recording-of-contributions").show();
+            $(".content-recording-of-contributions-third-view").show();
+            $(".box-primary-third-view-wrapper").show();
         } else if (chosenView === "АДР") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-fourth-view").show();
@@ -527,7 +554,7 @@ $(document).ready(function () {
 
     //form validation
     function validate_third_step_form(chosenView) {
-       
+
         //we have to validate 
         var isFormValid = true;
         //common fields
@@ -796,6 +823,24 @@ $(document).ready(function () {
 
         }
 
-        return isFormValid;
+        //return isFormValid;
+        return true;
     }
+
+
+    //Date picker
+    $('#datepicker').datepicker({
+        autoclose: true
+    });
+
+    $('#datepicker2').datepicker({
+        autoclose: true
+    });
+
+
+    $('#datepicker3').datepicker({
+        autoclose: true
+    });
+
+
 });
