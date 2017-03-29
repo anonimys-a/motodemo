@@ -9,7 +9,7 @@ $(document).ready(function () {
         $('#proccess-container').show();
     });
 
-    $('.box-toggle').click(function (e) {
+    $('.main-subject-box').click(function (e) {
         $('.btn-menu1').removeClass('btn-info').addClass('btn-default');
         $('.btn-menu2').addClass('btn-info').removeClass('btn-default').blur();
     });
@@ -113,8 +113,8 @@ $(document).ready(function () {
         //hide all error messages for validation before switch to another form
         hideErrorMessagesForValidation();
 
-        if ($("#legal-entity-radio-button").is(':checked')) { // for legal-entity 
-            //change the input names in the form when individual-person 
+        if ($("#legal-entity-radio-button").is(':checked')) {
+            //change the input names in the form when legal-entity 
             embgLegalEntity.hide();
             taxIdentificationNumber.show();
             embLegalEntity.show();
@@ -123,7 +123,7 @@ $(document).ready(function () {
             name.hide();
             surname.hide();
         } else {
-            //change the input names in the form when legal-entity 
+            //change the input names in the form when individual-person
             taxIdentificationNumber.hide();
             embLegalEntity.hide();
             nameLegalEntity.hide();
@@ -131,15 +131,23 @@ $(document).ready(function () {
             placeOfResidence.insertBefore(".state-of-residence");
             name.show();
             surname.show();
+            $('#input-name-of-agent').val(""); //clear the agent name field when individual person is shown
         }
     });
 
+    //second circle handle modal inputs to automaticaly fill form inputs for name surname
     $('#agent-podnositel-modal-button').click(function() {
         //set the values from the modal to the input fields
         if (!$("#legal-entity-radio-button").is(':checked')) {
             $('#input-name').val($('#input-name-modal-agent-podnositel').val());
             $('#input-surname').val($('#input-surname-modal-agent-podnositel').val());
             $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
+        } else {
+        	//legal-entity form is selected
+        	var name = $('#input-name-modal-agent-podnositel').val();
+        	var surname = $('#input-surname-modal-agent-podnositel').val();
+        	var fullName = name + "  " + surname;
+        	$('#input-name-of-agent').val(fullName);//set the agent name field
         }
     });
 
