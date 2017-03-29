@@ -383,7 +383,69 @@
                                         <div class="form-group">
                                             <label for="input-name-of-agent">Име и презиме на агент - Подносител на барањето:</label>
                                             <input type="text" class="form-control" id="input-name-of-agent">
-
+											<div class="form-group input-name-of-agent-wrapper">
+                                            <label for="input-name-of-agent">Агент - Подносител на барањето:</label>
+                                            <input type="text" class="form-control" id="input-name-of-agent" data-toggle="modal" data-target="#nameAgent">
+                                            
+                                            <!-- Modal -->
+											<div id="nameAgent" class="modal fade" role="dialog">
+											  <div class="modal-dialog">
+											
+											    <!-- Modal content-->
+											    <div class="modal-content">
+											      <div class="modal-header">
+											        <button type="button" class="close" data-dismiss="modal">&times;</button>
+											        <h4 class="modal-title">Modal Header</h4>
+											      </div>
+											      <div class="modal-body">
+                                                      <div class="row">
+                                                          <label for="input-name" class="col-md-offset-1 col-md-5">Име:</label>
+                                                          <input type="text" class="col-md-5" id="input-name">
+                                                      </div>
+                                                      <br>
+                                                      <div class="row">
+                                                          <label for="input-surname" class="col-md-offset-1 col-md-5">Презиме:</label>
+                                                          <input type="text" class="col-md-5" id="input-surname">
+                                                      </div>
+                                                      <br>
+                                                      <div class="row">
+                                                          <label for="input-embg" class="col-md-offset-1 col-md-5">ЕМБГ:</label>
+                                                          <input type="text" class="col-md-5" id="input-embg">
+                                                      </div>
+                                                      <br>
+                                                      <div class="row">
+                                                          <label for="input-active" class="col-md-offset-1 col-md-5">Активен:</label>
+                                                          		<label id="active-person-label" class="radio-inline">
+	                                                				<input id="active-person" type="radio" name="optradio" checked>
+	                                                						Да
+	                                            					</label>
+                                       							<label id="inactive-person-label" class="radio-inline">
+	                                                				<input id="inactive-person" type="radio" name="optradio">
+	                                               					 	Не
+	                                            				</label>
+                                                          <input type="text" class="col-md-5" id="input-active">
+                                                      </div>
+                                                      <br>
+                                                      <div class="row">
+                                                          <label for="input-rate" class="col-md-offset-1 col-md-5">Процент:</label>
+                                                          <input type="text" class="col-md-5" id="input-rate">
+                                                      </div>
+                                                      <br>
+                                                      <div class="row">
+                                                          <label for="input-fixed-amount-commission" class="col-md-offset-1 col-md-5">Фиксен износ Провизија:</label>
+                                                          <input type="text" class="col-md-5" id="input-fixed-amount-commission">
+                                                      </div>
+                                                      <br>
+											      </div>
+											      <div class="modal-footer">
+											        <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                    <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+											      </div>
+											      <div class="col-md-offset-1"></div>
+											    </div>
+											  </div>
+											</div>
+                                        </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
