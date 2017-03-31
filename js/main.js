@@ -136,18 +136,18 @@ $(document).ready(function () {
     });
 
     //second circle handle modal inputs to automaticaly fill form inputs for name surname
-    $('#agent-podnositel-modal-button').click(function() {
+    $('#agent-podnositel-modal-button').click(function () {
         //set the values from the modal to the input fields
         if (!$("#legal-entity-radio-button").is(':checked')) {
             $('#input-name').val($('#input-name-modal-agent-podnositel').val());
             $('#input-surname').val($('#input-surname-modal-agent-podnositel').val());
             $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
         } else {
-        	//legal-entity form is selected
-        	var name = $('#input-name-modal-agent-podnositel').val();
-        	var surname = $('#input-surname-modal-agent-podnositel').val();
-        	var fullName = name + "  " + surname;
-        	$('#input-name-of-agent').val(fullName);//set the agent name field
+            //legal-entity form is selected
+            var name = $('#input-name-modal-agent-podnositel').val();
+            var surname = $('#input-surname-modal-agent-podnositel').val();
+            var fullName = name + "  " + surname;
+            $('#input-name-of-agent').val(fullName);//set the agent name field
         }
     });
 
@@ -458,8 +458,7 @@ $(document).ready(function () {
             vehicleCategory.show();
             chassisNumber.insertAfter(type);
         } else if (chosenView === "Втиснување на идентификациски ознаки") {
-            $(".content-header.data-entry-vehicle-header").hide();
-            $(".content.data-entry-vehicle").hide();
+            
         } else if (chosenView === "АДР") {
             manufacturerOfVehicle.show();
             typeOfEngine.insertAfter(chassisNumber);
@@ -468,9 +467,7 @@ $(document).ready(function () {
             registrationNumberOfTheVehicle.show();
             numberOfAdrCertificate.show();
         } else if (chosenView === "Потврда за технички карактеристики") {
-            $(".content-header.data-entry-vehicle-header").hide();
-            $(".content.data-entry-vehicle").hide();
-            $(".content-recording-of-contributions-third-view").hide();
+           
         } else if (chosenView === "ЦЕМТ") {
             typeVehicle.show();
             typeOfEngine.show();
@@ -533,6 +530,13 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+        } else if (chosenView === "Потврда за технички карактеристики") {
+            $(".content-header-confirmation-of-the-technical-characteristics").show();
+            $("confirmation-of-the-technical-characteristics-fifth-view").show();
+            $(".box - wrapper - fifth - view").show();
+            $(".content-header.data-entry-vehicle-header").hide();
+            $(".content.data-entry-vehicle").hide();
+            $(".content-recording-of-contributions-third-view").hide();
         } else if (chosenView === "ЦЕМТ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-sixth-view").show();

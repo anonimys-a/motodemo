@@ -596,3 +596,12 @@ label.earlier-certificate-label {
 .form-group.input-place-of-residence-wrapper {
     margin-top: 37px;
 }
+
+.tabele-header-color {
+    background-color: #3c8dbc;
+    color: #fff;
+}
+
+.table-bordered-color {
+        border: 1px solid #3c8dbc!important;
+}
