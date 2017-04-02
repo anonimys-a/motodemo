@@ -1126,11 +1126,11 @@
                                                                                                     </label>
                                                                                                 </div>
                                                                                             </td>
-                                                                                        <tr>
-                                                                                            <td>M₂ M₃, N₂, N₃</td>
-                                                                                            <td>5.340</td>
-                                                                                            <td></td>
-                                                                                        </tr>
+	                                                                                        <tr>
+	                                                                                            <td>M₂ M₃, N₂, N₃</td>
+	                                                                                            <td>5.340</td>
+	                                                                                            <td></td>
+	                                                                                        </tr>
                                                                                         </tr>
                                                                                         <tr>
                                                                                             <td rowspan="2">2.4</td>
@@ -2332,67 +2332,160 @@
                 </section>
             <!-- Main content Second form - Third circle(fifth) -->
             <div class="confirmation-of-the-technical-characteristics-wrapper">
+                <div class="form-group">
+                    <label id="individual-person-label confirmation-of-the-technical-characteristics-label" class="radio-inline">
+                        <input id="individual-person" type="radio" name="optradiosecondcircle" checked>
+                        Физичко лице
+                    </label>
+                    <label id="legal-entity-label" class="radio-inline">
+                        <input id="legal-entity-radio-button" type="radio" name="optradiosecondcircle" />
+                        Правно лице
+                    </label>
+                </div>
                 <section class="content-header content-header-confirmation-of-the-technical-characteristics">
                     <h1>
-                        Simple Tables
+                        Потврда за технички карактеристики
                     </h1>
                 </section>
-            <section class="content confirmation-of-the-technical-characteristics-fifth-view">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="box">
-                            <div class="box-header">
-                                <h3 class="box-title">Responsive Hover Table</h3>
-                                <div class="box-tools">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
-                                        <div class="input-group-btn">
-                                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                <section class="content confirmation-of-the-technical-characteristics-fifth-view">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Responsive Hover Table</h3>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- /.box-header -->
+                                <div class="box-body table-responsive no-padding">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Р.<br/>Бр.</th>
+                                            <th>Име</th>
+                                            <th>Презиме</th>
+                                            <th>Бр. на предмет</th>
+                                            <th>Марка</th>
+                                            <th>Тип</th>
+                                            <th>Бр. на шасија</th>
+                                            <th>Добавувач Потврда</th>
+                                            <th>Статус на предметот</th>
+                                            <th>Бр. на фактура</th>
+                                            <th>Фактурирана/наплатена сума</th>
+                                            <th>Прилог-копија сообраќајна</th>
+                                            <th>Прилог-сканиран сертификат</th>
+                                            <th style="width: 200px">Забелешка</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Никола</td>
+                                            <td>Ангеловски</td>
+                                            <td>123456</td>
+                                            <td>Honda</td>
+                                            <td>Accord</td>
+                                            <td>Vin707EH704158417</td>
+                                            <td>
+                                                <div class="form-group input-kind-of-renovation-wrapper dropdown">
+                                                    <button class="btn btn-default dropdown-toggle button-supplier-style" type="button" data-toggle="dropdown">
+                                                        Одбери Добавувач
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-supplier-style">
+                                                        <li><a class="dropdown-supplier-link-color dropdown-wrap-text" data-toggle="modal" href="#first">- Овластен застапник на производителот во РМ</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#second">- Производител на возилото</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#third">- TUV Rheinland</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#fourth">- TUV Nord </a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#fifth">- TUV Sud</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group input-kind-of-renovation-wrapper dropdown">
+                                                    <button class="btn btn-default dropdown-toggle button-supplier-style" type="button" data-toggle="dropdown">
+                                                        Одбери статус
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-supplier-style">
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#first">- Информација</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#second">- Барање за потврда</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#third">- Завршен</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#fourth">- Во процедура</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#fifth">- Нема податоци во база</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#sixth">- Не исполнува</a></li>
+                                                        <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#seventh">- Информација - исполнува</a></li>
+                                                        <li><a class="dropdown-supplier-link-color dropdown-wrap-text" data-toggle="modal" href="#eight">- Информација - не исполнува</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td>12345</td>
+                                            <td>123456789</td>
+                                            <td>
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" rows="4" id="remarks">Podaci o vlasniku i korisniku vozila upisuju se na način kako su upisani u ispravi koja je priložena kao dokaz o njihovom identitetu.</textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Александар</td>
+                                            <td>Петровски</td>
+                                            <td>12345678</td>
+                                            <td>CITROEN</td>
+                                            <td></td>
+                                            <td>VH1234567890</td>
+                                            <td>Производител на возило</td>
+                                            <td>барање за потврда</td>
+                                            <td>123456</td>
+                                            <td>12345678</td>
+                                            <td>
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="checkbox checkbox-margin">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            <td><textarea class="form-control" rows="4" id="remarkss"></textarea></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
                             </div>
-                            <!-- /.box-header -->
-                            <div class="box-body table-responsive no-padding">
-                                <table class="table table-hover table-bordered">
-                                    <tr>
-                                    	<th>Р.<br />Бр.</th>
-                                        <th>Име на барател</th>
-                                        <th>Презиме на барател</th>
-                                        <th>Бр. на предмет</th>
-                                        <th>Марка возило</th>
-                                        <th>Тип возило</th>
-                                        <th>Бр. на шасија</th>
-                                        <th>Добавувач Потврда</th>
-                                        <th>Статус</th>
-                                        <th>Бр. на фактура</th>
-                                        <th>Фактурирана/наплатена сума</th>
-                                        <th>Прилог-копија сообраќајна</th>
-                                        <th>Прилог-сканиран сертификат</th>
-                                        <th>Забелешка</th>
-                                    </tr>
-                                    <tr>
-                                        <td>183</td>
-                                        <td>John Doe</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="label label-success">Approved</span></td>
-                                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>219</td>
-                                        <td>Alexander Pierce</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="label label-warning">Pending</span></td>
-                                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <!-- /.box-body -->
+                            <!-- /.box -->
                         </div>
-                        <!-- /.box -->
                     </div>
-                </div>
-            </section>
+                </section>
             </div>
                 <!-- Main content Second form - Third circle(sixth) -->
                         <section class="content content-recording-of-contributions-sixth-view">
@@ -3459,7 +3552,7 @@
                                         <div class="form-group">
                                             <label for="notes" class="col-sm-5 control-label">Забелешки</label>
                                             <div class="col-sm-7">
-                                                <textarea type="text" class="form-control" id="notes" name="notes"></textarea>
+                                                <textarea class="form-control" id="notes" name="notes"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -3576,8 +3669,8 @@
                             </li>
                         </ul>
                     </div>
-            </div>
-      </div>
-</div>
+            	</div>
+         	</div>
+     	</div>
 </body>
 </html>   

@@ -458,6 +458,37 @@ a.dropdown-choose-renovation-link-color:hover {
     color: #3c8dbc!important;
 }
 
+.button-supplier-style {
+    width: 208px!important;
+	background: #fff;
+	-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.dropdown-supplier-style {
+	width: 210px;
+    top: 31px;
+    left: -1px;
+    color: #fff;
+    background-color: #3c8dbc!important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+a.dropdown-supplier-link-color {
+    color: #fff!important;
+}
+
+a.dropdown-supplier-link-color:hover {
+    color: #3c8dbc!important;
+}
+
+.label#individual-person-label .confirmation-of-the-technical-characteristics-label {
+     padding-left: 12px!important; 
+}
+
 .btn-outline-primary {
     background-image: none!important;
     background-color: transparent!important;
