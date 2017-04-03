@@ -86,8 +86,8 @@ $(document).ready(function () {
             if (nextTab === "menu3") {
                 var chosenView = $("p#subject-type").text();
                 //change the form layout depending of the clicked subject
-                changeFormLayout(chosenView);
-                changeFormLayoutForRecordingOfContributionsForm(chosenView);
+                changeFormLayoutForVehicleData(chosenView);
+                changeFormLayoutForContributionsEvidence(chosenView);
             }
 
         } else {
@@ -417,8 +417,20 @@ $(document).ready(function () {
         return true;
         //    	return true;
     }
+    
+    //going from first view to fifth view by clickng the link
+    $("#potvrda-tehnicki-karakteristiki").click(function(e) {
+		e.preventDefault();
+		//hide all elements for the first view and show the table from the fifth view.
+		$(".data-entry-vehicle").hide();
+		$(".data-entry-vehicle-header").hide();
+		$(".content-header-recording-of-contributions").hide();
+		$(".content-recording-of-contributions-first-view").hide();
+        $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
+	})
 
-    function changeFormLayout(chosenView) {
+    //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
+    function changeFormLayoutForVehicleData(chosenView) {
         //create the appropriate form layout
 
         var manufacturerOfVehicle = $(".input-manufacturer-of-vehicle-wrapper");
@@ -440,11 +452,12 @@ $(document).ready(function () {
         var examinationForClass = $(".input-examination-for-class-wrapper");
         var type = $(".input-type-wrapper");
         var markVehicle = $(".input-mark-vehicle-wrapper");
+        var potvrdaZaTehnickiKarakteristiki = $(".confirmation-of-the-technical-characteristics-wrapper");
 
         //common input fields
         var chassisNumber = $(".input-chassis-number-wrapper");
 
-        if (chosenView === "Единечно одобрување и преправки" || chosenView === "Потврда за технички карактеристики" || chosenView === "Одобрување на тип на возило") {
+        if (chosenView === "Единечно одобрување и преправки" || chosenView === "Одобрување на тип на возило") {
             //add the needed fields and remove the ones that do not need
             manufacturerOfVehicle.show();
             typeOfEngine.show();
@@ -467,7 +480,7 @@ $(document).ready(function () {
             registrationNumberOfTheVehicle.show();
             numberOfAdrCertificate.show();
         } else if (chosenView === "Потврда за технички карактеристики") {
-           
+        	potvrdaZaTehnickiKarakteristiki.show();
         } else if (chosenView === "ЦЕМТ") {
             typeVehicle.show();
             typeOfEngine.show();
@@ -504,7 +517,7 @@ $(document).ready(function () {
         }
     }
 
-    function changeFormLayoutForRecordingOfContributionsForm(chosenView) {
+    function changeFormLayoutForContributionsEvidence(chosenView) {
         if (chosenView === "Единечно одобрување и преправки") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-first-view").show();

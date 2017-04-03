@@ -302,6 +302,10 @@ li.renovation:hover {
     display: none;
 }
 
+.confirmation-of-the-technical-characteristics-wrapper {
+	display: none;
+}
+
 #input-manufacturer-of-vehicle::-webkit-input-placeholder { 
   color: #dd4b39;
 }
