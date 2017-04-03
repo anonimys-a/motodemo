@@ -43,6 +43,11 @@ $(document).ready(function () {
 
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
+    	//if the sidebar is collapsed then we want to show it
+//    	$('body').hasClass('sidebar-collapse') {
+//    		$("a.sidebar-toggle").trigger("click");
+//    	}
+    	
         hideErrorMessagesForValidation();
         hideErrorMessagesForVehicleDataValidation();
 
@@ -427,6 +432,7 @@ $(document).ready(function () {
 		$(".content-header-recording-of-contributions").hide();
 		$(".content-recording-of-contributions-first-view").hide();
         $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
+        $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
 	})
 
     //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
