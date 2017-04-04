@@ -44,9 +44,9 @@ $(document).ready(function () {
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
     	//if the sidebar is collapsed then we want to show it
-//    	$('body').hasClass('sidebar-collapse') {
-//    		$("a.sidebar-toggle").trigger("click");
-//    	}
+    	if($('body').hasClass('sidebar-collapse')) {
+    		$("a.sidebar-toggle").trigger("click");
+    	}
     	
     	//reset the div container
     	$('#proccess-container').removeClass("container-fluid").addClass("container");
@@ -97,8 +97,11 @@ $(document).ready(function () {
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
                 
-                //make the main div fluid because we need more space for the table from fifth table box view
-                $('#proccess-container').removeClass("container").addClass("container-fluid");
+                if(chosenView === 'Потврда за технички карактеристики') {
+                	//make the main div fluid because we need more space for the table from fifth table box view
+                	$('#proccess-container').removeClass("container").addClass("container-fluid");
+                	$("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+                }
             }
 
         } else {
@@ -109,9 +112,10 @@ $(document).ready(function () {
                 clearSecondCircleForm();
             }
             
-            if (prevTab === "menu3") {
+            if (prevTab === "menu3" && chosenView === 'Потврда за технички карактеристики') {
                 //make the main div fluid because we need more space for the table from fifth table box view
                 $('#proccess-container').removeClass("container").addClass("container-fluid");
+                $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
             }
         }
     });
@@ -434,7 +438,7 @@ $(document).ready(function () {
         //    	return true;
     }
     
-    //going from first view to fifth view by clickng the link
+    //going from first view to fifth view by clicking the link
     $("#potvrda-tehnicki-karakteristiki").click(function(e) {
 		e.preventDefault();
 		//hide all elements for the first view and show the table from the fifth view.
@@ -444,6 +448,10 @@ $(document).ready(function () {
 		$(".content-recording-of-contributions-first-view").hide();
         $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
         $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+        $('#proccess-container').removeClass("container").addClass("container-fluid");//get more space with fluid class
+        $("p#subject-type").text('Потврда за технички карактеристики');
+        //TODO: take all field values that we need for the fifth box view table
+        //TODO: broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
 	})
 	
 	//hide or show columns when user is swithcing between legal entity or individual person
