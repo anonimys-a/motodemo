@@ -643,3 +643,19 @@ label.earlier-certificate-label {
 .naziv-tehnicki-karakteristiki {
 	display: none;
 }
+
+table.table-potvrda-za-tehnicki-karakteristiki tr:nth-of-type(odd) { 
+	background: #eee; 
+}
+	
+table.table-potvrda-za-tehnicki-karakteristiki th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+}
+
+table.table-potvrda-za-tehnicki-karakteristiki td, th { 
+	padding: 6px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+}

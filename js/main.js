@@ -48,6 +48,9 @@ $(document).ready(function () {
 //    		$("a.sidebar-toggle").trigger("click");
 //    	}
     	
+    	//reset the div container
+    	$('#proccess-container').removeClass("container-fluid").addClass("container");
+    	
         hideErrorMessagesForValidation();
         hideErrorMessagesForVehicleDataValidation();
 
@@ -93,6 +96,9 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
+                
+                //make the main div fluid because we need more space for the table from fifth table box view
+                $('#proccess-container').removeClass("container").addClass("container-fluid");
             }
 
         } else {
@@ -101,6 +107,11 @@ $(document).ready(function () {
             $('[href="#' + prevTab + '"]').tab('show');
             if (prevTab === "menu1") {
                 clearSecondCircleForm();
+            }
+            
+            if (prevTab === "menu3") {
+                //make the main div fluid because we need more space for the table from fifth table box view
+                $('#proccess-container').removeClass("container").addClass("container-fluid");
             }
         }
     });
