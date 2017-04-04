@@ -591,7 +591,7 @@ a.btn.btn-default.input-group-addon.file-border {
 }
 
 .individual-approval-margin {
-        margin-left: -37px;
+    margin-left: -37px;
 }
 
 .vehicle-on-site-margin {
@@ -638,5 +638,9 @@ label.earlier-certificate-label {
 }
 
 .table-bordered-color {
-        border: 1px solid #3c8dbc!important;
+    border: 1px solid #3c8dbc!important;
+}
+
+.naziv-tehnicki-karakteristiki {
+	display: none;
 }

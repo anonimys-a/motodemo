@@ -434,6 +434,21 @@ $(document).ready(function () {
         $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
         $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
 	})
+	
+	//hide or show columns when user is swithcing between legal entity or individual person
+	$(document).on('change', '#fizichko-lice-tehnicki-karakteristiki-labela, #pravno-lice-tehnicki-karakteristiki-labela', function () {
+        if ($("#legal-entity-tehnicki-karakteristiki-radio-button").is(':checked')) {
+            //hide ime, prezime columns and show naziv
+        	$('.ime-tehnicki-karakteristiki').hide();
+        	$('.prezime-tehnicki-karakteristiki').hide();
+        	$('.naziv-tehnicki-karakteristiki').show();
+        } else {
+            //show ime, prezime columns and hide naziv
+        	$('.ime-tehnicki-karakteristiki').show();
+        	$('.prezime-tehnicki-karakteristiki').show();
+        	$('.naziv-tehnicki-karakteristiki').hide();
+        }
+	});
 
     //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
     function changeFormLayoutForVehicleData(chosenView) {
