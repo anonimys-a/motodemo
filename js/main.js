@@ -898,6 +898,7 @@ $(document).ready(function () {
     $('#datepicker3').datepicker({
         autoclose: true
     });
-
+ 
+    $('a').tooltip();   
 
 });
