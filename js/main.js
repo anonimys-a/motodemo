@@ -152,24 +152,20 @@ $(document).ready(function () {
             placeOfResidence.insertBefore(".state-of-residence");
             name.show();
             surname.show();
-            $('#input-name-of-agent').val(""); //clear the agent name field when individual person is shown
         }
     });
 
-    //second circle handle modal inputs to automaticaly fill form inputs for name surname
+  //second circle handle modal inputs to automaticaly fill form inputs for name surname
     $('#agent-podnositel-modal-button').click(function () {
-        //set the values from the modal to the input fields
-        if (!$("#legal-entity-radio-button").is(':checked')) {
-            $('#input-name').val($('#input-name-modal-agent-podnositel').val());
-            $('#input-surname').val($('#input-surname-modal-agent-podnositel').val());
-            $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
-        } else {
-            //legal-entity form is selected
-            var name = $('#input-name-modal-agent-podnositel').val();
-            var surname = $('#input-surname-modal-agent-podnositel').val();
-            var fullName = name + "  " + surname;
-            $('#input-name-of-agent').val(fullName);//set the agent name field
-        }
+    	//set the values from the modal to the input fields
+    	var name = $('#input-name-modal-agent-podnositel').val();
+        var surname = $('#input-surname-modal-agent-podnositel').val();
+        var fullName = name + "  " + surname;
+        $('#input-name-of-agent').val(fullName);//set the agent name field
+        
+        $('#input-name').val(name);
+        $('#input-surname').val(surname);
+        $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
     });
 
     function hideErrorMessagesForValidation() {
