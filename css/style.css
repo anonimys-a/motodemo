@@ -399,6 +399,10 @@ li.renovation:hover {
 	display: none;
 }
 
+.box-primary-seven-view-wrapper {
+	display: none;
+}
+
 .box-primary-eighth-view-wrapper {
 	display: none;
 }
@@ -426,6 +430,15 @@ li.renovation:hover {
 .content-recording-of-contributions-sixth-view {
 	display: none;
 }
+
+.content-header-tachograph-data {
+	display: none;
+}
+
+.content-tachograph-data-seven-view {
+	display: none;
+}
+
 
 .content-recording-of-contributions-eighth-view {
 	display: none;

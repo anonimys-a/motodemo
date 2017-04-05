@@ -96,7 +96,7 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
-                dateEntryTachograph(chosenView);
+               
 
                 if (chosenView === 'Потврда за технички карактеристики') {
                     //make the main div fluid because we need more space for the table from fifth table box view
@@ -568,9 +568,6 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-second-view").show();
@@ -578,16 +575,10 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "Втиснување на идентификациски ознаки") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-third-view").show();
             $(".box-primary-third-view-wrapper").show();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "АДР") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-fourth-view").show();
@@ -595,9 +586,6 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "Потврда за технички карактеристики") {
             $(".content-header-confirmation-of-the-technical-characteristics").show();
             $("confirmation-of-the-technical-characteristics-fifth-view").show();
@@ -605,9 +593,6 @@ $(document).ready(function () {
             $(".content-header.data-entry-vehicle-header").hide();
             $(".content.data-entry-vehicle").hide();
             $(".content-recording-of-contributions-third-view").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "ЦЕМТ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-sixth-view").show();
@@ -615,9 +600,10 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
+        } else if (chosenView === "Калибрација на тахографи") {
+        	$(".content-header.content-header-tachograph-data").show();
+            $(".content-tachograph-data-seven-view").show();
+            $(".box-primary-seven-view-wrapper").show();
         } else if (chosenView === "ПТЕУ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-eighth-view").show();
@@ -625,29 +611,18 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "АТП") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-tenth-view").show();
             $(".box-primary-tenth-view-wrapper").show();
 
+            
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
-            $(".content-header content-header-tachograph-data").hide();
-            $(".content-tachograph-data-seven-view").hide();
-            $(".box-primary-seven-view-wrapper").hide();
         }
     }
 
-    function dateEntryTachograph(chosenView) {
-        if (chosenView === "Калибрација на тахографи") {
-            $(".content-header content-header-tachograph-data").show();
-            $(".content-tachograph-data-seven-view").show();
-            $(".box-primary-seven-view-wrapper").show();
-        }
-    }
+    
 
 
     /*=========THIRD FORM VALIDATION=======*/
