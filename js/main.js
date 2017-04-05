@@ -43,14 +43,14 @@ $(document).ready(function () {
 
     //this is the behaviour when click on next or back buttons
     $(document).on('click', '.next-step, .prev-step', function (e) {
-    	//if the sidebar is collapsed then we want to show it
-    	if($('body').hasClass('sidebar-collapse')) {
-    		$("a.sidebar-toggle").trigger("click");
-    	}
-    	
-    	//reset the div container
-    	$('#proccess-container').removeClass("container-fluid").addClass("container");
-    	
+        //if the sidebar is collapsed then we want to show it
+        if ($('body').hasClass('sidebar-collapse')) {
+            $("a.sidebar-toggle").trigger("click");
+        }
+
+        //reset the div container
+        $('#proccess-container').removeClass("container-fluid").addClass("container");
+
         hideErrorMessagesForValidation();
         hideErrorMessagesForVehicleDataValidation();
 
@@ -96,11 +96,12 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
-                
-                if(chosenView === 'Потврда за технички карактеристики') {
-                	//make the main div fluid because we need more space for the table from fifth table box view
-                	$('#proccess-container').removeClass("container").addClass("container-fluid");
-                	$("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+                dateEntryTachograph(chosenView);
+
+                if (chosenView === 'Потврда за технички карактеристики') {
+                    //make the main div fluid because we need more space for the table from fifth table box view
+                    $('#proccess-container').removeClass("container").addClass("container-fluid");
+                    $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
                 }
             }
 
@@ -111,7 +112,7 @@ $(document).ready(function () {
             if (prevTab === "menu1") {
                 clearSecondCircleForm();
             }
-            
+
             if (prevTab === "menu3" && chosenView === 'Потврда за технички карактеристики') {
                 //make the main div fluid because we need more space for the table from fifth table box view
                 $('#proccess-container').removeClass("container").addClass("container-fluid");
@@ -437,37 +438,39 @@ $(document).ready(function () {
         return true;
         //    	return true;
     }
-    
+
     //going from first view to fifth view by clicking the link
     $("#potvrda-tehnicki-karakteristiki").click(function(e) {
-		e.preventDefault();
-		//hide all elements for the first view and show the table from the fifth view.
-		$(".data-entry-vehicle").hide();
-		$(".data-entry-vehicle-header").hide();
-		$(".content-header-recording-of-contributions").hide();
-		$(".content-recording-of-contributions-first-view").hide();
+        e.preventDefault();
+        //hide all elements for the first view and show the table from the fifth view.
+        $(".data-entry-vehicle").hide();
+        $(".data-entry-vehicle-header").hide();
+        $(".content-header-recording-of-contributions").hide();
+        $(".content-recording-of-contributions-first-view").hide();
         $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
         $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
-        $('#proccess-container').removeClass("container").addClass("container-fluid");//get more space with fluid class
+        $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
         $("p#subject-type").text('Потврда за технички карактеристики');
         //TODO: take all field values that we need for the fifth box view table
+        $("#vrednost-za-ime-tehnicki-karakteristiki").val($("#input-name").val());
+       
         //TODO: broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
-	})
-	
-	//hide or show columns when user is swithcing between legal entity or individual person
-	$(document).on('change', '#fizichko-lice-tehnicki-karakteristiki-labela, #pravno-lice-tehnicki-karakteristiki-labela', function () {
+    });
+
+    //hide or show columns when user is swithcing between legal entity or individual person
+    $(document).on('change', '#fizichko-lice-tehnicki-karakteristiki-labela, #pravno-lice-tehnicki-karakteristiki-labela', function () {
         if ($("#legal-entity-tehnicki-karakteristiki-radio-button").is(':checked')) {
             //hide ime, prezime columns and show naziv
-        	$('.ime-tehnicki-karakteristiki').hide();
-        	$('.prezime-tehnicki-karakteristiki').hide();
-        	$('.naziv-tehnicki-karakteristiki').show();
+            $('.ime-tehnicki-karakteristiki').hide();
+            $('.prezime-tehnicki-karakteristiki').hide();
+            $('.naziv-tehnicki-karakteristiki').show();
         } else {
             //show ime, prezime columns and hide naziv
-        	$('.ime-tehnicki-karakteristiki').show();
-        	$('.prezime-tehnicki-karakteristiki').show();
-        	$('.naziv-tehnicki-karakteristiki').hide();
+            $('.ime-tehnicki-karakteristiki').show();
+            $('.prezime-tehnicki-karakteristiki').show();
+            $('.naziv-tehnicki-karakteristiki').hide();
         }
-	});
+    });
 
     //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
     function changeFormLayoutForVehicleData(chosenView) {
@@ -511,7 +514,7 @@ $(document).ready(function () {
             vehicleCategory.show();
             chassisNumber.insertAfter(type);
         } else if (chosenView === "Втиснување на идентификациски ознаки") {
-            
+
         } else if (chosenView === "АДР") {
             manufacturerOfVehicle.show();
             typeOfEngine.insertAfter(chassisNumber);
@@ -520,7 +523,7 @@ $(document).ready(function () {
             registrationNumberOfTheVehicle.show();
             numberOfAdrCertificate.show();
         } else if (chosenView === "Потврда за технички карактеристики") {
-        	potvrdaZaTehnickiKarakteristiki.show();
+            potvrdaZaTehnickiKarakteristiki.show();
         } else if (chosenView === "ЦЕМТ") {
             typeVehicle.show();
             typeOfEngine.show();
@@ -565,6 +568,9 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "Идентификација на возило и идентификација и оцена на техничката состојба") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-second-view").show();
@@ -572,10 +578,16 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "Втиснување на идентификациски ознаки") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-third-view").show();
             $(".box-primary-third-view-wrapper").show();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "АДР") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-fourth-view").show();
@@ -583,6 +595,9 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "Потврда за технички карактеристики") {
             $(".content-header-confirmation-of-the-technical-characteristics").show();
             $("confirmation-of-the-technical-characteristics-fifth-view").show();
@@ -590,6 +605,9 @@ $(document).ready(function () {
             $(".content-header.data-entry-vehicle-header").hide();
             $(".content.data-entry-vehicle").hide();
             $(".content-recording-of-contributions-third-view").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "ЦЕМТ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-sixth-view").show();
@@ -597,6 +615,9 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "ПТЕУ") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-eighth-view").show();
@@ -604,6 +625,9 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
         } else if (chosenView === "АТП") {
             $(".content-header-recording-of-contributions").show();
             $(".content-recording-of-contributions-tenth-view").show();
@@ -611,6 +635,17 @@ $(document).ready(function () {
 
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
+            $(".content-header content-header-tachograph-data").hide();
+            $(".content-tachograph-data-seven-view").hide();
+            $(".box-primary-seven-view-wrapper").hide();
+        }
+    }
+
+    function dateEntryTachograph(chosenView) {
+        if (chosenView === "Калибрација на тахографи") {
+            $(".content-header content-header-tachograph-data").show();
+            $(".content-tachograph-data-seven-view").show();
+            $(".box-primary-seven-view-wrapper").show();
         }
     }
 
@@ -906,7 +941,7 @@ $(document).ready(function () {
     $('#datepicker3').datepicker({
         autoclose: true
     });
- 
-    $('a').tooltip();   
+
+    $('a').tooltip();
 
 });
