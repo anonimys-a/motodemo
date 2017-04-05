@@ -917,7 +917,7 @@ $(document).ready(function () {
     
     //only one row can be checked from the first table from the first box view
     $('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function() {
-	   $('input[type="checkbox"]').not(this).prop('checked', false);
+	   $('.grupa1-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
 	});
 
 });
