@@ -644,13 +644,31 @@ label.earlier-certificate-label {
     margin-top: 37px;
 }
 
-.tabele-header-color {
-    background-color: #3c8dbc;
-    color: #fff;
+/*tabela vid na prepravki*/
+.box-header.with-border.border-tabela-vid-na-prepravka {
+    border-bottom-style: none!important;
 }
 
-.table-bordered-color {
-    border: 1px solid #3c8dbc!important;
+.modal-header-background-tabela-vid-na-prepravka {
+    background: #f9f9f9;
+}
+
+.modal-footer-background-tabela-vid-na-prepravka {
+     background: #f9f9f9;
+}
+
+.table.tabela-vid-na-prepravka > tbody > tr {
+    background-color: #f9f9f9;
+}
+
+
+.table.table-bordered.tabela-vid-na-prepravka > tbody > tr > td {
+    border: 1px solid #ddd;
+}
+
+.table.tabela-vid-na-prepravka > tbody > tr.tabele-header-color {
+    background-color: #3c8dbc;
+    color: #fff;
 }
 
 .naziv-tehnicki-karakteristiki {
@@ -662,8 +680,8 @@ table.table-potvrda-za-tehnicki-karakteristiki tr:nth-of-type(odd) {
 }
 	
 table.table-potvrda-za-tehnicki-karakteristiki th { 
-	background: #333; 
-	color: white; 
+	background: #3c8dbc; 
+	color: #fff; 
 	font-weight: bold; 
 }
 
@@ -696,4 +714,13 @@ table.table-potvrda-za-tehnicki-karakteristiki td, th {
     height:0
   }
 
- 
+ /*poramnuvanje na tabelata potvrda za tehnicki karakteristiki*/
+ .table > tbody > tr > td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table > thead > tr > th {
+    vertical-align: middle;
+    text-align: center;
+}

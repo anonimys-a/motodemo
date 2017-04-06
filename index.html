@@ -41,7 +41,7 @@
             </ul>
         </div>
   <!-- /#sidebar-wrapper -->
-<div class="container" id="proccess-container">
+  <div class="container" id="proccess-container">
     <div class="row">
         <div class="process">
             <div class="process-row nav nav-tabs">
@@ -586,14 +586,14 @@
                                                             </div>
                                                             <br />
                                                             <div class="row">
-                                                                <label for="description" class="col-md-offset-1 col-md-5">Опис</label>
-                                                                <input type="text" class="col-md-5" id="description" />
+                                                                <label for="description-podatoci-vozilo-modal" class="col-md-offset-1 col-md-5">Опис</label>
+                                                                <input type="text" class="col-md-5" id="description-podatoci-vozilo-modal" />
                                                             </div>
                                                             <div class="col-md-offset-1"></div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-                                                            <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                            <button type="button" class="btn btn-success" id="podatoci-vozilo-marka-modal-button" data-dismiss="modal">Сними</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -795,15 +795,15 @@
                                                                 <div class="row">
                                                                     <div class="col-md-12">
                                                                         <div class="box box-border-top-color">
-                                                                            <div class="modal-header">
-                                                                                <div class="box-header with-border">
+                                                                            <div class="modal-header modal-header-background-tabela-vid-na-prepravka">
+                                                                                <div class="box-header with-border border-tabela-vid-na-prepravka">
                                                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                                                     <h4 class="modal-title">1. ГРУПА – возила со променета, или преправена каросерија, кабина, или заштитна рамка</h4>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="modal-body">
                                                                                 <div class="box-body">
-                                                                                    <table class="table table-bordered table-bordered-color table-responsive">
+                                                                                    <table class="table table-bordered table-responsive tabela-vid-na-prepravka">
                                                                                         <tr class="tabele-header-color">
                                                                                             <th style="width: 10px">Р.<br />бр.</th>
                                                                                             <th>Активност</th>
@@ -1022,8 +1022,8 @@
                                                                                     </table>
                                                                                 </div>
                                                                             </div><!--/end modal body-->
-                                                                            <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                            <div class="modal-footer modal-footer-background-tabela-vid-na-prepravka">
+                                                                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1041,16 +1041,16 @@
                                                                 <div class="row">
                                                                     <div class="col-md-12">
                                                                         <div class="box">
-                                                                            <div class="modal-header">
-                                                                                <div class="box-header with-border">
+                                                                            <div class="modal-header modal-header-background-tabela-vid-na-prepravka">
+                                                                                <div class="box-header with-border border-tabela-vid-na-prepravka">
                                                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                                                     <h4 class="modal-title">2. ГРУПА - преправки или поправки во системите на возилото</h4>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="modal-body">
                                                                                 <div class="box-body">
-                                                                                    <table class="table table-bordered table-responsive">
-                                                                                        <tr>
+                                                                                    <table class="table table-bordered table-responsive tabela-vid-na-prepravka">
+                                                                                        <tr class="tabele-header-color">
                                                                                             <th style="width: 10px">Р.<br />бр.</th>
                                                                                             <th>Активност</th>
                                                                                             <th style="width: 120px">категорија</th>
@@ -1079,7 +1079,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1101,7 +1101,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1121,7 +1121,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1145,7 +1145,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1169,7 +1169,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1193,7 +1193,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1216,7 +1216,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1238,7 +1238,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1261,7 +1261,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1284,7 +1284,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa2-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1343,7 +1343,7 @@
                                                                                             <td rowspan="3">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1373,7 +1373,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1392,7 +1392,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1410,7 +1410,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1431,7 +1431,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1449,7 +1449,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1471,7 +1471,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1494,7 +1494,7 @@
                                                                                             <td rowspan="3">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1521,7 +1521,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1539,7 +1539,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1556,7 +1556,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa3-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1610,7 +1610,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa4-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1636,7 +1636,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa4-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1662,7 +1662,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa4-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1689,7 +1689,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa4-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1720,7 +1720,7 @@
                                                                                             <td rowspan="2">
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa4-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -1750,7 +1750,7 @@
                                                                                             <td>
                                                                                                 <div class="checkbox checkbox-margin">
                                                                                                     <label>
-                                                                                                        <input type="checkbox" value="">
+                                                                                                        <input type="checkbox" value="" class="grupa4-tabela-vid-na-prepravka-checkbox">
                                                                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                                                                     </label>
                                                                                                 </div>
@@ -2363,9 +2363,9 @@
                                                     <th class="ime-tehnicki-karakteristiki">Име</th>
                                                     <th class="prezime-tehnicki-karakteristiki">Презиме</th>
                                                     <th class="naziv-tehnicki-karakteristiki">Назив</th>
-                                                    <th>Бр. на предмет</th>
-                                                    <th>Марка</th>
-                                                    <th>Тип</th>
+                                                    <th class="br-na-predmet-tehnicki-karakteristiki">Бр. на предмет</th>
+                                                    <th>Марка на возило</th>
+                                                    <th>Тип на возило</th>
                                                     <th>Бр. на шасија</th>
                                                     <th>Добавувач Потврда</th>
                                                     <th>Статус на предметот</th>
@@ -2373,13 +2373,13 @@
                                                     <th>Фактурирана/наплатена сума</th>
                                                     <th>Прилог-копија сообраќајна</th>
                                                     <th>Прилог-сканиран сертификат</th>
-                                                    <th style="width: 200px">Забелешка</th>
+                                                    <th style="min-width: 200px">Забелешка</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td id="vrednost-za-ime-tehnicki-karakteristiki" class="ime-tehnicki-karakteristiki"></td>
+                                                    <td id="vrednost-za-ime-tehnicki-karakteristiki" class="ime-tehnicki-karakteristiki">Ana</td>
                                                     <td class="prezime-tehnicki-karakteristiki">Ангеловски</td>
                                                     <td class="naziv-tehnicki-karakteristiki">Назив тест</td>
                                                     <td>123456</td>
@@ -2408,14 +2408,14 @@
                                                                 <span class="caret"></span>
                                                             </button>
                                                             <ul class="dropdown-menu dropdown-supplier-style">
-                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="modal, tooltip" data-placement="bottom" href="#first" title="да се внесе соодветно барање од клиентот">- Информација</a></li>
-                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="modal, tooltip" data-placement="bottom" href="#second" title="да се внесе соодветно барање од клиентот">- Барање за потврда</a></li>
-                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="modal, tooltip" data-placement="bottom" href="#third" title="документот е добиен од страна на издавачот и проследен до барателот">- Завршен</a></li>
-                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="modal, tooltip" data-placement="bottom" href="#fourth" title="Потврдата е нарачана и се чека на добивање од страна на издавачот.">- Во процедура</a></li>
-                                                                <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#fifth">- Нема податоци во база</a></li>
-                                                                <li><a class="dropdown-supplier-link-color" data-toggle="modal" href="#sixth">- Не исполнува</a></li>
-                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="modal, tooltip" data-placement="bottom" href="#seventh" title="Се генерира сметка и фактура согласно ценовник за информација. Да се смени статусот - прво во 'Во процедура', а потоа во 'завршен', а ќе генерира сметка и фактура како доплата.">- Информација - исполнува</a></li>
-                                                                <li><a class="dropdown-supplier-link-color dropdown-wrap-text tabela-teh-karakteristiki-tooltip" data-toggle="modal, tooltip" data-placement="bottom" href="#eight" title="Се генерира сметка и фактура согласно ценовник за информација.">- Информација - не исполнува</a></li>
+                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="tooltip" data-placement="bottom" href="#" title="да се внесе соодветно барање од клиентот">- Информација</a></li>
+                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="tooltip" data-placement="bottom" href="#" title="да се внесе соодветно барање од клиентот">- Барање за потврда</a></li>
+                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="tooltip" data-placement="bottom" href="#" title="документот е добиен од страна на издавачот и проследен до барателот">- Завршен</a></li>
+                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="tooltip" data-placement="bottom" href="#" title="Потврдата е нарачана и се чека на добивање од страна на издавачот.">- Во процедура</a></li>
+                                                                <li><a class="dropdown-supplier-link-color" href="#fifth">- Нема податоци во база</a></li>
+                                                                <li><a class="dropdown-supplier-link-color" href="#sixth">- Не исполнува</a></li>
+                                                                <li><a class="dropdown-supplier-link-color tabela-teh-karakteristiki-tooltip" data-toggle="tooltip" data-placement="bottom" href="#" title="Се генерира сметка и фактура согласно ценовник за информација. Да се смени статусот - прво во 'Во процедура', а потоа во 'завршен', а ќе генерира сметка и фактура како доплата.">- Информација - исполнува</a></li>
+                                                                <li><a class="dropdown-supplier-link-color dropdown-wrap-text tabela-teh-karakteristiki-tooltip" data-toggle="tooltip" data-placement="bottom" href="#" title="Се генерира сметка и фактура согласно ценовник за информација.">- Информација - не исполнува</a></li>
                                                             </ul>
                                                         </div>
                                                     </td>
@@ -2448,7 +2448,7 @@
                                                     <td class="naziv-tehnicki-karakteristiki">Назив Тест два</td>
                                                     <td>12345678</td>
                                                     <td>CITROEN</td>
-                                                    <td></td>
+                                                    <td>KK</td>
                                                     <td>VH1234567890</td>
                                                     <td>Производител на возило</td>
                                                     <td>барање за потврда</td>
@@ -2587,7 +2587,7 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input type="checkbox" value="" class="grupa1-vid-na-tahograf-checkbox">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                             Аналоген
                                                         </label>
@@ -2598,7 +2598,7 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input type="checkbox" value="" class="grupa1-vid-na-tahograf-checkbox">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                             Дигитален
                                                         </label>
@@ -2618,7 +2618,7 @@
                                                 <input type="text" class="form-control" id="type-of-tachograph">
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </form>
 
@@ -2646,9 +2646,9 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input type="checkbox" value="" class="grupa2-vid-na-inspekcija-checkbox">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-                                                            Редовна    
+                                                            Редовна
                                                         </label>
                                                     </div>
                                                 </div>
@@ -2657,9 +2657,9 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input type="checkbox" value="" class="grupa2-vid-na-inspekcija-checkbox">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-                                                            Вонредна 
+                                                            Вонредна
                                                         </label>
                                                     </div>
                                                 </div>
@@ -2671,7 +2671,7 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input type="checkbox" value="" class="grupa3-samo-digitalni-tahografi-checkbox">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                             Активација
                                                         </label>
@@ -2682,7 +2682,7 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input type="checkbox" value="" class="grupa3-samo-digitalni-tahografi-checkbox">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                             Превземи
                                                         </label>
@@ -2695,1113 +2695,1113 @@
 
                             </div>
                         </div>
-					</div>
-				</section>
+                    </div>
+                </section>
 
-				<!-- Main content Second form - Third circle(eighth) -->
-				<section class="content content-recording-of-contributions-eighth-view">
-					<div class="row">
-						<!-- left column -->
-						<div class="col-md-6">
-							<!-- general form elements -->
-							<div class="box box-primary box-primary-eighth-view-wrapper">
-								<div class="box-header with-border">
+                <!-- Main content Second form - Third circle(eighth) -->
+                <section class="content content-recording-of-contributions-eighth-view">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="box box-primary box-primary-eighth-view-wrapper">
+                                <div class="box-header with-border">
 
-								</div>
-								<!-- /.box-header -->
-								<!-- form start -->
-								<form class="form-horizontal">
-									<div class="box-body">
-										<div class="form-group input-copy-of-the-driving-license-wrapper">
-											<label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Сообраќајна дозвола од возилото-фотокопија:</label>
-											<div class="col-sm-1">
-												<div class="input-group">
-													<div class="checkbox checkbox-margin">
-														<label>
-															<input type="checkbox" value="">
-															<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- /.box-body -->
-								</form>
-							</div>
-						</div>
-						<!-- /.box -->
-						<div class="col-md-6">
-							<!-- general form elements -->
-							<div class="box box-primary box-primary-eighth-view-wrapper">
-								<div class="box-header with-border">
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <form class="form-horizontal">
+                                    <div class="box-body">
+                                        <div class="form-group input-copy-of-the-driving-license-wrapper">
+                                            <label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Сообраќајна дозвола од возилото-фотокопија:</label>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <div class="checkbox checkbox-margin">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="box box-primary box-primary-eighth-view-wrapper">
+                                <div class="box-header with-border">
 
-								</div>
-								<!-- /.box-header -->
-								<!-- form start -->
-								<form class="form-horizontal">
-									<div class="box-body">
-										<div class="form-group input-earlier-certificate-wrapper">
-											<label for="input-earlier-certificate" class="col-sm-9 control-label">Возило за технички преглед:</label>
-											<div class="col-sm-1">
-												<div class="input-group">
-													<div class="checkbox checkbox-margin">
-														<label>
-															<input type="checkbox" value="">
-															<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- /.box-body -->
-								</form>
-							</div>
-							<!-- /.box -->
-						</div>
-					</div>
-				</section>
-				<!-- Main content Second form - Third circle(tenth) -->
-				<section class="content content-recording-of-contributions-tenth-view">
-					<div class="row">
-						<!-- left column -->
-						<div class="col-md-6">
-							<!-- general form elements -->
-							<div class="box box-primary box-primary-tenth-view-wrapper">
-								<div class="box-header with-border">
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <form class="form-horizontal">
+                                    <div class="box-body">
+                                        <div class="form-group input-earlier-certificate-wrapper">
+                                            <label for="input-earlier-certificate" class="col-sm-9 control-label">Возило за технички преглед:</label>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <div class="checkbox checkbox-margin">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </form>
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Main content Second form - Third circle(tenth) -->
+                <section class="content content-recording-of-contributions-tenth-view">
+                    <div class="row">
+                        <!-- left column -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="box box-primary box-primary-tenth-view-wrapper">
+                                <div class="box-header with-border">
 
-								</div>
-								<!-- /.box-header -->
-								<!-- form start -->
-								<form class="form-horizontal">
-									<div class="box-body">
-										<div class="form-group input-copy-of-the-driving-license-wrapper">
-											<label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Сообраќајна дозвола од возилото-фотокопија:</label>
-											<div class="col-sm-1">
-												<div class="input-group">
-													<div class="checkbox checkbox-margin">
-														<label>
-															<input type="checkbox" value="">
-															<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="form-group input-atp-certificate-wrapper">
-											<label for="input-atp-certificate" class="col-sm-9 control-label">Претходно издаден АТП Сертификат:</label>
-											<div class="col-sm-1">
-												<div class="input-group">
-													<div class="checkbox checkbox-margin">
-														<label>
-															<input type="checkbox" value="">
-															<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- /.box-body -->
-								</form>
-							</div>
-						</div>
-						<!-- /.box -->
-						<div class="col-md-6">
-							<!-- general form elements -->
-							<div class="box box-primary box-primary-tenth-view-wrapper">
-								<div class="box-header with-border">
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <form class="form-horizontal">
+                                    <div class="box-body">
+                                        <div class="form-group input-copy-of-the-driving-license-wrapper">
+                                            <label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Сообраќајна дозвола од возилото-фотокопија:</label>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <div class="checkbox checkbox-margin">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-atp-certificate-wrapper">
+                                            <label for="input-atp-certificate" class="col-sm-9 control-label">Претходно издаден АТП Сертификат:</label>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <div class="checkbox checkbox-margin">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                        <div class="col-md-6">
+                            <!-- general form elements -->
+                            <div class="box box-primary box-primary-tenth-view-wrapper">
+                                <div class="box-header with-border">
 
-								</div>
-								<!-- /.box-header -->
-								<!-- form start -->
-								<form class="form-horizontal">
-									<div class="box-body">
-										<div class="form-group input-technical-documentation-wrapper">
-											<label for="input-technical-documentation" class="col-sm-5 control-label">Техничка докумен.:</label>
-											<div class="col-sm-6">
-												<textarea class="form-control" rows="2" id="input-technical-documentation"></textarea>
-											</div>
-										</div>
-										<div class="form-group input-earlier-certificate-wrapper">
-											<label for="input-earlier-certificate" class="col-sm-9 control-label">Возило на увид/преглед:</label>
-											<div class="col-sm-1">
-												<div class="input-group">
-													<div class="checkbox checkbox-margin">
-														<label class="earlier-certificate-label">
-															<input type="checkbox" value="">
-															<span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- /.box-body -->
-								</form>
-							</div>
-							<!-- /.box -->
-						</div>
-					</div>
-				</section>
-				<section class="content">
-					<div class="row">
-						<div class="box-footer">
-							<ul class="mailbox-attachments clearfix">
-								<li>
-									<span class="mailbox-attachment-icon"><i class="fa fa-file-pdf-o"></i></span>
+                                </div>
+                                <!-- /.box-header -->
+                                <!-- form start -->
+                                <form class="form-horizontal">
+                                    <div class="box-body">
+                                        <div class="form-group input-technical-documentation-wrapper">
+                                            <label for="input-technical-documentation" class="col-sm-5 control-label">Техничка докумен.:</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control" rows="2" id="input-technical-documentation"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-earlier-certificate-wrapper">
+                                            <label for="input-earlier-certificate" class="col-sm-9 control-label">Возило на увид/преглед:</label>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <div class="checkbox checkbox-margin">
+                                                        <label class="earlier-certificate-label">
+                                                            <input type="checkbox" value="">
+                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </form>
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+                </section>
+                <section class="content">
+                    <div class="row">
+                        <div class="box-footer">
+                            <ul class="mailbox-attachments clearfix">
+                                <li>
+                                    <span class="mailbox-attachment-icon"><i class="fa fa-file-pdf-o"></i></span>
 
-									<div class="mailbox-attachment-info">
-										<a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> Sep2014-report.pdf</a>
-										<span class="mailbox-attachment-size">
-											1,245 KB
-											<a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
-										</span>
-									</div>
-								</li>
-								<li>
-									<span class="mailbox-attachment-icon"><i class="fa fa-file-word-o"></i></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> Sep2014-report.pdf</a>
+                                        <span class="mailbox-attachment-size">
+                                            1,245 KB
+                                            <a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="mailbox-attachment-icon"><i class="fa fa-file-word-o"></i></span>
 
-									<div class="mailbox-attachment-info">
-										<a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> App Description.docx</a>
-										<span class="mailbox-attachment-size">
-											1,245 KB
-											<a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
-										</span>
-									</div>
-								</li>
-								<li>
-									<span class="mailbox-attachment-icon"><i class="fa fa-file-pdf-o"></i></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> App Description.docx</a>
+                                        <span class="mailbox-attachment-size">
+                                            1,245 KB
+                                            <a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="mailbox-attachment-icon"><i class="fa fa-file-pdf-o"></i></span>
 
-									<div class="mailbox-attachment-info">
-										<a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> Sep2014-report.pdf</a>
-										<span class="mailbox-attachment-size">
-											1,245 KB
-											<a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
-										</span>
-									</div>
-								</li>
-								<li>
-									<span class="mailbox-attachment-icon"><i class="fa fa-file-pdf-o"></i></span>
+                                    <div class="mailbox-attachment-info">
+                                        <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> Sep2014-report.pdf</a>
+                                        <span class="mailbox-attachment-size">
+                                            1,245 KB
+                                            <a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="mailbox-attachment-icon"><i class="fa fa-file-pdf-o"></i></span>
 
-									<div class="mailbox-attachment-info">
-										<a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> Sep2014-report.pdf</a>
-										<span class="mailbox-attachment-size">
-											1,245 KB
-											<a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
-										</span>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-				<ul class="list-unstyled list-inline pull-left">
-					<li>
-						<button type="button" class="btn btn-danger">Delete</button>
-					</li>
-				</ul>
-				<ul class="list-unstyled list-inline pull-left">
-					<li>
-						<button type="button" class="btn btn-danger">Delete all</button>
-					</li>
-				</ul>
-				<ul class="list-unstyled list-inline pull-right">
-					<li>
-						<button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
-					</li>
-					<li>
-						<button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button>
-					</li>
-				</ul>
-			</div>
-			<!--/menu4-->
-			<div id="menu4" class="tab-pane fade">
-				<h3>Единечно одобрување на возило - запленето</h3>
-				<div class="col-md-6">
-					<!-- Horizontal Form -->
-					<div class="box box-info">
-						<div class="box-header with-border">
+                                    <div class="mailbox-attachment-info">
+                                        <a href="#" class="mailbox-attachment-name"><i class="fa fa-paperclip"></i> Sep2014-report.pdf</a>
+                                        <span class="mailbox-attachment-size">
+                                            1,245 KB
+                                            <a href="#" class="btn btn-default btn-xs pull-right"><i class="fa fa-cloud-download"></i></a>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <ul class="list-unstyled list-inline pull-left">
+                    <li>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </li>
+                </ul>
+                <ul class="list-unstyled list-inline pull-left">
+                    <li>
+                        <button type="button" class="btn btn-danger">Delete all</button>
+                    </li>
+                </ul>
+                <ul class="list-unstyled list-inline pull-right">
+                    <li>
+                        <button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <!--/menu4-->
+            <div id="menu4" class="tab-pane fade">
+                <h3>Единечно одобрување на возило - запленето</h3>
+                <div class="col-md-6">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
 
-						</div>
-						<!-- /.box-header -->
-						<!-- form start -->
-						<form class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="mark" class="col-sm-6 control-label">(D.1) Марка</label>
-									<div class="col-sm-6">
-										<div class="input-group">
-											<input type="text" class="form-control" id="mark" name="mark" required />
-											<a href="#markModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
-										</div>
-										<div class="modal fade" id="markModal" role="dialog">
-											<div class="modal-dialog">
-												<!-- Modal content-->
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-														<h4 class="modal-title">Марка на возило</h4>
-													</div>
-													<div class="modal-body">
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">Шифра</label>
-															<input type="text" class="col-md-5" />
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">Опис</label>
-															<input type="text" class="col-md-5" />
-														</div>
-														<div class="col-md-offset-1"></div>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-														<button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
-													</div>
-												</div>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="mark" class="col-sm-6 control-label">(D.1) Марка</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="mark" name="mark" required />
+                                            <a href="#markModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                        </div>
+                                        <div class="modal fade" id="markModal" role="dialog">
+                                            <div class="modal-dialog">
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Марка на возило</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">Шифра</label>
+                                                            <input type="text" class="col-md-5" />
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">Опис</label>
+                                                            <input type="text" class="col-md-5" />
+                                                        </div>
+                                                        <div class="col-md-offset-1"></div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                        <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                    </div>
+                                                </div>
 
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="type" class="col-sm-2 control-label">Тип</label>
-									<div class="col-sm-2">
-										<input type="text" class="form-control" id="type" name="type" required>
-									</div>
-									<label for="type" class="col-sm-2 control-label">Варијанта</label>
-									<div class="col-sm-2">
-										<input type="text" class="form-control" id="type" name="type" required>
-									</div>
-									<label for="type" class="col-sm-2 control-label">Изведба</label>
-									<div class="col-sm-2">
-										<input type="text" class="form-control" id="type" name="type" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="designation" class="col-sm-6 control-label">(D.3) Комерцијална(и) ознака(и)</label>
-									<div class="col-sm-6">
-										<div class="input-group">
-											<input type="text" class="form-control" id="designation" name="designation" required>
-											<a href="#tipVozilo" type="button" class="input-group-addon btn btn-default" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
-										</div>
-										<!-- Modal -->
-										<div class="modal fade" id="tipVozilo" role="dialog">
-											<div class="modal-dialog">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="col-sm-2 control-label">Тип</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="type" name="type" required>
+                                    </div>
+                                    <label for="type" class="col-sm-2 control-label">Варијанта</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="type" name="type" required>
+                                    </div>
+                                    <label for="type" class="col-sm-2 control-label">Изведба</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="type" name="type" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="designation" class="col-sm-6 control-label">(D.3) Комерцијална(и) ознака(и)</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="designation" name="designation" required>
+                                            <a href="#tipVozilo" type="button" class="input-group-addon btn btn-default" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="tipVozilo" role="dialog">
+                                            <div class="modal-dialog">
 
-												<!-- Modal content-->
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-														<h4 class="modal-title">Тип на возило</h4>
-													</div>
-													<div class="modal-body">
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">Вид возило</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">(D.1) Марка</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">(D3) Комерцијална ознака</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">(D2) Тип возило</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">(D2) Варијанта</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">(D2) Изведба</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">Форма</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="opis" class="col-md-offset-1 col-md-5">Намена</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-														<button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
-													</div>
-												</div>
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Тип на возило</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">Вид возило</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">(D.1) Марка</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">(D3) Комерцијална ознака</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">(D2) Тип возило</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">(D2) Варијанта</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">(D2) Изведба</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">Форма</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="opis" class="col-md-offset-1 col-md-5">Намена</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                        <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                    </div>
+                                                </div>
 
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="vin" class="col-sm-6 control-label">(E) Број на шасија</label>
-									<div class="col-sm-6">
-										<div class="input-group dropdown">
-											<input type="text" class="form-control" id="vin" name="vin" required>
-											<ul class="dropdown-menu" aria-labelledby="sasija"></ul>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="year" class="col-sm-6 control-label">(5A) Година на производство</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="year" name="year" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="vehicle-mass" class="col-sm-6 control-label">(G) Маса на возилото (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="vehicle-mass" name="vehicle-mass" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="category" class="col-sm-6 control-label">Категорија и вид на возилото</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="category" name="category" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="axles" class="col-sm-6 control-label">(L) Број на оски</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="axles" name="axles" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="inputEmail3" class="col-sm-6 control-label">(3S) Број на места за лежење</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="inputEmail3" required>
-									</div>
-								</div>
-							</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vin" class="col-sm-6 control-label">(E) Број на шасија</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group dropdown">
+                                            <input type="text" class="form-control" id="vin" name="vin" required>
+                                            <ul class="dropdown-menu" aria-labelledby="sasija"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="year" class="col-sm-6 control-label">(5A) Година на производство</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="year" name="year" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vehicle-mass" class="col-sm-6 control-label">(G) Маса на возилото (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="vehicle-mass" name="vehicle-mass" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="category" class="col-sm-6 control-label">Категорија и вид на возилото</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="category" name="category" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="axles" class="col-sm-6 control-label">(L) Број на оски</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="axles" name="axles" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-6 control-label">(3S) Број на места за лежење</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="inputEmail3" required>
+                                    </div>
+                                </div>
+                            </div>
 
-							<!-- /.box-body -->
+                            <!-- /.box-body -->
 
-						</form>
-						<div class="box-footer">
+                        </form>
+                        <div class="box-footer">
 
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
-				<div class="col-md-6">
-					<!-- Horizontal Form -->
-					<div class="box box-info">
-						<div class="box-header with-border">
-						</div>
-						<!-- /.box-header -->
-						<!-- form start -->
-						<form class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="fuel" class="col-sm-6 control-label">(38) Облик на каросеријата</label>
-									<div class=" col-sm-6">
-										<div class="input-group dropdown">
-											<input type="text" class="form-control " id="form" name="form" placeholder="Изберете облик на каросеријата" required>
-											<a href="#" id="form" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><i class="fa fa-chevron-down"></i></a>
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="fuel" class="col-sm-6 control-label">(38) Облик на каросеријата</label>
+                                    <div class=" col-sm-6">
+                                        <div class="input-group dropdown">
+                                            <input type="text" class="form-control " id="form" name="form" placeholder="Изберете облик на каросеријата" required>
+                                            <a href="#" id="form" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button"><i class="fa fa-chevron-down"></i></a>
 
-											<ul class="dropdown-menu" aria-labelledby="fuel">
-												<li>
-													<a href="">AA - лимузина</a>
-												</li>
-												<li>
-													<a href="">AB - возила со подвижни задни врати</a>
-												</li>
-												<li>
-													<a href="">AC - караван</a>
-												</li>
-												<li>
-													<a href="">AD - купе</a>
-												</li>
-												<li>
-													<a href="">AE - кабриолет</a>
-												</li>
-												<li>
-													<a href="">AF - повеќенаменско</a>
-												</li>
-												<li>
-													<a href="">SA - возило за домување</a>
-												</li>
-												<li>
-													<a href="">SB - блиндирано возило</a>
-												</li>
-												<li>
-													<a href="">SC - возило за итна помош</a>
-												</li>
-												<li>
-													<a href="">SC - погребно возило</a>
-												</li>
-												<li>
-													<a href="">SG - возило за специјална намена</a>
-												</li>
-											</ul>
-										</div>
+                                            <ul class="dropdown-menu" aria-labelledby="fuel">
+                                                <li>
+                                                    <a href="">AA - лимузина</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">AB - возила со подвижни задни врати</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">AC - караван</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">AD - купе</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">AE - кабриолет</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">AF - повеќенаменско</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">SA - возило за домување</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">SB - блиндирано возило</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">SC - возило за итна помош</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">SC - погребно возило</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">SG - возило за специјална намена</a>
+                                                </li>
+                                            </ul>
+                                        </div>
 
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="form-and-purpose" class="col-sm-6 control-label">Намена на каросеријата</label>
-									<div class="col-sm-6">
-										<div class="input-group">
-											<input type="text" class="form-control" id="form-and-purpose" name="form-and-purpose" required>
-											<a href="#purposeModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
-										</div>
-									</div>
-									<!-- Modal -->
-									<div class="modal fade" id="purposeModal" role="dialog">
-										<div class="modal-dialog">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-and-purpose" class="col-sm-6 control-label">Намена на каросеријата</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="form-and-purpose" name="form-and-purpose" required>
+                                            <a href="#purposeModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="purposeModal" role="dialog">
+                                        <div class="modal-dialog">
 
-											<!-- Modal content-->
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal">&times;</button>
-													<h4 class="modal-title">Намена на возило</h4>
-												</div>
-												<div class="modal-body">
-													<div class="row">
-														<label class="col-md-offset-1 col-md-5">Намена шифра</label>
-														<input type="text" class="col-md-5" />
-														<div class="col-md-offset-1"></div>
-													</div>
-													<br />
-													<div class="row">
-														<label class="col-md-offset-1 col-md-5">Намена опис</label>
-														<input type="text" class="col-md-5" />
-														<div class="col-md-offset-1"></div>
-													</div>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-													<button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
-												</div>
-											</div>
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Намена на возило</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <label class="col-md-offset-1 col-md-5">Намена шифра</label>
+                                                        <input type="text" class="col-md-5" />
+                                                        <div class="col-md-offset-1"></div>
+                                                    </div>
+                                                    <br />
+                                                    <div class="row">
+                                                        <label class="col-md-offset-1 col-md-5">Намена опис</label>
+                                                        <input type="text" class="col-md-5" />
+                                                        <div class="col-md-offset-1"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                    <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                </div>
+                                            </div>
 
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="engine-type" class="col-sm-6 control-label">(21) Тип на моторот</label>
-									<div class="col-sm-6">
-										<div class="input-group">
-											<input type="text" class="form-control" id="engine-type" name="engine-type" required />
-											<a href="#tipMotor" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
-										</div>
-										<div class="modal fade" id="tipMotor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-											<div class="modal-dialog" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-														<h4 class="modal-title" id="myModalLabel">Тип мотор</h4>
-													</div>
-													<div class="modal-body">
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">(21) Тип мотор</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">(P2) Снага</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">(P1) Зафатнина</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label for="fuel" class="col-md-offset-1 col-md-5">(P3) Гориво</label>
-															<div class="input-group dropdown col-md-5">
-																<input type="text" class="form-control " id="fuel" name="fuel" placeholder="Изберете вид на гориво" required>
-																<a href="#" id="fuel" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-chevron-down"></i></a>
-																<div class="col-md-offset-1"></div>
-																<ul class="dropdown-menu" aria-labelledby="fuel">
-																	<li>
-																		<a href="">Не користи</a>
-																	</li>
-																	<li>
-																		<a href="">Бензин</a>
-																	</li>
-																	<li>
-																		<a href="">Нафта</a>
-																	</li>
-																	<li>
-																		<a href="">Мешавина</a>
-																	</li>
-																	<li>
-																		<a href="">Гас</a>
-																	</li>
-																	<li>
-																		<a href="">Електрична енергија</a>
-																	</li>
-																	<li>
-																		<a href="">Алкохол</a>
-																	</li>
-																	<li>
-																		<a href="">Дизел</a>
-																	</li>
-																</ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="engine-type" class="col-sm-6 control-label">(21) Тип на моторот</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="engine-type" name="engine-type" required />
+                                            <a href="#tipMotor" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                        </div>
+                                        <div class="modal fade" id="tipMotor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="myModalLabel">Тип мотор</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">(21) Тип мотор</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">(P2) Снага</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">(P1) Зафатнина</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label for="fuel" class="col-md-offset-1 col-md-5">(P3) Гориво</label>
+                                                            <div class="input-group dropdown col-md-5">
+                                                                <input type="text" class="form-control " id="fuel" name="fuel" placeholder="Изберете вид на гориво" required>
+                                                                <a href="#" id="fuel" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-chevron-down"></i></a>
+                                                                <div class="col-md-offset-1"></div>
+                                                                <ul class="dropdown-menu" aria-labelledby="fuel">
+                                                                    <li>
+                                                                        <a href="">Не користи</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Бензин</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Нафта</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Мешавина</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Гас</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Електрична енергија</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Алкохол</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Дизел</a>
+                                                                    </li>
+                                                                </ul>
 
-															</div>
-														</div>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-														<button type="button" class="btn btn-success">Сними</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="engine-capacity" class="col-sm-6 control-label">(P1) Зафатнина (cm³)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="engine-capacity" name="engine-capacity" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="engine-power" class="col-sm-6 control-label">(P2) Снага (kW)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="engine-power" name="engine-power" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="fuel-type" class="col-sm-6 control-label">(P3) Вид на гориво</label>
-									<div class="col-sm-6">
-										<div class="input-group">
-											<input type="text" class="form-control" id="fuel-type" name="fuel-type" required>
-											<a href="#tipGorivoModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
-										</div>
-										<!-- Modal -->
-										<div class="modal fade" id="tipGorivoModal" role="dialog">
-											<div class="modal-dialog">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                        <button type="button" class="btn btn-success">Сними</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="engine-capacity" class="col-sm-6 control-label">(P1) Зафатнина (cm³)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="engine-capacity" name="engine-capacity" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="engine-power" class="col-sm-6 control-label">(P2) Снага (kW)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="engine-power" name="engine-power" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fuel-type" class="col-sm-6 control-label">(P3) Вид на гориво</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="fuel-type" name="fuel-type" required>
+                                            <a href="#tipGorivoModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="tipGorivoModal" role="dialog">
+                                            <div class="modal-dialog">
 
-												<!-- Modal content-->
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-														<h4 class="modal-title">Гориво</h4>
-													</div>
-													<div class="modal-body">
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">Гориво шифра</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">Гориво опис</label>
-															<div class="input-group dropdown col-md-5">
-																<input type="text" class="form-control " id="fuel" name="fuel" placeholder="Изберете вид на гориво" required>
-																<a href="#" id="fuel" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-chevron-down"></i></a>
-																<div class="col-md-offset-1"></div>
-																<ul class="dropdown-menu" aria-labelledby="fuel">
-																	<li>
-																		<a href="">Не користи</a>
-																	</li>
-																	<li>
-																		<a href="">Бензин</a>
-																	</li>
-																	<li>
-																		<a href="">Нафта</a>
-																	</li>
-																	<li>
-																		<a href="">Мешавина</a>
-																	</li>
-																	<li>
-																		<a href="">Гас</a>
-																	</li>
-																	<li>
-																		<a href="">Електрична енергија</a>
-																	</li>
-																	<li>
-																		<a href="">Алкохол</a>
-																	</li>
-																	<li>
-																		<a href="">Дизел</a>
-																	</li>
-																</ul>
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Гориво</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">Гориво шифра</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">Гориво опис</label>
+                                                            <div class="input-group dropdown col-md-5">
+                                                                <input type="text" class="form-control " id="fuel" name="fuel" placeholder="Изберете вид на гориво" required>
+                                                                <a href="#" id="fuel" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-chevron-down"></i></a>
+                                                                <div class="col-md-offset-1"></div>
+                                                                <ul class="dropdown-menu" aria-labelledby="fuel">
+                                                                    <li>
+                                                                        <a href="">Не користи</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Бензин</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Нафта</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Мешавина</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Гас</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Електрична енергија</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Алкохол</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Дизел</a>
+                                                                    </li>
+                                                                </ul>
 
-															</div>
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="form-group">
-															<label class="col-md-offset-6">
-																<input type="checkbox" class="flat-red">
-																Се плаќа екологија
-															</label>
-														</div>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-														<button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
-													</div>
-												</div>
+                                                            </div>
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="form-group">
+                                                            <label class="col-md-offset-6">
+                                                                <input type="checkbox" class="flat-red">
+                                                                Се плаќа екологија
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                        <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                    </div>
+                                                </div>
 
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="engine-number" class="col-sm-6 control-label">(P5) Број на мотор</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="engine-number" name="engine-number" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="vehicle-color" class="col-sm-6 control-label">(R) Боја на возилото</label>
-									<div class="col-sm-6">
-										<div class="input-group">
-											<input type="text" class="form-control" id="vehicle-color" name="vehicle-color" required>
-											<a href="#bojaModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
-										</div>
-										<!-- Modal -->
-										<div class="modal fade" id="bojaModal" role="dialog">
-											<div class="modal-dialog">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="engine-number" class="col-sm-6 control-label">(P5) Број на мотор</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="engine-number" name="engine-number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vehicle-color" class="col-sm-6 control-label">(R) Боја на возилото</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="vehicle-color" name="vehicle-color" required>
+                                            <a href="#bojaModal" type="button" class="btn btn-default input-group-addon" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="bojaModal" role="dialog">
+                                            <div class="modal-dialog">
 
-												<!-- Modal content-->
-												<div class="modal-content">
-													<div class="modal-header">
-														<button type="button" class="close" data-dismiss="modal">&times;</button>
-														<h4 class="modal-title">Боја</h4>
-													</div>
-													<div class="modal-body">
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">Шифра</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">Група на боја</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-														<br />
-														<div class="row">
-															<label class="col-md-offset-1 col-md-5">Опис на боја</label>
-															<input type="text" class="col-md-5" />
-															<div class="col-md-offset-1"></div>
-														</div>
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-														<button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
-													</div>
-												</div>
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Боја</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">Шифра</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">Група на боја</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                        <br />
+                                                        <div class="row">
+                                                            <label class="col-md-offset-1 col-md-5">Опис на боја</label>
+                                                            <input type="text" class="col-md-5" />
+                                                            <div class="col-md-offset-1"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                        <button type="button" class="btn btn-success" data-dismiss="modal">Сними</button>
+                                                    </div>
+                                                </div>
 
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="seats-number" class="col-sm-6 control-label">(S.1) Седишта (за М2 и М3 без возач)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="seats-number" name="seats-number" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="standing-places" class="col-sm-6 control-label">(S.1) Број на места за стоење</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="standing-places" name="standing-places" required>
-									</div>
-								</div>
-							</div>
-							<!-- /.box-body -->
-						</form>
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
-				<div class="col-md-12">
-					<!-- Horizontal Form -->
-					<div class="box box-info">
-						<div class="box-header with-border">
-						</div>
-						<!-- /.box-header -->
-						<!-- form start -->
-						<form class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="power-weight" class="col-sm-6 control-label">Однос силина/маса (само за моторцикли ) (kW/kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="power-weight" name="power-weight" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="constructive-total-weight" class="col-sm-6 control-label">(F1) Најголема конструктивна вкупна маса на возилото (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="constructive-total-weight" name="constructive-total-weight" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="nkvmkp" class="col-sm-6 control-label">(O1) Најголема конструктивна вкупна маса на кочена приколка (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="nkvmkp" name="nkvmkp" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="nkvmnp" class="col-sm-6 control-label">(O2) Најголема конструктивна вкупна маса на некочена приколка (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="nkvmnp" name="nkvmnp" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="nkopp" class="col-sm-6 control-label">(19) Најголемо конструктивно оптоварување во приклучокот за приколка (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="nkopp" name="nkopp" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="nlvmvr" class="col-sm-6 control-label">Најголема легална вкупна маса на возилото при регистрација (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="nlvmvr" name="nlvmvr" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="nlvmgvr" class="col-sm-6 control-label">(F3) Најголема легална вкупна маса на група возила при регистрација (kg)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="nlvmgvr" name="nlvmgvr" required>
-									</div>
-								</div>
-							</div>
-							<!-- /.box-body -->
-						</form>
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
-				<div class="col-md-6">
-					<!-- Horizontal Form -->
-					<div class="box box-info">
-						<div class="box-header with-border">
-						</div>
-						<!-- /.box-header -->
-						<!-- form start -->
-						<form class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="vehicle-length" class="col-sm-6 control-label">(5) Должина на возило (mm)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="vehicle-length" name="vehicle-length" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="vehicle-width" class="col-sm-6 control-label">(6) Ширина на возило (mm)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="vehicle-width" name="vehicle-width" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="vehicle-height" class="col-sm-6 control-label">(7) Висина на возило (mm)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="vehicle-height" name="vehicle-height" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="tires" class="col-sm-6 control-label">(35) Пневматици и наплатки</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="tires" name="tires" required>
-									</div>
-								</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="seats-number" class="col-sm-6 control-label">(S.1) Седишта (за М2 и М3 без возач)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="seats-number" name="seats-number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="standing-places" class="col-sm-6 control-label">(S.1) Број на места за стоење</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="standing-places" name="standing-places" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </form>
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="power-weight" class="col-sm-6 control-label">Однос силина/маса (само за моторцикли ) (kW/kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="power-weight" name="power-weight" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="constructive-total-weight" class="col-sm-6 control-label">(F1) Најголема конструктивна вкупна маса на возилото (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="constructive-total-weight" name="constructive-total-weight" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nkvmkp" class="col-sm-6 control-label">(O1) Најголема конструктивна вкупна маса на кочена приколка (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nkvmkp" name="nkvmkp" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nkvmnp" class="col-sm-6 control-label">(O2) Најголема конструктивна вкупна маса на некочена приколка (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nkvmnp" name="nkvmnp" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nkopp" class="col-sm-6 control-label">(19) Најголемо конструктивно оптоварување во приклучокот за приколка (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nkopp" name="nkopp" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nlvmvr" class="col-sm-6 control-label">Најголема легална вкупна маса на возилото при регистрација (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nlvmvr" name="nlvmvr" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nlvmgvr" class="col-sm-6 control-label">(F3) Најголема легална вкупна маса на група возила при регистрација (kg)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="nlvmgvr" name="nlvmgvr" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </form>
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="vehicle-length" class="col-sm-6 control-label">(5) Должина на возило (mm)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="vehicle-length" name="vehicle-length" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vehicle-width" class="col-sm-6 control-label">(6) Ширина на возило (mm)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="vehicle-width" name="vehicle-width" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vehicle-height" class="col-sm-6 control-label">(7) Висина на возило (mm)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="vehicle-height" name="vehicle-height" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tires" class="col-sm-6 control-label">(35) Пневматици и наплатки</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="tires" name="tires" required>
+                                    </div>
+                                </div>
 
-							</div>
+                            </div>
 
-							<!-- /.box-body -->
+                            <!-- /.box-body -->
 
-						</form>
-						<div class="box-footer">
+                        </form>
+                        <div class="box-footer">
 
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
-				<div class="col-md-6">
-					<!-- Horizontal Form -->
-					<div class="box box-info">
-						<div class="box-header with-border">
-						</div>
-						<!-- /.box-header -->
-						<!-- form start -->
-						<form class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="rpm" class="col-sm-6 control-label">(P4) Број на вртежи (min<sup>-1</sup>)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="rpm" name="rpm" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="max-speed" class="col-sm-6 control-label">(T) Максимална брзина (km/h)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="max-speed" name="max-speed" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="co2" class="col-sm-6 control-label">(V.7) CO<sub>2</sub> (g/km)</label>
-									<div class="col-sm-6">
-										<input type="text" class="form-control" id="co2" name="co2" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="stationary-noise" class="col-sm-5 control-label">(45) Стационарна бучавост</label>
-									<div class="col-sm-2">
-										<input type="text" class="form-control" id="stationary-noise" name="stationary-noise" placeholder="dB(A)" required>
-									</div>
-									<label for="rotation-speed" class="col-sm-3 control-label">брзина вртење</label>
-									<div class="col-sm-2">
-										<input type="text" class="form-control" id="rotation-speed" name="rotation-speed" placeholder="min-1" required>
-									</div>
-								</div>
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="rpm" class="col-sm-6 control-label">(P4) Број на вртежи (min<sup>-1</sup>)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="rpm" name="rpm" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="max-speed" class="col-sm-6 control-label">(T) Максимална брзина (km/h)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="max-speed" name="max-speed" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="co2" class="col-sm-6 control-label">(V.7) CO<sub>2</sub> (g/km)</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="co2" name="co2" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="stationary-noise" class="col-sm-5 control-label">(45) Стационарна бучавост</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="stationary-noise" name="stationary-noise" placeholder="dB(A)" required>
+                                    </div>
+                                    <label for="rotation-speed" class="col-sm-3 control-label">брзина вртење</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="rotation-speed" name="rotation-speed" placeholder="min-1" required>
+                                    </div>
+                                </div>
 
-							</div>
-							<!-- /.box-body -->
+                            </div>
+                            <!-- /.box-body -->
 
-						</form>
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
-				<div class="col-md-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<h3 class="box-title">(N) Распределба на најголемата конструктивна вкупна маса по оски (kg) (за возила со најголема конструктивна вкупна маса над 3500kg) и на приклучната точка (за полуприколка и за приколка со централна оска)</h3>
-						</div>
-						<div class="box-body">
-							<div class="row input-group-sm">
-								<div class="col-xs-offset-1 col-xs-2">
-									<input type="text" class="form-control" id="rnkvm-axis1" name="rnkvm-axis1" placeholder="Оска 1">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="rnkvm-axis2" name="rnkvm-axis2" placeholder="Оска 2">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="rnkvm-axis3" name="rnkvm-axis3" placeholder="Оска 3">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="rnkvm-axis4" name="rnkvm-axis4" placeholder="Оска 4">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="rnkvm-axis5" name="rnkvm-axis5" placeholder="Оска 5">
-								</div>
-								<div class="col-xs-offset-1"></div>
-							</div>
-						</div>
-						<!-- /.box-body -->
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-					<div class="box box-info">
-						<div class="box-header with-border">
-							<h3 class="box-title">(16.2) Најголемо конструктивно осно (или на група на оски) оптоварување (kg) и на приклучната точка (за полуприколка и за приколка со централна оска)</h3>
-						</div>
-						<div class="box-body">
-							<div class="row input-group-sm">
-								<div class="col-xs-offset-1 col-xs-2">
-									<input type="text" class="form-control" id="nkoopt-axis1" name="nkoopt-axis1" placeholder="Оска 1">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="nkoopt-axis2" name="nkoopt-axis2" placeholder="Оска 2">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="nkoopt-axis3" name="nkoopt-axis3" placeholder="Оска 3">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="nkoopt-axis4" name="nkoopt-axis4" placeholder="Оска 4">
-								</div>
-								<div class="col-xs-2">
-									<input type="text" class="form-control" id="nkoopt-axis5" name="nkoopt-axis5" placeholder="Оска 5">
-								</div>
-								<div class="col-xs-offset-1"></div>
-							</div>
-						</div>
-						<!-- /.box-body -->
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
+                        </form>
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">(N) Распределба на најголемата конструктивна вкупна маса по оски (kg) (за возила со најголема конструктивна вкупна маса над 3500kg) и на приклучната точка (за полуприколка и за приколка со централна оска)</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row input-group-sm">
+                                <div class="col-xs-offset-1 col-xs-2">
+                                    <input type="text" class="form-control" id="rnkvm-axis1" name="rnkvm-axis1" placeholder="Оска 1">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="rnkvm-axis2" name="rnkvm-axis2" placeholder="Оска 2">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="rnkvm-axis3" name="rnkvm-axis3" placeholder="Оска 3">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="rnkvm-axis4" name="rnkvm-axis4" placeholder="Оска 4">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="rnkvm-axis5" name="rnkvm-axis5" placeholder="Оска 5">
+                                </div>
+                                <div class="col-xs-offset-1"></div>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">(16.2) Најголемо конструктивно осно (или на група на оски) оптоварување (kg) и на приклучната точка (за полуприколка и за приколка со централна оска)</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="row input-group-sm">
+                                <div class="col-xs-offset-1 col-xs-2">
+                                    <input type="text" class="form-control" id="nkoopt-axis1" name="nkoopt-axis1" placeholder="Оска 1">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="nkoopt-axis2" name="nkoopt-axis2" placeholder="Оска 2">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="nkoopt-axis3" name="nkoopt-axis3" placeholder="Оска 3">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="nkoopt-axis4" name="nkoopt-axis4" placeholder="Оска 4">
+                                </div>
+                                <div class="col-xs-2">
+                                    <input type="text" class="form-control" id="nkoopt-axis5" name="nkoopt-axis5" placeholder="Оска 5">
+                                </div>
+                                <div class="col-xs-offset-1"></div>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
 
-				<div class="col-md-12">
-					<!-- Horizontal Form -->
-					<div class="box box-info">
-						<div class="box-header with-border">
-						</div>
-						<!-- /.box-header -->
-						<!-- form start -->
-						<form class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="mark-approval" class="col-sm-5 control-label">(K) Ознака на одобрување (Во Р.Македонија /  ЕУ одобрување)</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" id="mark-approval" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="hitch-approval" class="col-sm-5 control-label">(43.1) Ознака на одобрение на приклучниот уред</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" id="hitch-approval" name="hitch-approval" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="coc" class="col-sm-5 control-label">(1K) Број на ЕУ потврдата за сообразност (COC)</label>
-									<div class="col-sm-7">
-										<input type="text" class="form-control" id="coc" name="coc" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="notes" class="col-sm-5 control-label">Забелешки</label>
-									<div class="col-sm-7">
-										<textarea class="form-control" id="notes" name="notes"></textarea>
-									</div>
-								</div>
-							</div>
-							<!-- /.box-body -->
+                <div class="col-md-12">
+                    <!-- Horizontal Form -->
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <form class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="mark-approval" class="col-sm-5 control-label">(K) Ознака на одобрување (Во Р.Македонија /  ЕУ одобрување)</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="mark-approval" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hitch-approval" class="col-sm-5 control-label">(43.1) Ознака на одобрение на приклучниот уред</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="hitch-approval" name="hitch-approval" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="coc" class="col-sm-5 control-label">(1K) Број на ЕУ потврдата за сообразност (COC)</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" id="coc" name="coc" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes" class="col-sm-5 control-label">Забелешки</label>
+                                    <div class="col-sm-7">
+                                        <textarea class="form-control" id="notes" name="notes"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
 
-						</form>
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
+                        </form>
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
 
-				<div class="col-sm-12">
-					<div class="box box-info">
-						<div class="box-header with-border">
-						</div>
-						<div class="form-horizontal input-group-sm">
-							<div class="box-body">
-								<div class="form-group">
-									<label for="referral-number" class="col-sm-4 control-label">Број на упат од МВР</label>
-									<div class="col-sm-3">
-										<input type="text" class="form-control" id="referral-number" name="referral-number" required>
-									</div>
-									<label for="referral-date" class="col-sm-2 control-label">Дата</label>
-									<div class="col-sm-3">
-										<input type="text" class="form-control" id="referral-date" name="referral-date" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="decision-number" class="col-sm-4 control-label">Број на одлуката од Влада</label>
-									<div class="col-sm-3">
-										<input type="text" class="form-control" id="decision-number" name="decision-number" required>
-									</div>
-									<label for="decision-date" class="col-sm-2 control-label">Дата</label>
-									<div class="col-sm-3">
-										<input type="text" class="form-control" id="decision-date" name="decision-date" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="approval-number" class="col-sm-4 control-label">Број на одобрување од Биро за метрологија</label>
-									<div class="col-sm-3">
-										<input type="text" class="form-control" id="approval-number" name="approval-number" required>
-									</div>
-									<label for="approval-date" class="col-sm-2 control-label">Дата</label>
-									<div class="col-sm-3">
-										<input type="text" class="form-control" id="approval-date" name="approval-date" required>
-									</div>
-								</div>
-							</div>
-							<!-- /.box-body -->
+                <div class="col-sm-12">
+                    <div class="box box-info">
+                        <div class="box-header with-border">
+                        </div>
+                        <div class="form-horizontal input-group-sm">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="referral-number" class="col-sm-4 control-label">Број на упат од МВР</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="referral-number" name="referral-number" required>
+                                    </div>
+                                    <label for="referral-date" class="col-sm-2 control-label">Дата</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="referral-date" name="referral-date" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="decision-number" class="col-sm-4 control-label">Број на одлуката од Влада</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="decision-number" name="decision-number" required>
+                                    </div>
+                                    <label for="decision-date" class="col-sm-2 control-label">Дата</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="decision-date" name="decision-date" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="approval-number" class="col-sm-4 control-label">Број на одобрување од Биро за метрологија</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="approval-number" name="approval-number" required>
+                                    </div>
+                                    <label for="approval-date" class="col-sm-2 control-label">Дата</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" id="approval-date" name="approval-date" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
 
-						</div>
-						<div class="box-footer">
-						</div>
-						<!-- /.box-footer -->
-					</div>
-				</div>
+                        </div>
+                        <div class="box-footer">
+                        </div>
+                        <!-- /.box-footer -->
+                    </div>
+                </div>
 
-				<ul class="list-unstyled list-inline pull-right">
-					<li>
-						<button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
-					</li>
-					<li>
-						<button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button>
-					</li>
-				</ul>
-			</div>
+                <ul class="list-unstyled list-inline pull-right">
+                    <li>
+                        <button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button>
+                    </li>
+                </ul>
+            </div>
 
-			<!--/menu5-->
-			<div id="menu5" class="tab-pane fade">
-				<h3>Menu 5</h3>
-				<p>Some content in menu 2.</p>
-				<div class="row">
-					<div class="col-lg-12">
-						<h1 class="page-header">Thumbnail Gallery</h1>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive" src="http://placehold.it/100x100" alt="">
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive" src="http://placehold.it/100x100" alt="">
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive" src="http://placehold.it/100x100" alt="">
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive" src="http://placehold.it/100x100" alt="">
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive" src="http://placehold.it/100x100" alt="">
-						</a>
-					</div>
-					<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						<a class="thumbnail" href="#">
-							<img class="img-responsive" src="http://placehold.it/100x100" alt="">
-						</a>
-					</div>
-				</div>
-				<ul class="list-unstyled list-inline pull-right">
-					<li>
-						<button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
-					</li>
-					<li>
-						<button type="button" class="btn btn-success"><i class="fa fa-check"></i> Done!</button>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
+            <!--/menu5-->
+            <div id="menu5" class="tab-pane fade">
+                <h3>Menu 5</h3>
+                <p>Some content in menu 2.</p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Thumbnail Gallery</h1>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/100x100" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/100x100" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/100x100" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/100x100" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/100x100" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/100x100" alt="">
+                        </a>
+                    </div>
+                </div>
+                <ul class="list-unstyled list-inline pull-right">
+                    <li>
+                        <button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-success"><i class="fa fa-check"></i> Done!</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>	
 </body>
 </html>   

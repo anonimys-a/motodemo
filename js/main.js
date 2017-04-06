@@ -96,7 +96,7 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
-               
+
 
                 if (chosenView === 'Потврда за технички карактеристики') {
                     //make the main div fluid because we need more space for the table from fifth table box view
@@ -155,17 +155,22 @@ $(document).ready(function () {
         }
     });
 
-  //second circle handle modal inputs to automaticaly fill form inputs for name surname
+    //second circle handle modal inputs to automaticaly fill form inputs for name surname
     $('#agent-podnositel-modal-button').click(function () {
-    	//set the values from the modal to the input fields
-    	var name = $('#input-name-modal-agent-podnositel').val();
+        //set the values from the modal to the input fields
+        var name = $('#input-name-modal-agent-podnositel').val();
         var surname = $('#input-surname-modal-agent-podnositel').val();
         var fullName = name + "  " + surname;
         $('#input-name-of-agent').val(fullName);//set the agent name field
-        
+
         $('#input-name').val(name);
         $('#input-surname').val(surname);
         $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
+    });
+
+    //third circle handle modal inputs to automaticaly fill form input description
+    $('#podatoci-vozilo-marka-modal-button').click(function() {
+        $('#input-mark-vehicle').val($('#description-podatoci-vozilo-modal').val());
     });
 
     function hideErrorMessagesForValidation() {
@@ -436,7 +441,7 @@ $(document).ready(function () {
     }
 
     //going from first view to fifth view by clicking the link
-    $("#potvrda-tehnicki-karakteristiki").click(function(e) {
+    $("#potvrda-tehnicki-karakteristiki").click(function (e) {
         e.preventDefault();
         //hide all elements for the first view and show the table from the fifth view.
         $(".data-entry-vehicle").hide();
@@ -449,7 +454,7 @@ $(document).ready(function () {
         $("p#subject-type").text('Потврда за технички карактеристики');
         //TODO: take all field values that we need for the fifth box view table
         $("#vrednost-za-ime-tehnicki-karakteristiki").val($("#input-name").val());
-       
+
         //TODO: broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
     });
 
@@ -597,7 +602,7 @@ $(document).ready(function () {
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
         } else if (chosenView === "Калибрација на тахографи") {
-        	$(".content-header.content-header-tachograph-data").show();
+            $(".content-header.content-header-tachograph-data").show();
             $(".content-tachograph-data-seven-view").show();
             $(".box-primary-seven-view-wrapper").show();
         } else if (chosenView === "ПТЕУ") {
@@ -612,13 +617,13 @@ $(document).ready(function () {
             $(".content-recording-of-contributions-tenth-view").show();
             $(".box-primary-tenth-view-wrapper").show();
 
-            
+
             $(".content-recording-of-contributions-third-view").hide();
             $(".box-primary-third-view-wrapper").hide();
         }
     }
 
-    
+
 
 
     /*=========THIRD FORM VALIDATION=======*/
@@ -914,10 +919,36 @@ $(document).ready(function () {
     });
 
     $('a').tooltip();
-    
+
     //only one row can be checked from the first table from the first box view
-    $('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function() {
-	   $('.grupa1-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
-	});
+    $('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function () {
+        $('.grupa1-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa2-tabela-vid-na-prepravka-checkbox').on('change', function() {
+        $('.grupa2-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa3-tabela-vid-na-prepravka-checkbox').on('change', function() {
+        $('.grupa3-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa4-tabela-vid-na-prepravka-checkbox').on('change', function() {
+        $('.grupa4-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    //only one checkbox can be checked from the tachograph-data form from the seventh box view
+    $('.grupa1-vid-na-tahograf-checkbox').on('change', function() {
+        $('.grupa1-vid-na-tahograf-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa2-vid-na-inspekcija-checkbox').on('change', function() {
+        $('.grupa2-vid-na-inspekcija-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa3-samo-digitalni-tahografi-checkbox').on('change', function() {
+        $('.grupa3-samo-digitalni-tahografi-checkbox').not(this).prop('checked', false);
+    });
+
 
 });
