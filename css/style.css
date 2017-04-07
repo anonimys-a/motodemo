@@ -675,6 +675,10 @@ label.earlier-certificate-label {
 	display: none;
 }
 
+.br-na-predmet-edinecno-tehnicki-karakteristiki {
+	display: none;
+}
+
 table.table-potvrda-za-tehnicki-karakteristiki tr:nth-of-type(odd) { 
 	background: #eee; 
 }

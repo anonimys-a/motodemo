@@ -25,6 +25,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/mindmup-editabletable.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
 </head>
 <body>
@@ -2356,7 +2357,7 @@
                                     </div>
                                     <!-- /.box-header -->
                                     <div class="box-body table-responsive no-padding">
-                                        <table class="table table-hover table-bordered table-potvrda-za-tehnicki-karakteristiki">
+                                        <table class="table table-hover table-bordered table-potvrda-za-tehnicki-karakteristiki" id="table-potvrda-za-tehnicki-karakteristiki">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
@@ -2364,6 +2365,7 @@
                                                     <th class="prezime-tehnicki-karakteristiki">Презиме</th>
                                                     <th class="naziv-tehnicki-karakteristiki">Назив</th>
                                                     <th class="br-na-predmet-tehnicki-karakteristiki">Бр. на предмет</th>
+                                                    <th class="br-na-predmet-edinecno-tehnicki-karakteristiki">Бр. на предмет од единечно одобрение</th>
                                                     <th>Марка на возило</th>
                                                     <th>Тип на возило</th>
                                                     <th>Бр. на шасија</th>
@@ -2380,12 +2382,13 @@
                                                 <tr>
                                                     <td>1</td>
                                                     <td id="vrednost-za-ime-tehnicki-karakteristiki" class="ime-tehnicki-karakteristiki">Ana</td>
-                                                    <td class="prezime-tehnicki-karakteristiki">Ангеловски</td>
+                                                    <td id="vrednost-za-prezime-tehnicki-karakteristiki" class="prezime-tehnicki-karakteristiki">Ангеловски</td>
                                                     <td class="naziv-tehnicki-karakteristiki">Назив тест</td>
-                                                    <td>123456</td>
-                                                    <td>Honda</td>
-                                                    <td>Accord</td>
-                                                    <td>Vin707EH704158417</td>
+                                                    <td class="br-na-predmet-tehnicki-karakteristiki">123456</td>
+                                                    <td class="br-na-predmet-edinecno-tehnicki-karakteristiki">123456</td>
+                                                    <td id="marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki">Honda</td>
+                                                    <td id="tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki">Accord</td>
+                                                    <td id="broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki">Vin707EH704158417</td>
                                                     <td>
                                                         <div class="form-group odberi-dobavuvac-kolona-wrapper dropdown">
                                                             <button class="btn btn-default dropdown-toggle button-supplier-style" type="button" data-toggle="dropdown">
@@ -2446,7 +2449,8 @@
                                                     <td class="ime-tehnicki-karakteristiki">Александар</td>
                                                     <td class="prezime-tehnicki-karakteristiki">Петровски</td>
                                                     <td class="naziv-tehnicki-karakteristiki">Назив Тест два</td>
-                                                    <td>12345678</td>
+                                                    <td class="br-na-predmet-tehnicki-karakteristiki">12345678</td>
+                                                    <td class="br-na-predmet-edinecno-tehnicki-karakteristiki">123456</td>
                                                     <td>CITROEN</td>
                                                     <td>KK</td>
                                                     <td>VH1234567890</td>
