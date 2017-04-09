@@ -728,3 +728,13 @@ table.table-potvrda-za-tehnicki-karakteristiki td, th {
     vertical-align: middle;
     text-align: center;
 }
+
+.table.tabela-vid-na-prepravka.table-bordered>tbody>tr.tabele-header-color>th {
+    border: 1px solid #f4f4f4;
+    border-top: none;
+}
+
+.table.table-potvrda-za-tehnicki-karakteristiki.table-bordered > tbody > tr > td {
+    border: 1px solid #ddd;
+    border-top: none;
+}    

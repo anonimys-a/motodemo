@@ -72,7 +72,7 @@ $(document).ready(function () {
                     //if validation not pass or the response is with error we do not go to the third step(cirlce)
                     return;
                 } else {
-//                    clearSecondCircleForm();
+                    //                    clearSecondCircleForm();
                 };
             }
 
@@ -452,14 +452,15 @@ $(document).ready(function () {
         $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
         $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
         $("p#subject-type").text('Потврда за технички карактеристики');
-        
+
         //take all field values that we need for the fifth box view table
         var name = $('#input-name').val();
         var surname = $('#input-surname').val();
         var inputChassisNumber = $("#input-chassis-number").val();
         var tipNaVozilo = $("#input-type").val();
-        var markaNaVozilo =  $('#description-podatoci-vozilo-modal').val();
+        var markaNaVozilo = $('#description-podatoci-vozilo-modal').val();
         
+
         $('#broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki').html(inputChassisNumber);
         $("#vrednost-za-ime-tehnicki-karakteristiki").html(name);
         $("#vrednost-za-prezime-tehnicki-karakteristiki").html(surname);
@@ -485,7 +486,7 @@ $(document).ready(function () {
             $('.naziv-tehnicki-karakteristiki').hide();
         }
     });
-    
+
     //make custom columns to be editable
     $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
 
@@ -937,7 +938,7 @@ $(document).ready(function () {
     $('a').tooltip();
 
     //only one row can be checked from the first table from the first box view
-    $('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function () {
+    $('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function() {
         $('.grupa1-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
     });
 
