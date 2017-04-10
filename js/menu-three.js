@@ -73,7 +73,7 @@ $(document).ready(function () {
 	    $('.grupa4-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
 	});
 
-	//only one checkbox can be checked from the tachograph-data form from the seventh box view
+	//only one checkbox can be checked from the tachograph-data form from the seventh box view, menu 3
 	$('.grupa1-vid-na-tahograf-checkbox').on('change', function() {
 	    $('.grupa1-vid-na-tahograf-checkbox').not(this).prop('checked', false);
 	});
@@ -563,19 +563,39 @@ function clearThirdCircleForm() {
     $("#input-mark-vehicle").val('');
     $("#input-type").val('');
     $("#input-chassis-number").val('');
-    $("#input-type-number-of-engine").val('');
+    $("#input-input-type-of-engine").val('');
+    $("#input-number-of-engine").val('');
     $("#input-vehicle-category").val('');
-    $("#input-kind-of-renovation").val('');
     $("#input-number-of-adr-certificate").val('');
     $("#input-type-vehicle").val('');
     $("#input-mileage").val('');
     $("#input-examination-for-class").val('');
     $("#input-registration-mark-of-the-vehicle").val('');
-    $("#input-type-of-vehicle-shipping-requiring-confirmation").val('');
-    $("#input-class-of-the-vehicle").val('');
+//    $("#input-type-of-vehicle-shipping-requiring-confirmation").val('');
+//    $("#input-class-of-the-vehicle").val('');
     $("#input-model-of-the-vehicle").val('');
     $("#input-number-of-seats-according-to-vehicle-license").val('');
     $("#input-registration-number-of-the-vehicle").val('');
     $("#input-year-of-first-registration").val('');
     $("#input-year-of-production").val('');
+    $("#checkbox-vozilo-na-uvid").prop('checked', false);
+    $("#checkbox-vozilo-na-lice-mesto").prop('checked', false);
+    $("#input-other-documentation").val('');
+    $("#input-number-approval-for-embossing").val('');
+    $("#input-number-orders").val('');
+    $("#input-number-individual-approval").val('');
+    $("#datepicker").val('');
+    $('#datepicker-approval-for-embossing').datepicker('setDate', null);
+    $("#datepicker-orders-of-authority").datepicker('setDate', null);
+    $("#datepicker-individual-approval").datepicker('setDate', null);
+    clearAllTablesFromFirstView();
 }
+
+//Clear na 4-te tabeli Odberi Prepravka od prvoto view, menu 3
+function clearAllTablesFromFirstView(){
+	$('.grupa1-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+	$('.grupa2-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+	$('.grupa3-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+	$('.grupa4-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+}
+

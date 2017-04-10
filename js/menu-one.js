@@ -15,4 +15,9 @@ $(document).ready(function () {
 	    var chosenSubjectName = $(this).find("span.hidden-subject-name").text();
 	    $("p#subject-type").text(chosenSubjectName);
 	});
+	
+	$(".discard-all-button").click(function(){
+		clearSecondCircleForm();
+		clearThirdCircleForm();
+	});
 });

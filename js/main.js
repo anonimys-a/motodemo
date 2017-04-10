@@ -127,16 +127,16 @@ $(document).ready(function () {
     });
 
     //Date picker
-    $('#datepicker').datepicker({
+    $('#datepicker-approval-for-embossing').datepicker({
         autoclose: true
     });
 
-    $('#datepicker2').datepicker({
+    $('#datepicker-orders-of-authority').datepicker({
         autoclose: true
     });
 
 
-    $('#datepicker3').datepicker({
+    $('#datepicker-individual-approval').datepicker({
         autoclose: true
     });
 

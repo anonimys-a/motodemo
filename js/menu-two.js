@@ -66,7 +66,7 @@ function clearSecondCircleForm() {
     $("#input-tax-identification-number").val('');
     $("#input-municipality-of-residence").val('');
     $("#input-place-of-residence").val('');
-    $("#input-municipality-of-residence").val('');
+    $("#input-country-of-residence").val('');
 }
 
 

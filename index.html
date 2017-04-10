@@ -526,13 +526,10 @@
                 </ul>
                 <ul class="list-unstyled list-inline pull-left">
                     <li>
-                        <button type="button" class="btn btn-danger">Delete all</button>
+                        <button data-toggle="tab" href="#menu1" type="button" class="btn btn-danger discard-all-button">Discard all</button>
                     </li>
                 </ul>
                 <ul class="list-unstyled list-inline pull-right">
-                    <li>
-                        <button type="button" class="btn btn-default prev-step"><i class="fa fa-chevron-left"></i> Back</button>
-                    </li>
                     <li>
                         <button type="button" class="btn btn-info next-step">Next <i class="fa fa-chevron-right"></i></button>
                     </li>
@@ -2106,7 +2103,7 @@
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
                                                         <label>
-                                                            <input type="checkbox" value="">
+                                                            <input id="checkbox-vozilo-na-uvid" type="checkbox" value="">
                                                             <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                         </label>
                                                     </div>
@@ -2135,34 +2132,34 @@
                                 <!-- form start -->
                                 <form class="form-horizontal">
                                     <div class="box-body">
-                                        <div class="form-group input-imprint-identification-marks-wrapper">
-                                            <label for="input-imprint-identification-marks" class="col-sm-10 control-label">Одобрение за втиснување издадено од Биро за метрологија</label>
+                                        <div class="form-group input-approval-for-embossing-wrapper">
+                                            <label for="input-approval-for-embossing" class="col-sm-10 control-label">Одобрение за втиснување издадено од Биро за метрологија</label>
                                         </div>
-                                        <div class="form-group input-number-imprint-identification-marks-wrapper">
-                                            <label for="input-number-imprint-identification-marks" class="col-sm-2 control-label">број:</label>
+                                        <div class="form-group input-number-approval-for-embossing-wrapper">
+                                            <label for="input-number-approval-for-embossing" class="col-sm-2 control-label">број:</label>
                                             <div class="col-sm-4">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="input-number-imprint-identification-marks">
+                                                    <input type="text" class="form-control" id="input-number-approval-for-embossing">
                                                 </div>
                                             </div>
-                                            <label for="input-date-imprint-identification-marks" class="col-sm-2 control-label">дата:</label>
+                                            <label for="input-date-approval-for-embossing" class="col-sm-2 control-label">дата:</label>
                                             <div class="col-sm-4">
                                                 <div class="input-group date">
                                                     <div class="input-group-addon addon-color">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
-                                                    <input type="text" class="form-control pull-right datepicker_recurring_start input-addon-border-left" id="datepicker">
+                                                    <input type="text" class="form-control pull-right datepicker_recurring_start input-addon-border-left" id="datepicker-approval-for-embossing">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group input-imprint-identification-marks-wrapper">
-                                            <label for="input-imprint-identification-marks" class="col-sm-5 control-label imprint-identification-marks-margin">Упатница од надлежен орган </label>
+                                        <div class="form-group input-orders-of-authority-wrapper">
+                                            <label for="input-orders-of-authority" class="col-sm-5 control-label imprint-identification-marks-margin">Упатница од надлежен орган</label>
                                         </div>
                                         <div class="form-group input-number-orders-wrapper">
                                             <label for="input-number-orders" class="col-sm-2 control-label">број:</label>
                                             <div class="col-sm-4">
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" id="input-number-imprint-identification-marks">
+                                                    <input type="text" class="form-control" id="input-number-orders">
                                                 </div>
                                             </div>
                                             <label for="input-date-imprint-identification-marks" class="col-sm-2 control-label">дата:</label>
@@ -2171,7 +2168,7 @@
                                                     <div class="input-group-addon addon-color">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
-                                                    <input type="text" class="form-control pull-right input-addon-border-left" id="datepicker2">
+                                                    <input type="text" class="form-control pull-right input-addon-border-left" id="datepicker-orders-of-authority">
                                                 </div>
                                             </div>
                                         </div>
@@ -2206,7 +2203,7 @@
                                                     <div class="input-group-addon addon-color">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
-                                                    <input type="text" class="form-control pull-right input-addon-border-left" id="datepicker3">
+                                                    <input type="text" class="form-control pull-right input-addon-border-left" id="datepicker-individual-approval">
                                                 </div>
                                             </div>
                                         </div>
@@ -2217,7 +2214,7 @@
                                                     <div class="input-group">
                                                         <div class="checkbox checkbox-margin">
                                                             <label>
-                                                                <input type="checkbox" value="">
+                                                                <input id="checkbox-vozilo-na-lice-mesto" type="checkbox" value="">
                                                                 <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                             </label>
                                                         </div>
@@ -2921,7 +2918,7 @@
                 </ul>
                 <ul class="list-unstyled list-inline pull-left">
                     <li>
-                        <button type="button" class="btn btn-danger">Delete all</button>
+                        <button data-toggle="tab" href="#menu1" type="button" class="btn btn-danger discard-all-button">Discard all</button>
                     </li>
                 </ul>
                 <ul class="list-unstyled list-inline pull-right">
