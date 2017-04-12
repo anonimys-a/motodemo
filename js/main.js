@@ -3,23 +3,6 @@ $(document).ready(function () {
     //	$("#load-template").on("click", function() {
     //        $("#page-content-wrapper").load("page-content-template.html");
     //	});
-	
-	$('#download-pdf').click(function() {
-    	var elem = $('#customers');
-    	if(!elem.is(":visible")){
-            elem.show();elem.fadeIn(1);elem.fadeOut(1);
-         }
-    	
-        html2canvas($("#customers"), {
-            onrendered: function(canvas) {         
-                var imgData = canvas.toDataURL(
-                    'image/png');              
-                var doc = new jsPDF('p', 'mm');
-                doc.addImage(imgData, 'PNG', 10, 10);
-                doc.save('sample-file.pdf');
-            }
-        });
-    });
 
     //show the proccess content on click
     $('#load-template').click(function (e) {
@@ -113,6 +96,7 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
+                changeFormLayoutDataEntryTank(chosenView);
 
 
                 if (chosenView === 'Потврда за технички карактеристики') {
@@ -139,8 +123,18 @@ $(document).ready(function () {
     });
 
     //third circle handle modal inputs to automaticaly fill form input description
-    $('#podatoci-vozilo-marka-modal-button').click(function() {
+    $('#podatoci-vozilo-marka-modal-button').click(function () {
         $('#input-mark-vehicle').val($('#description-podatoci-vozilo-modal').val());
+    });
+
+    //third circle handle modal inputs to automaticaly fill form input type-of-engine
+    $("#podatoci-vozilo-tip-motor-modal-button").click(function() {
+        $("#input-type-of-engine").val($("#podatoci-vozilo-tip-motor-modal").val());
+    });
+
+    //third circle handle modal inputs to automaticaly fill form input model-of-the-vehicle (komercijalna oznaka)
+    $("#podatoci - vozilo - komercijalna - oznaka - modal - button").click(function() {
+        $("#model-of-the-vehicle").val($("#modal-komercijalna-oznaka").val());
     });
 
     //Date picker

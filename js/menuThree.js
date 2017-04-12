@@ -238,6 +238,15 @@ function changeFormLayoutForContributionsEvidence(chosenView) {
     }
 }
 
+function changeFormLayoutDataEntryTank(chosenView) {
+    if (chosenView === "АДР") {
+        $(".content - data - entry - tank - fourth - view").show();
+        $(".input-manufacturer-of-tank-wrapper").show();
+        $(".content-header-data-entry-tank").show();
+        $(".box-primary-sixth-view-wrapper").show();
+    }
+}
+
 /*=========THIRD FORM VALIDATION=======*/
 
 //form validation
@@ -560,10 +569,15 @@ function hideErrorMessagesForVehicleDataValidation() {
 
 function clearThirdCircleForm() {
 	$("#input-manufacturer-of-vehicle").val('');
-    $("#input-mark-vehicle").val('');
+	$("#input-mark-vehicle").val('');
+	$("#identification").val('');
+	$("#description-podatoci-vozilo-modal").val('');
     $("#input-type").val('');
     $("#input-chassis-number").val('');
-    $("#input-input-type-of-engine").val('');
+    $("#input-type-of-engine").val('');
+    $("#podatoci-vozilo-tip-motor-modal").val('');
+    $("#podatoci-vozilo-snaga-modal").val('');
+    $("#podatoci-vozilo-zafatnina-modal").val('');
     $("#input-number-of-engine").val('');
     $("#input-vehicle-category").val('');
     $("#input-number-of-adr-certificate").val('');
@@ -574,21 +588,85 @@ function clearThirdCircleForm() {
 //    $("#input-type-of-vehicle-shipping-requiring-confirmation").val('');
 //    $("#input-class-of-the-vehicle").val('');
     $("#input-model-of-the-vehicle").val('');
+    $("#modal-komercijalna-oznaka-vid-vozilo").val('');
+    $("#modal-komercijalna-oznaka-marka").val('');
+    $("#modal-komercijalna-oznaka").val('');
+    $("#modal-komercijalna-oznaka-tip-vozilo").val('');
+    $("#modal-komercijalna-oznaka-varijanta").val('');
+    $("#modal-komercijalna-oznaka-izvedba").val('');
+    $("#modal-komercijalna-oznaka-forma").val('');
+    $("#modal-komercijalna-oznaka-namena").val('');
     $("#input-number-of-seats-according-to-vehicle-license").val('');
     $("#input-registration-number-of-the-vehicle").val('');
     $("#input-year-of-first-registration").val('');
     $("#input-year-of-production").val('');
-    $("#checkbox-vozilo-na-uvid").prop('checked', false);
-    $("#checkbox-vozilo-na-lice-mesto").prop('checked', false);
-    $("#input-other-documentation").val('');
+    
+   //first box, second view, second form
+    $("#checkbox-potvrda-za-tehnichki-baranja-first-box").prop('checked', false);
+    $("#checkbox-dokaz-za-carinski-obvrski-first-box").prop('checked', false);
+    $("#checkbox-fotokopija-dogovor-faktura-first-box").prop('checked', false);
+    $("#checkbox-fotokopija-soobrakjajna-dozvola-first-box").prop('checked', false);
+    $("#checkbox-upatnica-mvr").prop('checked', false);
+    $("#checkbox-potvrda-vgraduvanje").prop('checked', false);
+    $("#input-other-documentation-first-box").val('');
+    $("#checkbox-vozilo-uvid-pregled").prop('checked', false);
+
+    //second box, second view, second form
+    $("#checkbox-potvrda-za-tehnichki-baranja-second-box").prop('checked', false);
+    $("#checkbox-potvrda-identifikacija").prop('checked', false);
+    $("#checkbox-dokaz-za-carinski-obvrski-second-box").prop('checked', false);
+    $("#checkbox-fotokopija-dogovor-faktura-second-box").prop('checked', false);
+    $("#checkbox-fotokopija-soobrakjajna-dozvola-second-box").prop('checked', false);
+    $("#checkbox-vozilo-na-uvid-pregled-second-box").prop('checked', false);
+
+    //third box, second view, second form
     $("#input-number-approval-for-embossing").val('');
     $("#input-number-orders").val('');
     $("#input-number-individual-approval").val('');
-    $("#datepicker").val('');
     $('#datepicker-approval-for-embossing').datepicker('setDate', null);
     $("#datepicker-orders-of-authority").datepicker('setDate', null);
     $("#datepicker-individual-approval").datepicker('setDate', null);
+    $("#checkbox-vozilo-na-lice-mesto").prop('checked', false);
     clearAllTablesFromFirstView();
+
+    //fourth box, second view, second form
+    $("#checkbox-fotokopija-soobrakjajna-dozvola-fourth-box").prop('checked', false);
+    $("#input-other-documentation-fourth-box").val('');
+    $("#checkbox-izdaden-sertifikat").prop('checked', false);
+    $("#checkbox-izdadeno-uverenie").prop('checked', false);
+    $("#checkbox-proverka-rezervoar").prop('checked', false);
+    $("#input-technical-documentation-fourth-box").val('');
+    $("#checkbox-vozilo-uvid-pregled-fourth-box").prop('checked', false);
+
+    //fifth box, second view, second form
+   
+
+    //sixth box, second view, second form
+    $("#checkbox-fotokopija-soobrakjajna-dozvola-sixth-box").prop('checked', false);
+    $("#input-certificate-of-conformity").val('');
+    $("#input-tachograph").val('');
+    $("#checkbox-vozilo-uvid-pregled-sixth-box").prop('checked', false);
+
+    //seventh box, second view, second form
+    $("#checkbox-analogen").prop('checked', false);
+    $("#checkbox-digitalen").prop('checked', false);
+    $("#input-manufacturer-of-tachograph").val('');
+    $("#input-type-of-tachograph").val('');
+    $("#input-factory-serial-number-of-the-tachograph").val('');
+    $("#checkbox-redovna").prop('checked', false);
+    $("#checkbox-vonredna").prop('checked', false);
+    $("#checkbox-aktivacija").prop('checked', false);
+    $("#checkbox-prevzemi").prop('checked', false);
+
+    //eighth box, second view, second form
+    $("#checkbox-fotokopija-soobrakjajna-dozvola-eighth-box").prop('checked', false);
+    $("#checkbox-vozilo-tehnichki-pregled").prop('checked', false);
+
+    //tenth box, second view, second form
+    $("#checkbox-fotokopija-soobrakjajna-dozvola-tenth-box").prop('checked', false);
+    $("#checkbox-izdaden-atp-sertifikat").prop('checked', false);
+    $("#input-technical-documentation-tenth-box").val('');
+    $("#checkbox-vozilo-na-uvid-pregled-tenth-box").prop('checked', false);
 }
 
 //Clear na 4-te tabeli Odberi Prepravka od prvoto view, menu 3

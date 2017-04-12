@@ -306,6 +306,18 @@ li.renovation:hover {
 	display: none;
 }
 
+.content-data-entry-tank-fourth-view {
+    display: none;
+}
+
+.input-manufacturer-of-tank-wrapper {
+    display: none;
+}
+
+.content-header-data-entry-tank {
+    display: none;
+}
+
 #input-manufacturer-of-vehicle::-webkit-input-placeholder { 
   color: #dd4b39;
 }
@@ -394,6 +406,9 @@ li.renovation:hover {
 	display: none;
 }
 
+ .box-primary-fourth-tank-view-wrapper {
+     display: none;
+ }
 
 .box-primary-sixth-view-wrapper {
 	display: none;
