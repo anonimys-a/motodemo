@@ -5,12 +5,12 @@ $(document).ready(function () {
     //	});
 	
 	$('#download-pdf').click(function() {
-    	var elem = $('#demo-table');
+    	var elem = $('#customers');
     	if(!elem.is(":visible")){
             elem.show();elem.fadeIn(1);elem.fadeOut(1);
          }
     	
-        html2canvas($("#demo-table"), {
+        html2canvas($("#customers"), {
             onrendered: function(canvas) {         
                 var imgData = canvas.toDataURL(
                     'image/png');              

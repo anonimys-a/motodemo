@@ -26,10 +26,14 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mindmup-editabletable.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jspdf.debug.js"></script>
     <script src="js/menuOne.js"></script>
     <script src="js/menuTwo.js"></script>
     <script src="js/menuThree.js"></script>
+    <script language="javascript" type="text/javascript" src="js/plugins/html2canvas.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.20/vfs_fonts.js"></script>
 </head>
 <body>
     <div id="wrapper" class="toggled">
@@ -86,6 +90,58 @@
                 <div class="row">
                     <div class="col-md-4 col-lg-6">
                         <div class="col-sm-12">
+                        <div id="customers">
+    <table id="tab_customers" class="table table-striped">
+        <colgroup>
+            <col width="20%">
+                <col width="20%">
+                    <col width="20%">
+                        <col width="20%">
+        </colgroup>
+        <thead>
+            <tr class='warning'>
+                <th>Country</th>
+                <th>Population</th>
+                <th>Date</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Кина</td>
+                <td>1,363,480,000</td>
+                <td>March 24, 2014</td>
+                <td>19.1</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>1,241,900,000</td>
+                <td>March 24, 2014</td>
+                <td>17.4</td>
+            </tr>
+            <tr>
+                <td>United States</td>
+                <td>317,746,000</td>
+                <td>March 24, 2014</td>
+                <td>4.44</td>
+            </tr>
+            <tr>
+                <td>Indonesia</td>
+                <td>249,866,000</td>
+                <td>July 1, 2013</td>
+                <td>3.49</td>
+            </tr>
+            <tr>
+                <td>Brazil</td>
+                <td>201,032,714</td>
+                <td>July 1, 2013</td>
+                <td>2.81</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<button id="download-pdf">Download Pdf</button>
 
                             <div class="info-box bg-aqua box-toggle main-subject-tab">
                                 <span class="info-box-icon"><i class="fa fa-flag-o"></i></span>
