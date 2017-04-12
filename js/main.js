@@ -3,6 +3,23 @@ $(document).ready(function () {
     //	$("#load-template").on("click", function() {
     //        $("#page-content-wrapper").load("page-content-template.html");
     //	});
+	
+	$('#download-pdf').click(function() {
+    	var elem = $('#demo-table');
+    	if(!elem.is(":visible")){
+            elem.show();elem.fadeIn(1);elem.fadeOut(1);
+         }
+    	
+        html2canvas($("#demo-table"), {
+            onrendered: function(canvas) {         
+                var imgData = canvas.toDataURL(
+                    'image/png');              
+                var doc = new jsPDF('p', 'mm');
+                doc.addImage(imgData, 'PNG', 10, 10);
+                doc.save('sample-file.pdf');
+            }
+        });
+    });
 
     //show the proccess content on click
     $('#load-template').click(function (e) {
