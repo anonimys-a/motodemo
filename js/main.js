@@ -96,7 +96,7 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
-                changeFormLayoutDataEntryTank(chosenView);
+               
 
 
                 if (chosenView === 'Потврда за технички карактеристики') {

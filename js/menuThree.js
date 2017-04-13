@@ -199,9 +199,13 @@ function changeFormLayoutForContributionsEvidence(chosenView) {
         $(".content-header-recording-of-contributions").show();
         $(".content-recording-of-contributions-fourth-view").show();
         $(".box-primary-fourth-view-wrapper").show();
-
+        
         $(".content-recording-of-contributions-third-view").hide();
         $(".box-primary-third-view-wrapper").hide();
+        
+        $(".content-header-data-entry-tank").show();
+        $(".content-data-entry-tank-fourth-view").show();
+        $(".box-primary-fourth-tank-view-wrapper").show();
     } else if (chosenView === "Потврда за технички карактеристики") {
         $(".content-header-confirmation-of-the-technical-characteristics").show();
         $("confirmation-of-the-technical-characteristics-fifth-view").show();
@@ -238,14 +242,6 @@ function changeFormLayoutForContributionsEvidence(chosenView) {
     }
 }
 
-function changeFormLayoutDataEntryTank(chosenView) {
-    if (chosenView === "АДР") {
-        $(".content - data - entry - tank - fourth - view").show();
-        $(".input-manufacturer-of-tank-wrapper").show();
-        $(".content-header-data-entry-tank").show();
-        $(".box-primary-sixth-view-wrapper").show();
-    }
-}
 
 /*=========THIRD FORM VALIDATION=======*/
 
@@ -676,4 +672,5 @@ function clearAllTablesFromFirstView(){
 	$('.grupa3-tabela-vid-na-prepravka-checkbox').prop("checked", false);
 	$('.grupa4-tabela-vid-na-prepravka-checkbox').prop("checked", false);
 }
+
 
