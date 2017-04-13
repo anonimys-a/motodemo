@@ -22,6 +22,7 @@ $(document).ready(function () {
 	    var inputChassisNumber = $("#input-chassis-number").val();
 	    var tipNaVozilo = $("#input-type").val();
 	    var markaNaVozilo = $('#description-podatoci-vozilo-modal').val();
+	    var naziv = $('#name-legal-entity').val();
 	    
 
 	    $('#broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki').html(inputChassisNumber);
@@ -29,10 +30,15 @@ $(document).ready(function () {
 	    $("#vrednost-za-prezime-tehnicki-karakteristiki").html(surname);
 	    $("#tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(tipNaVozilo);
 	    $("#marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(markaNaVozilo);
+	    $("#vrednost-za-naziv-tehnicki-karakteristiki").html(naziv);
 
 	    //broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
 	    $('.br-na-predmet-tehnicki-karakteristiki').hide();
 	    $('.br-na-predmet-edinecno-tehnicki-karakteristiki').show();
+	    
+	    if ($("#legal-entity-radio-button").is(':checked')) {
+	    	$("#legal-entity-tehnicki-karakteristiki-radio-button").trigger("click"); 
+	    }
 	});
 	
 	/*==========================FIFTH VIEW=======*/

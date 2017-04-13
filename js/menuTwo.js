@@ -44,9 +44,6 @@ $(document).ready(function () {
 	    var surname = $('#input-surname-modal-agent-podnositel').val();
 	    var fullName = name + "  " + surname;
 	    $('#input-name-of-agent').val(fullName);//set the agent name field
-
-	    $('#input-name').val(name);
-	    $('#input-surname').val(surname);
 	    $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
 	});
 });
