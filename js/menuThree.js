@@ -14,7 +14,7 @@ $(document).ready(function () {
 	    $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
 	    $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
 	    $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
-	    $("p#subject-type").text('Потврда за технички карактеристики');
+//	    $("p#subject-type").text('Потврда за технички карактеристики');
 
 	    //take all field values that we need for the fifth box view table
 	    var name = $('#input-name').val();
@@ -39,6 +39,9 @@ $(document).ready(function () {
 	    if ($("#legal-entity-radio-button").is(':checked')) {
 	    	$("#legal-entity-tehnicki-karakteristiki-radio-button").trigger("click"); 
 	    }
+	    
+		$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16] });
+
 	});
 	
 	/*==========================FIFTH VIEW=======*/
@@ -59,7 +62,7 @@ $(document).ready(function () {
 	});
 	
 	//make custom columns to be editable
-	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
+//	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
 
 
 	//only one row can be checked from the first table from the first box view
@@ -145,6 +148,7 @@ function changeFormLayoutForVehicleData(chosenView) {
         numberOfAdrCertificate.show();
     } else if (chosenView === "Потврда за технички карактеристики") {
         potvrdaZaTehnickiKarakteristiki.show();
+    	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
     } else if (chosenView === "ЦЕМТ") {
         typeVehicle.show();
         typeOfEngine.show();
