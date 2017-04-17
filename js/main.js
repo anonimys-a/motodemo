@@ -96,7 +96,7 @@ $(document).ready(function () {
                 //change the form layout depending of the clicked subject
                 changeFormLayoutForVehicleData(chosenView);
                 changeFormLayoutForContributionsEvidence(chosenView);
-               
+
 
 
                 if (chosenView === 'Потврда за технички карактеристики') {
@@ -128,12 +128,12 @@ $(document).ready(function () {
     });
 
     //third circle handle modal inputs to automaticaly fill form input type-of-engine
-    $("#podatoci-vozilo-tip-motor-modal-button").click(function() {
+    $("#podatoci-vozilo-tip-motor-modal-button").click(function () {
         $("#input-type-of-engine").val($("#podatoci-vozilo-tip-motor-modal").val());
     });
 
     //third circle handle modal inputs to automaticaly fill form input model-of-the-vehicle (komercijalna oznaka)
-    $("#podatoci-vozilo-komercijalna-oznaka-modal-button").click(function() {
+    $("#podatoci-vozilo-komercijalna-oznaka-modal-button").click(function () {
         $("#model-of-the-vehicle").val($("#modal-komercijalna-oznaka").val());
     });
 

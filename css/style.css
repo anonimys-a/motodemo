@@ -748,4 +748,38 @@ table.table-potvrda-za-tehnicki-karakteristiki td, th {
 .table.table-potvrda-za-tehnicki-karakteristiki.table-bordered > tbody > tr > td {
     border: 1px solid #ddd;
     border-top: none;
-}    
+}  
+
+.table.table-liquid-compressed-gas > tbody > tr {
+    background-color: #f9f9f9;
+}  
+
+table.table-liquid-compressed-gas th { 
+	background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-submitter-user th { 
+	background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-vehicle th { 
+	background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-tank th { 
+	background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-code-tank th { 
+	background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
