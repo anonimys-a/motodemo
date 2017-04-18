@@ -16,6 +16,13 @@ $(document).ready(function () {
 	    $("p#subject-type").text(chosenSubjectName);
 	});
 	
+	//take the link name when click event is triggered on the first view/box
+	$(document).on('click', '.edinecno-odobruvanje-link', function (e) {
+		e.preventDefault();
+		var chosenSubjectLink = $(this).text();
+		$("p#chosen-link-from-view-menu1").text(chosenSubjectLink);
+	});
+	
 	$(".discard-all-button").click(function(){
 		clearSecondCircleForm();
 		clearThirdCircleForm();
