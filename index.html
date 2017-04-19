@@ -4106,7 +4106,19 @@
                                             <thead>
                                             <tr class="tabele-header-color">
                                                 <th style="width: 100px;">Код на резервоарот</th>
-                                                <th style="width: 100px;">Вид на резервоарот (фиксен, демонтажен или контејнер)</th>
+                                                <th style="width: 100px;">
+                                                	<div class="form-group input-code-tank-wrapper" style="display: block;">
+														<label for="input-code-tank" class="col-sm-6 control-label">Вид на резервоарот:</label>
+														<div class="col-sm-6">
+															<select class="form-control" id="input-code-tank" style="border-color: rgb(210, 214, 222);">
+																<option selected="">Одбери резервоар</option>
+																<option>фиксен</option>
+																<option>демонтажен</option>
+																<option>контејнер</option>
+															</select>
+														</div>
+													</div>
+                                                </th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -4367,7 +4379,14 @@
                                             <tbody>
                                             <tr>
                                                 <td>Електричен отпор :</td>
-                                                <td>(Ω)</td>
+                                                <td>
+                                                	<div class="form-group input-electrical-resistance-wrapper">
+														<div class="col-sm-6">
+															<input type="text" class="form-control" id="input-electrical-resistance" style="border-color: rgb(210, 214, 222);">
+														</div>
+														<label for="input-electrical-resistance" class="col-sm-2 control-label">(Ω)</label>
+													</div>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>Забелешки и примедби кои можат да влијаат на безбедноста на цистерна и опремата: </td>
