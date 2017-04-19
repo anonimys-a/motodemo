@@ -2,50 +2,50 @@
 
 
 $(document).ready(function () {
-	//change the second step form layout depending on the checkbox state
-	$("#individual-person-label, #legal-entity-label").change(function () {
-	    var placeOfResidence = $(".input-place-of-residence-wrapper");
-	    var embgLegalEntity = $(".embg-legal-entity-wrapper");
-	    var nameLegalEntity = $(".name-legal-entity-wrapper");
-	    var embLegalEntity = $(".emb-legal-entity-wrapper");
-	    var taxIdentificationNumber = $(".input-tax-identification-number-wrapper");
-	    var name = $(".input-name-wrapper");
-	    var surname = $(".input-surname-wrapper");
+    //change the second step form layout depending on the checkbox state
+    $("#individual-person-label, #legal-entity-label").change(function () {
+        var placeOfResidence = $(".input-place-of-residence-wrapper");
+        var embgLegalEntity = $(".embg-legal-entity-wrapper");
+        var nameLegalEntity = $(".name-legal-entity-wrapper");
+        var embLegalEntity = $(".emb-legal-entity-wrapper");
+        var taxIdentificationNumber = $(".input-tax-identification-number-wrapper");
+        var name = $(".input-name-wrapper");
+        var surname = $(".input-surname-wrapper");
 
-	    //hide all error messages for validation before switch to another form
-	    hideErrorMessagesForValidation();
+        //hide all error messages for validation before switch to another form
+        hideErrorMessagesForValidation();
 
-	    if ($("#legal-entity-radio-button").is(':checked')) {
-	        //change the input names in the form when legal-entity 
-	        embgLegalEntity.hide();
-	        taxIdentificationNumber.show();
-	        embLegalEntity.show();
-	        nameLegalEntity.show();
-	        placeOfResidence.insertBefore(".state-of-residence");
-	        name.hide();
-	        surname.hide();
-	    } else {
-	        //change the input names in the form when individual-person
-	        taxIdentificationNumber.hide();
-	        embLegalEntity.hide();
-	        nameLegalEntity.hide();
-	        embgLegalEntity.show();
-	        placeOfResidence.insertBefore(".state-of-residence");
-	        name.show();
-	        surname.show();
-	    }
-	});
-	
+        if ($("#legal-entity-radio-button").is(':checked')) {
+            //change the input names in the form when legal-entity 
+            embgLegalEntity.hide();
+            taxIdentificationNumber.show();
+            embLegalEntity.show();
+            nameLegalEntity.show();
+            placeOfResidence.insertBefore(".state-of-residence");
+            name.hide();
+            surname.hide();
+        } else {
+            //change the input names in the form when individual-person
+            taxIdentificationNumber.hide();
+            embLegalEntity.hide();
+            nameLegalEntity.hide();
+            embgLegalEntity.show();
+            placeOfResidence.insertBefore(".state-of-residence");
+            name.show();
+            surname.show();
+        }
+    });
 
-	//second circle handle modal inputs to automaticaly fill form inputs for name surname
-	$('#agent-podnositel-modal-button').click(function () {
-	    //set the values from the modal to the input fields
-	    var name = $('#input-name-modal-agent-podnositel').val();
-	    var surname = $('#input-surname-modal-agent-podnositel').val();
-	    var fullName = name + "  " + surname;
-	    $('#input-name-of-agent').val(fullName);//set the agent name field
-	    $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
-	});
+
+    //second circle handle modal inputs to automaticaly fill form inputs for name surname
+    $('#agent-podnositel-modal-button').click(function () {
+        //set the values from the modal to the input fields
+        var name = $('#input-name-modal-agent-podnositel').val();
+        var surname = $('#input-surname-modal-agent-podnositel').val();
+        var fullName = name + "  " + surname;
+        $('#input-name-of-agent').val(fullName);//set the agent name field
+        $('#input-embg').val($('#input-embg-modal-agent-podnositel').val());
+    });
 });
 
 function clearSecondCircleForm() {

@@ -1,99 +1,99 @@
 //## MENU THREE
 
 $(document).ready(function () {
-	/*==========================FIRST VIEW=======*/
+    /*==========================FIRST VIEW=======*/
 
-	//going from first view to fifth view by clicking the link
-	$("#potvrda-tehnicki-karakteristiki").click(function (e) {
-	    e.preventDefault();
-	    //hide all elements for the first view and show the table from the fifth view.
-	    $(".data-entry-vehicle").hide();
-	    $(".data-entry-vehicle-header").hide();
-	    $(".content-header-recording-of-contributions").hide();
-	    $(".content-recording-of-contributions-first-view").hide();
-	    $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
-	    $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
-	    $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
-//	    $("p#subject-type").text('Потврда за технички карактеристики');
+    //going from first view to fifth view by clicking the link
+    $("#potvrda-tehnicki-karakteristiki").click(function (e) {
+        e.preventDefault();
+        //hide all elements for the first view and show the table from the fifth view.
+        $(".data-entry-vehicle").hide();
+        $(".data-entry-vehicle-header").hide();
+        $(".content-header-recording-of-contributions").hide();
+        $(".content-recording-of-contributions-first-view").hide();
+        $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
+        $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+        $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
+        //	    $("p#subject-type").text('Потврда за технички карактеристики');
 
-	    //take all field values that we need for the fifth box view table
-	    var name = $('#input-name').val();
-	    var surname = $('#input-surname').val();
-	    var inputChassisNumber = $("#input-chassis-number").val();
-	    var tipNaVozilo = $("#input-type").val();
-	    var markaNaVozilo = $('#description-podatoci-vozilo-modal').val();
-	    var naziv = $('#name-legal-entity').val();
-	    
-
-	    $('#broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki').html(inputChassisNumber);
-	    $("#vrednost-za-ime-tehnicki-karakteristiki").html(name);
-	    $("#vrednost-za-prezime-tehnicki-karakteristiki").html(surname);
-	    $("#tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(tipNaVozilo);
-	    $("#marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(markaNaVozilo);
-	    $("#vrednost-za-naziv-tehnicki-karakteristiki").html(naziv);
-
-	    //broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
-	    $('.br-na-predmet-tehnicki-karakteristiki').hide();
-	    $('.br-na-predmet-edinecno-tehnicki-karakteristiki').show();
-	    
-	    if ($("#legal-entity-radio-button").is(':checked')) {
-	    	$("#legal-entity-tehnicki-karakteristiki-radio-button").trigger("click"); 
-	    }
-	    
-		$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16] });
-
-	});
-	
-	/*==========================FIFTH VIEW=======*/
-
-	//hide or show columns when user is swithcing between legal entity or individual person
-	$(document).on('change', '#fizichko-lice-tehnicki-karakteristiki-labela, #pravno-lice-tehnicki-karakteristiki-labela', function () {
-	    if ($("#legal-entity-tehnicki-karakteristiki-radio-button").is(':checked')) {
-	        //hide ime, prezime columns and show naziv
-	        $('.ime-tehnicki-karakteristiki').hide();
-	        $('.prezime-tehnicki-karakteristiki').hide();
-	        $('.naziv-tehnicki-karakteristiki').show();
-	    } else {
-	        //show ime, prezime columns and hide naziv
-	        $('.ime-tehnicki-karakteristiki').show();
-	        $('.prezime-tehnicki-karakteristiki').show();
-	        $('.naziv-tehnicki-karakteristiki').hide();
-	    }
-	});
-	
-	//make custom columns to be editable
-//	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
+        //take all field values that we need for the fifth box view table
+        var name = $('#input-name').val();
+        var surname = $('#input-surname').val();
+        var inputChassisNumber = $("#input-chassis-number").val();
+        var tipNaVozilo = $("#input-type").val();
+        var markaNaVozilo = $('#description-podatoci-vozilo-modal').val();
+        var naziv = $('#name-legal-entity').val();
 
 
-	//only one row can be checked from the first table from the first box view
-	$('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function() {
-	    $('.grupa1-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
-	});
+        $('#broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki').html(inputChassisNumber);
+        $("#vrednost-za-ime-tehnicki-karakteristiki").html(name);
+        $("#vrednost-za-prezime-tehnicki-karakteristiki").html(surname);
+        $("#tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(tipNaVozilo);
+        $("#marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(markaNaVozilo);
+        $("#vrednost-za-naziv-tehnicki-karakteristiki").html(naziv);
 
-	$('.grupa2-tabela-vid-na-prepravka-checkbox').on('change', function() {
-	    $('.grupa2-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
-	});
+        //broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
+        $('.br-na-predmet-tehnicki-karakteristiki').hide();
+        $('.br-na-predmet-edinecno-tehnicki-karakteristiki').show();
 
-	$('.grupa3-tabela-vid-na-prepravka-checkbox').on('change', function() {
-	    $('.grupa3-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
-	});
+        if ($("#legal-entity-radio-button").is(':checked')) {
+            $("#legal-entity-tehnicki-karakteristiki-radio-button").trigger("click");
+        }
 
-	$('.grupa4-tabela-vid-na-prepravka-checkbox').on('change', function() {
-	    $('.grupa4-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
-	});
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16] });
 
-	//only one checkbox can be checked from the tachograph-data form from the seventh box view, menu 3
-	$('.grupa1-vid-na-tahograf-checkbox').on('change', function() {
-	    $('.grupa1-vid-na-tahograf-checkbox').not(this).prop('checked', false);
-	});
+    });
 
-	$('.grupa2-vid-na-inspekcija-checkbox').on('change', function() {
-	    $('.grupa2-vid-na-inspekcija-checkbox').not(this).prop('checked', false);
-	});
+    /*==========================FIFTH VIEW=======*/
 
-	$('.grupa3-samo-digitalni-tahografi-checkbox').on('change', function() {
-	    $('.grupa3-samo-digitalni-tahografi-checkbox').not(this).prop('checked', false);
-	});
+    //hide or show columns when user is swithcing between legal entity or individual person
+    $(document).on('change', '#fizichko-lice-tehnicki-karakteristiki-labela, #pravno-lice-tehnicki-karakteristiki-labela', function () {
+        if ($("#legal-entity-tehnicki-karakteristiki-radio-button").is(':checked')) {
+            //hide ime, prezime columns and show naziv
+            $('.ime-tehnicki-karakteristiki').hide();
+            $('.prezime-tehnicki-karakteristiki').hide();
+            $('.naziv-tehnicki-karakteristiki').show();
+        } else {
+            //show ime, prezime columns and hide naziv
+            $('.ime-tehnicki-karakteristiki').show();
+            $('.prezime-tehnicki-karakteristiki').show();
+            $('.naziv-tehnicki-karakteristiki').hide();
+        }
+    });
+
+    //make custom columns to be editable
+    //	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
+
+
+    //only one row can be checked from the first table from the first box view
+    $('.grupa1-tabela-vid-na-prepravka-checkbox').on('change', function () {
+        $('.grupa1-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa2-tabela-vid-na-prepravka-checkbox').on('change', function () {
+        $('.grupa2-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa3-tabela-vid-na-prepravka-checkbox').on('change', function () {
+        $('.grupa3-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa4-tabela-vid-na-prepravka-checkbox').on('change', function () {
+        $('.grupa4-tabela-vid-na-prepravka-checkbox').not(this).prop('checked', false);
+    });
+
+    //only one checkbox can be checked from the tachograph-data form from the seventh box view, menu 3
+    $('.grupa1-vid-na-tahograf-checkbox').on('change', function () {
+        $('.grupa1-vid-na-tahograf-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa2-vid-na-inspekcija-checkbox').on('change', function () {
+        $('.grupa2-vid-na-inspekcija-checkbox').not(this).prop('checked', false);
+    });
+
+    $('.grupa3-samo-digitalni-tahografi-checkbox').on('change', function () {
+        $('.grupa3-samo-digitalni-tahografi-checkbox').not(this).prop('checked', false);
+    });
 });
 
 //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
@@ -148,7 +148,7 @@ function changeFormLayoutForVehicleData(chosenView) {
         numberOfAdrCertificate.show();
     } else if (chosenView === "Потврда за технички карактеристики") {
         potvrdaZaTehnickiKarakteristiki.show();
-    	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
     } else if (chosenView === "ЦЕМТ") {
         typeVehicle.show();
         typeOfEngine.show();
@@ -209,10 +209,10 @@ function changeFormLayoutForContributionsEvidence(chosenView) {
         $(".content-header-recording-of-contributions").show();
         $(".content-recording-of-contributions-fourth-view").show();
         $(".box-primary-fourth-view-wrapper").show();
-        
+
         $(".content-recording-of-contributions-third-view").hide();
         $(".box-primary-third-view-wrapper").hide();
-        
+
         $(".content-header-data-entry-tank").show();
         $(".content-data-entry-tank-fourth-view").show();
         $(".box-primary-fourth-tank-view-wrapper").show();
@@ -574,10 +574,10 @@ function hideErrorMessagesForVehicleDataValidation() {
 }
 
 function clearThirdCircleForm() {
-	$("#input-manufacturer-of-vehicle").val('');
-	$("#input-mark-vehicle").val('');
-	$("#identification").val('');
-	$("#description-podatoci-vozilo-modal").val('');
+    $("#input-manufacturer-of-vehicle").val('');
+    $("#input-mark-vehicle").val('');
+    $("#identification").val('');
+    $("#description-podatoci-vozilo-modal").val('');
     $("#input-type").val('');
     $("#input-chassis-number").val('');
     $("#input-type-of-engine").val('');
@@ -591,8 +591,8 @@ function clearThirdCircleForm() {
     $("#input-mileage").val('');
     $("#input-examination-for-class").val('');
     $("#input-registration-mark-of-the-vehicle").val('');
-//    $("#input-type-of-vehicle-shipping-requiring-confirmation").val('');
-//    $("#input-class-of-the-vehicle").val('');
+    //    $("#input-type-of-vehicle-shipping-requiring-confirmation").val('');
+    //    $("#input-class-of-the-vehicle").val('');
     $("#input-model-of-the-vehicle").val('');
     $("#modal-komercijalna-oznaka-vid-vozilo").val('');
     $("#modal-komercijalna-oznaka-marka").val('');
@@ -606,8 +606,8 @@ function clearThirdCircleForm() {
     $("#input-registration-number-of-the-vehicle").val('');
     $("#input-year-of-first-registration").val('');
     $("#input-year-of-production").val('');
-    
-   //first box, second view, second form
+
+    //first box, second view, second form
     $("#checkbox-potvrda-za-tehnichki-baranja-first-box").prop('checked', false);
     $("#checkbox-dokaz-za-carinski-obvrski-first-box").prop('checked', false);
     $("#checkbox-fotokopija-dogovor-faktura-first-box").prop('checked', false);
@@ -645,7 +645,7 @@ function clearThirdCircleForm() {
     $("#checkbox-vozilo-uvid-pregled-fourth-box").prop('checked', false);
 
     //fifth box, second view, second form
-   
+
 
     //sixth box, second view, second form
     $("#checkbox-fotokopija-soobrakjajna-dozvola-sixth-box").prop('checked', false);
@@ -676,11 +676,11 @@ function clearThirdCircleForm() {
 }
 
 //Clear na 4-te tabeli Odberi Prepravka od prvoto view, menu 3
-function clearAllTablesFromFirstView(){
-	$('.grupa1-tabela-vid-na-prepravka-checkbox').prop("checked", false);
-	$('.grupa2-tabela-vid-na-prepravka-checkbox').prop("checked", false);
-	$('.grupa3-tabela-vid-na-prepravka-checkbox').prop("checked", false);
-	$('.grupa4-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+function clearAllTablesFromFirstView() {
+    $('.grupa1-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+    $('.grupa2-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+    $('.grupa3-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+    $('.grupa4-tabela-vid-na-prepravka-checkbox').prop("checked", false);
 }
 
 

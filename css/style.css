@@ -783,3 +783,27 @@ table.table-code-tank th {
 	color: #fff; 
 	font-weight: bold; 
 }
+
+table.table-thickness-of-the-walls th {
+    background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-komora th {
+    background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-review-tank th {
+    background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}
+
+table.table-electrical-resistance th {
+    background: #3c8dbc; 
+	color: #fff; 
+	font-weight: bold; 
+}

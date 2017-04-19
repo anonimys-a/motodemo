@@ -84,7 +84,7 @@ $(document).ready(function () {
                     //if validation not pass or the response is with error we do not go to the fourth step(cirlce)
                     return;
                 } else {
-//                    clearThirdCircleForm();
+                    //                    clearThirdCircleForm();
                 };
             }
 
@@ -106,9 +106,9 @@ $(document).ready(function () {
                     $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
                 }
             }
-            
+
             if (nextTab === "menu5") {
-        		createLeyoutForMenu5(chosenView, chosenSubjectLinkFromFirstMenu);
+                createLeyoutForMenu5(chosenView, chosenSubjectLinkFromFirstMenu);
             }
 
         } else {
@@ -126,29 +126,31 @@ $(document).ready(function () {
             }
         }
     });
-    
+
     function createLeyoutForMenu5(chosenView, chosenSubjectLinkFromFirstMenu) {
         //create the appropriate layout for the fifth menu
-    	var isCheckboxFromTheMenu3Table3isChecked = $('#grupa3-tabela-vid-na-prepravka-checkbox-3-1').is(':checked');
-    	if(chosenView === "Единечно одобрување и преправки") {
-    		if(chosenSubjectLinkFromFirstMenu === "- Единечно одобрување со преправка") {
-    			//if the first row from the 3.1 table is selected
-    			if(isCheckboxFromTheMenu3Table3isChecked) {
-    				//show appropriate tables and hide everything else if needed
-    			} else {
-    				//show appropriate tables and hide everything else if needed
-    			}
-    		} else if(chosenSubjectLinkFromFirstMenu === "- Единечно одобрување-запленето") {
-    			//show appropriate tables and hide everything else if needed
-    		} else if(chosenSubjectLinkFromFirstMenu === "- Одобрување на преправено/поправено возило") {
-    			//show appropriate tables and hide everything else if needed
-    		} else {
-    			//what we going to show if non of the three links from the first view is chosen>??
-    		}
-    	} else {
-    		//this means that we came on the fifth menu but not from the first view, so what we should show/hide in this situation???
-    	}
-    	
+        var isCheckboxFromTheMenu3Table3isChecked = $('#grupa3-tabela-vid-na-prepravka-checkbox-3-1').is(':checked');
+        if (chosenView === "Единечно одобрување и преправки") {
+            if (chosenSubjectLinkFromFirstMenu === "- Единечно одобрување со преправка") {
+                //if the first row from the 3.1 table is selected
+                if (isCheckboxFromTheMenu3Table3isChecked) {
+                    //show appropriate tables and hide everything else if needed
+                    $(".liquid-compressed-gas-wrapper").show();
+                } else {
+                    //show appropriate tables and hide everything else if needed
+                    $(".liquid-compressed-gas-wrapper").hide();
+                }
+            } else if (chosenSubjectLinkFromFirstMenu === "- Единечно одобрување-запленето") {
+                //show appropriate tables and hide everything else if needed
+            } else if (chosenSubjectLinkFromFirstMenu === "- Одобрување на преправено/поправено возило") {
+                //show appropriate tables and hide everything else if needed
+            } else {
+                //what we going to show if non of the three links from the first view is chosen>??
+            }
+        } else {
+            //this means that we came on the fifth menu but not from the first view, so what we should show/hide in this situation???
+        }
+
     }
 
     //third circle handle modal inputs to automaticaly fill form input description
