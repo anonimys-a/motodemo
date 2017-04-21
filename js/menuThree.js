@@ -94,9 +94,12 @@ $(document).ready(function () {
     $('.grupa3-samo-digitalni-tahografi-checkbox').on('change', function () {
         $('.grupa3-samo-digitalni-tahografi-checkbox').not(this).prop('checked', false);
     });
+    
+    $('.grupa1-tank-checkbox').on('change', function () {
+        $('.grupa1-tank-checkbox').not(this).prop('checked', false);  
+    });
+    
 });
-
-
 
 //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
 function changeFormLayoutForVehicleData(chosenView) {

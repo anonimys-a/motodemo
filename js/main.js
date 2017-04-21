@@ -137,7 +137,16 @@ $(document).ready(function () {
             if (chosenAdrLinkFromFourthMenu === "- Инспекција на цистерни за транспорт на опасни материи") {
                 $(".inspection-of-tanks-wrapper").show();
                 $(".edinechno-odobrenie-vozilo-zapleneto").hide();
-
+              //da se zemat site potrebni vrednosti za menu 4 za Инспекција на цистерни за транспорт на опасни материи
+                if ($("#legal-entity-radio-button").is(':checked')) {
+                	//da se prezemat podatocite od pravno, da se prikazat vo menu 4 vo prvata tabela.
+                	//po default se krie tabelata za pravno lice vo css  
+                } else {
+                	//da se prezemat podatocite od fizicko lice i da se prikazat vo menu 4 vo prvata tabela
+                	var embgFizicko = $("#input-embg").val();
+                	$("#embg-podnesuvach-korisnik-tabela").val(embgFizicko);
+                }
+                //da se prezemat site podatoci od menu 3 i da se setiraat vo menu 4
             } else {
                 $(".inspection-of-tanks-wrapper").hide();
                 $(".edinechno-odobrenie-vozilo-zapleneto").show();
@@ -160,12 +169,14 @@ $(document).ready(function () {
                 }
             } else if (chosenSubjectLinkFromFirstMenu === "- Единечно одобрување-запленето") {
                 //show appropriate tables and hide everything else if needed
-                $("izveshtaj-za-pregledano-vozilo-tabela").show();
+                $(".izveshtaj-za-pregledano-vozilo-tabela").show();
                 $(".liquid-compressed-gas-wrapper").hide();
             } else if (chosenSubjectLinkFromFirstMenu === "- Одобрување на преправено/поправено возило") {
                 //show appropriate tables and hide everything else if needed
-                $(".liquid-compressed-gas-wrapper").show();
-                $("izveshtaj-za-pregledano-vozilo-tabela").hide();
+            	if(isCheckboxFromTheMenu3Table3isChecked){
+	        		$(".liquid-compressed-gas-wrapper").show();
+	        		$(".izveshtaj-za-pregledano-vozilo-tabela").hide();
+            	}
             } else {
                 //what we going to show if non of the three links from the first view is chosen>??
             }
