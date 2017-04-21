@@ -61,6 +61,7 @@ $(document).ready(function () {
         var embgFieldExist = $('#embg-legal-entity').is(":visible");
         var chosenView = $("p#subject-type").text();
         var chosenSubjectLinkFromFirstMenu = $("p#chosen-link-from-view-menu1").text();
+        var chosenAdrLinkFromFourthMenu = $("p#chosen-link-from-view-menu4").text();
 
         $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
 
@@ -107,6 +108,10 @@ $(document).ready(function () {
                 }
             }
 
+            if (nextTab === "menu4") {
+                createLeyoutForMenu4(chosenView, chosenAdrLinkFromFourthMenu);
+            }
+
             if (nextTab === "menu5") {
                 createLeyoutForMenu5(chosenView, chosenSubjectLinkFromFirstMenu);
             }
@@ -127,6 +132,19 @@ $(document).ready(function () {
         }
     });
 
+    function createLeyoutForMenu4(chosenView, chosenAdrLinkFromFourthMenu) {
+        if (chosenView === "АДР") {
+            if (chosenAdrLinkFromFourthMenu === "- Инспекција на цистерни за транспорт на опасни материи") {
+                $(".inspection-of-tanks-wrapper").show();
+                $(".edinechno-odobrenie-vozilo-zapleneto").hide();
+
+            } else {
+                $(".inspection-of-tanks-wrapper").hide();
+                $(".edinechno-odobrenie-vozilo-zapleneto").show();
+            }
+        }
+    }
+
     function createLeyoutForMenu5(chosenView, chosenSubjectLinkFromFirstMenu) {
         //create the appropriate layout for the fifth menu
         var isCheckboxFromTheMenu3Table3isChecked = $('#grupa3-tabela-vid-na-prepravka-checkbox-3-1').is(':checked');
@@ -142,13 +160,18 @@ $(document).ready(function () {
                 }
             } else if (chosenSubjectLinkFromFirstMenu === "- Единечно одобрување-запленето") {
                 //show appropriate tables and hide everything else if needed
+                $("izveshtaj-za-pregledano-vozilo-tabela").show();
+                $(".liquid-compressed-gas-wrapper").hide();
             } else if (chosenSubjectLinkFromFirstMenu === "- Одобрување на преправено/поправено возило") {
                 //show appropriate tables and hide everything else if needed
+                $(".liquid-compressed-gas-wrapper").show();
+                $("izveshtaj-za-pregledano-vozilo-tabela").hide();
             } else {
                 //what we going to show if non of the three links from the first view is chosen>??
             }
         } else {
             //this means that we came on the fifth menu but not from the first view, so what we should show/hide in this situation???
+            // da se vidi vo dokumentacijata sto da ima vo peto menu ako ne pristapime od prvo view
         }
 
     }

@@ -23,6 +23,12 @@ $(document).ready(function () {
         $("p#chosen-link-from-view-menu1").text(chosenSubjectLink);
     });
 
+    $(document).on('click', '.adr-link', function (e) {
+        e.preventDefault();
+        var chosenAdrLink = $(this).text();
+        $("p#chosen-link-from-view-menu4").text(chosenAdrLink);
+    });
+
     $(".discard-all-button").click(function () {
         clearSecondCircleForm();
         clearThirdCircleForm();

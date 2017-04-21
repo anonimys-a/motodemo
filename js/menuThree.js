@@ -96,6 +96,27 @@ $(document).ready(function () {
     });
 });
 
+$('input.grupa1-tank-checkbox').on('change', function () {
+    $('input.grupa1-tank-checkbox').not(this).prop('checked', false);  
+});
+
+$("#tank-check tbody tr").click(function(e) {
+    $("#tank-check tbody tr").removeClass("selected");
+    var $checkbox = $(this).find(':checkbox');
+    $("#tank-check :checkbox").not($checkbox).removeAttr("checked");
+    if (e.target.type == "checkbox") {
+
+        // stop the bubbling to prevent firing the row's click event
+        e.stopPropagation();
+        $(this).filter(':has(:checkbox)').toggleClass('selected', $checkbox.attr('checked'));
+    } else {
+
+        
+        $checkbox.attr('checked', !$checkbox.attr('checked'));
+        $(this).filter(':has(:checkbox)').toggleClass('selected', $checkbox.attr('checked'));
+    }
+});
+
 //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
 function changeFormLayoutForVehicleData(chosenView) {
     //create the appropriate form layout

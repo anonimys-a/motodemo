@@ -874,3 +874,17 @@ table.table-transport-of-dangerous-goods th {
 .submitter-user-margin-right {
     margin-right: -7px;
 }
+
+.inspection-of-tanks-wrapper {
+	display: none;
+}
+
+.tabela-inspekcija-padding {
+    padding-right: 0px;
+    padding-left: 0px; 
+}
+
+.tabela-techen-gas-padding {
+    padding-right: 0px;
+    padding-left: 0px; 
+}
