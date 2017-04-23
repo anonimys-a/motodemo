@@ -888,3 +888,7 @@ table.table-transport-of-dangerous-goods th {
     padding-right: 0px;
     padding-left: 0px; 
 }
+
+#submitter-user-legal-entity {
+    display: none;
+}

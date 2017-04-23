@@ -94,11 +94,35 @@ $(document).ready(function () {
     $('.grupa3-samo-digitalni-tahografi-checkbox').on('change', function () {
         $('.grupa3-samo-digitalni-tahografi-checkbox').not(this).prop('checked', false);
     });
-    
+
+    //only one checkbox can be checked from the tank table from the fourth box view, menu 4
     $('.grupa1-tank-checkbox').on('change', function () {
-        $('.grupa1-tank-checkbox').not(this).prop('checked', false);  
+        $('.grupa1-tank-checkbox').not(this).prop('checked', false);
     });
-    
+
+    $('.grupa1-tank-zadovoluva-nezadovoluva').on('change', function() {
+        $('.grupa1-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+    });
+
+    $('.grupa-tank-adr-rid-imdg-ostanato').on('change', function() {
+        $('.grupa-tank-adr-rid-imdg-ostanato').not(this).prop('checked', false);
+    });
+
+    $('.grupa2-tank-zadovoluva-nezadovoluva').on('change', function() {
+        $('.grupa2-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+    });
+
+    $('.grupa3-tank-zadovoluva-nezadovoluva').on('change', function() {
+        $('.grupa3-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+    });
+
+    $('.grupa4-tank-zadovoluva-nezadovoluva').on('change', function() {
+        $('.grupa4-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+    });
+
+    $('.datum-proverka-tank').on('change', function () {
+        $('.datum-proverka-tank').not(this).prop('checked', false);
+    });
 });
 
 //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)

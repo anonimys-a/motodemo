@@ -137,16 +137,69 @@ $(document).ready(function () {
             if (chosenAdrLinkFromFourthMenu === "- Инспекција на цистерни за транспорт на опасни материи") {
                 $(".inspection-of-tanks-wrapper").show();
                 $(".edinechno-odobrenie-vozilo-zapleneto").hide();
-              //da se zemat site potrebni vrednosti za menu 4 za Инспекција на цистерни за транспорт на опасни материи
+                //da se zemat site potrebni vrednosti za menu 4 za Инспекција на цистерни за транспорт на опасни материи
                 if ($("#legal-entity-radio-button").is(':checked')) {
-                	//da se prezemat podatocite od pravno, da se prikazat vo menu 4 vo prvata tabela.
-                	//po default se krie tabelata za pravno lice vo css  
+                    //da se prezemat podatocite od pravno lice i da se prikazat vo menu 4 vo prvata tabela
+                    $("#submitter-user-legal-entity").show();
+                    $("#submitter-user").hide();
+                    var agentPravnoLice = $("#input-name-of-agent").val();
+                    $("#agent-podnesuvach-korisnik-tabela-pravno-lice").val(agentPravnoLice);
+                    var nazivPravnoLice = $("#name-legal-entity").val();
+                    $("#naziv-podnesuvach-korisnik-tabela").val(nazivPravnoLice);
+                    var edbPravnpLice = $("#input-tax-identification-number").val();
+                    $("#edb-podnesuvach-korisnik-tabela").val(edbPravnpLice);
+                    var embPravnoLice = $("#emb-legal-entity").val();
+                    $("#emb-podnesuvach-korisnik-tabela").val(embPravnoLice);
+                    var adresaPravnoLice = $("#input-address").val();
+                    $("#adresa-podnesuvach-korisnik-tabela-pravno-lice").val(adresaPravnoLice);
+                    var opshtinaPravnoLice = $("#input-municipality-of-residence").val();
+                    $("#opshtina-podnesuvach-korisnik-tabela-pravno-lice").val(opshtinaPravnoLice);
+                    var mestoPravnoLice = $("#input-place-of-residence").val();
+                    $("#mesto-podnesuvach-korisnik-tabela-pravno-lice").val(mestoPravnoLice);
+                    var telPravnoLice = $("#input-number").val();
+                    $("#tel-podnesuvach-korisnik-tabela-pravno-lice").val(telPravnoLice);
+                    var emailPravnoLice = $("#input-email").val();
+                    $("#email-podnesuvach-korisnik-tabela-pravno-lice").val(emailPravnoLice);
                 } else {
-                	//da se prezemat podatocite od fizicko lice i da se prikazat vo menu 4 vo prvata tabela
-                	var embgFizicko = $("#input-embg").val();
-                	$("#embg-podnesuvach-korisnik-tabela").val(embgFizicko);
+                    //da se prezemat podatocite od fizicko lice i da se prikazat vo menu 4 vo prvata tabela
+                    var agentfizichkoLice = $("#input-name-of-agent").val();
+                    $("#agent-podnesuvach-korisnik-tabela").val(agentfizichkoLice);
+                    var imeFizichkoLice = $("#input-name").val();
+                    var prezimeFizichkoLice = $("#input-surname").val();
+                    var imePrezimeFizichkoLice = imeFizichkoLice + " " + prezimeFizichkoLice;
+                    $("#lice-podnesuvach-korisnik-tabela").val(imePrezimeFizichkoLice);
+                    var embgFizichkoLice = $("#input-embg").val();
+                    $("#embg-podnesuvach-korisnik-tabela").val(embgFizichkoLice);
+                    var adresaFizichkoLice = $("#input-address").val();
+                    $("#adresa-podnesuvach-korisnik-tabela").val(adresaFizichkoLice);
+                    var opshtinaFizichkoLice = $("#input-municipality-of-residence").val();
+                    $("#opshtina-podnesuvach-korisnik-tabela").val(opshtinaFizichkoLice);
+                    var mestoFizichkoLice = $("#input-place-of-residence").val();
+                    $("#mesto-podnesuvach-korisnik-tabela").val(mestoFizichkoLice);
+                    var telFizichkoLice = $("#input-number").val();
+                    $("#tel-podnesuvach-korisnik-tabela").val(telFizichkoLice);
+                    var emailFizichkoLice = $("#input-email").val();
+                    $("#email-podnesuvach-korisnik-tabela").val(emailFizichkoLice);
                 }
-                //da se prezemat site podatoci od menu 3 i da se setiraat vo menu 4
+                var markaPodatociVozilo = $("#input-mark-vehicle").val();
+                $("#marka-vozilo-tabela").val(markaPodatociVozilo);
+                var tipPodatociVozilo = $("#input-type").val();
+                $("#tip-vozilo-tabela").val(tipPodatociVozilo);
+                var shasijaPodatociVozilo = $("#input-chassis-number").val();
+                $("#vin-vozilo-tabela").val(shasijaPodatociVozilo);
+                var registerskiBrojPodatociVozilo = $("#input-registration-number-of-the-vehicle").val();
+                $("#regbroj-vozilo-tabela").val(registerskiBrojPodatociVozilo);
+
+                var proizveduvachPodatociRezervoar = $("#input-manufacturer-of-tank").val();
+                $("#proizveduvach-rezervoar-tabela").val(proizveduvachPodatociRezervoar);
+                var seriskibrojPodatociRezervoar = $("#input-serial-number-of-the-tank").val();
+                $("#seriski-br-rezervoar-tabela").val(seriskibrojPodatociRezervoar);
+                var datumPodatociRezervoar = $("#input-date-of-previous-inspection").val();
+                $("#datum-rezervoar-tabela").val(datumPodatociRezervoar);
+                var tankPodatociRezervoar = $("#input-tank-code-on-tank").val();
+                $("#kod-rezervoar-rezervoar-tabela").val(tankPodatociRezervoar);
+                var pritisokPodatociRezervoar = $("#input-test-pressure-tank").val();
+                $("#ispitan-pritisok-rezervoar-tabela").val(pritisokPodatociRezervoar);
             } else {
                 $(".inspection-of-tanks-wrapper").hide();
                 $(".edinechno-odobrenie-vozilo-zapleneto").show();
@@ -173,10 +226,11 @@ $(document).ready(function () {
                 $(".liquid-compressed-gas-wrapper").hide();
             } else if (chosenSubjectLinkFromFirstMenu === "- Одобрување на преправено/поправено возило") {
                 //show appropriate tables and hide everything else if needed
-            	if(isCheckboxFromTheMenu3Table3isChecked){
-	        		$(".liquid-compressed-gas-wrapper").show();
-	        		$(".izveshtaj-za-pregledano-vozilo-tabela").hide();
-            	}
+                if (isCheckboxFromTheMenu3Table3isChecked) {
+                    $(".liquid-compressed-gas-wrapper").show();
+                    $(".izveshtaj-za-pregledano-vozilo-tabela").hide();
+                }
+                
             } else {
                 //what we going to show if non of the three links from the first view is chosen>??
             }
