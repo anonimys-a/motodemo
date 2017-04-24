@@ -98,26 +98,128 @@ $(document).ready(function () {
     //only one checkbox can be checked from the tank table from the fourth box view, menu 4
     $('.grupa1-tank-checkbox').on('change', function () {
         $('.grupa1-tank-checkbox').not(this).prop('checked', false);
-    });
+        var pochetnaProverkaZadovoluva = $("#pochetna-proverka-zadovoluva");
+        var pochetnaProverkaNezadovoluva = $("#pochetna-proverka-nezadovoluva");
+        var pochetnaProverkaAdr = $("#pochetna-proverka-adr");
+        var periodichnaProverkaZadovoluva = $("#periodichna-proverka-zadovoluva");
+        var periodichnaProverkaNezadovoluva = $("#periodichna-proverka-nezadovoluva");
+        var periodichnaProverkaRid = $("#periodichna-proverka-rid");
+        var megjuperiodichnaProverkaZadovoluva = $("#megjuperiodichna-proverka-zadovoluva");
+        var megjuperiodichnaProverkaNezadovoluva = $("#megjuperiodichna-proverka-nezadovoluva");
+        var megjuperiodichnaProverkaImdg = $("#megjuperiodichna-proverka-imdg");
+        var vonrednaProverkaZadovoluva = $("#vonredna-proverka-zadovoluva");
+        var vonrednaProverkaNezadovoluva = $("#vonredna-proverka-nezadovoluva");
+        var vonrednaProverkaOstanato = $("#vonredna-proverka-ostanato");
+        
+        if ($("#pochetna-proverka-tank").is(':checked')) {
+            pochetnaProverkaZadovoluva.prop("disabled", false);
+            pochetnaProverkaNezadovoluva.prop("disabled", false);
+            pochetnaProverkaAdr.prop("disabled", false);
 
-    $('.grupa1-tank-zadovoluva-nezadovoluva').on('change', function() {
-        $('.grupa1-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
-    });
+            megjuperiodichnaProverkaZadovoluva.prop('checked', false);
+            megjuperiodichnaProverkaNezadovoluva.prop('checked', false);
+            megjuperiodichnaProverkaImdg.prop('checked', false);
+            vonrednaProverkaZadovoluva.prop('checked', false);
+            vonrednaProverkaNezadovoluva.prop('checked', false);
+            vonrednaProverkaOstanato.prop('checked', false);
+            periodichnaProverkaZadovoluva.prop('checked', false);
+            periodichnaProverkaNezadovoluva.prop('checked', false);
+            periodichnaProverkaRid.prop('checked', false);
 
-    $('.grupa-tank-adr-rid-imdg-ostanato').on('change', function() {
-        $('.grupa-tank-adr-rid-imdg-ostanato').not(this).prop('checked', false);
-    });
+            periodichnaProverkaZadovoluva.prop("disabled", true);
+            periodichnaProverkaNezadovoluva.prop("disabled", true);
+            periodichnaProverkaRid.prop("disabled", true);
+            megjuperiodichnaProverkaZadovoluva.prop("disabled", true);
+            megjuperiodichnaProverkaNezadovoluva.prop("disabled", true);
+            megjuperiodichnaProverkaImdg.prop("disabled", true);
+            vonrednaProverkaZadovoluva.prop("disabled", true);
+            vonrednaProverkaNezadovoluva.prop("disabled", true);
+            vonrednaProverkaOstanato.prop("disabled", true);
+            $('.grupa1-tank-zadovoluva-nezadovoluva').on('change', function () {
+                $('.grupa1-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+            });
+        } else if ($("#periodichna-proverka-tank").is(':checked')) {
+            periodichnaProverkaZadovoluva.prop("disabled", false);
+            periodichnaProverkaNezadovoluva.prop("disabled", false);
+            periodichnaProverkaRid.prop("disabled", false);
 
-    $('.grupa2-tank-zadovoluva-nezadovoluva').on('change', function() {
-        $('.grupa2-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
-    });
+            pochetnaProverkaZadovoluva.prop('checked', false);
+            pochetnaProverkaNezadovoluva.prop('checked', false);
+            pochetnaProverkaAdr.prop('checked', false);
+            megjuperiodichnaProverkaZadovoluva.prop('checked', false);
+            megjuperiodichnaProverkaNezadovoluva.prop('checked', false);
+            megjuperiodichnaProverkaImdg.prop('checked', false);
+            vonrednaProverkaZadovoluva.prop('checked', false);
+            vonrednaProverkaNezadovoluva.prop('checked', false);
+            vonrednaProverkaOstanato.prop('checked', false);
 
-    $('.grupa3-tank-zadovoluva-nezadovoluva').on('change', function() {
-        $('.grupa3-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
-    });
+            pochetnaProverkaZadovoluva.prop("disabled", true);
+            pochetnaProverkaNezadovoluva.prop("disabled", true);
+            pochetnaProverkaAdr.prop("disabled", true);
+            megjuperiodichnaProverkaZadovoluva.prop("disabled", true);
+            megjuperiodichnaProverkaNezadovoluva.prop("disabled", true);
+            megjuperiodichnaProverkaImdg.prop("disabled", true);
+            vonrednaProverkaZadovoluva.prop("disabled", true);
+            vonrednaProverkaNezadovoluva.prop("disabled", true);
+            vonrednaProverkaOstanato.prop("disabled", true);
+            $('.grupa2-tank-zadovoluva-nezadovoluva').on('change', function () {
+                $('.grupa2-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+            });
+        } else if ($("#megjuperiodichna-proverka-tank").is(':checked')) {
+            megjuperiodichnaProverkaZadovoluva.prop("disabled", false);
+            megjuperiodichnaProverkaNezadovoluva.prop("disabled", false);
+            megjuperiodichnaProverkaImdg.prop("disabled", false);
 
-    $('.grupa4-tank-zadovoluva-nezadovoluva').on('change', function() {
-        $('.grupa4-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+            pochetnaProverkaZadovoluva.prop('checked', false);
+            pochetnaProverkaNezadovoluva.prop('checked', false);
+            pochetnaProverkaAdr.prop('checked', false);
+            periodichnaProverkaZadovoluva.prop('checked', false);
+            periodichnaProverkaNezadovoluva.prop('checked', false);
+            periodichnaProverkaRid.prop('checked', false);
+            vonrednaProverkaZadovoluva.prop('checked', false);
+            vonrednaProverkaNezadovoluva.prop('checked', false);
+            vonrednaProverkaOstanato.prop('checked', false);
+
+            pochetnaProverkaZadovoluva.prop("disabled", true);
+            pochetnaProverkaNezadovoluva.prop("disabled", true);
+            pochetnaProverkaAdr.prop("disabled", true);
+            periodichnaProverkaZadovoluva.prop("disabled", true);
+            periodichnaProverkaNezadovoluva.prop("disabled", true);
+            periodichnaProverkaRid.prop("disabled", true);
+            vonrednaProverkaZadovoluva.prop("disabled", true);
+            vonrednaProverkaNezadovoluva.prop("disabled", true);
+            vonrednaProverkaOstanato.prop("disabled", true);
+            $('.grupa3-tank-zadovoluva-nezadovoluva').on('change', function () {
+                $('.grupa3-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+            });
+        } else if ($("#vonredna-proverka-tank").is(':checked')) {
+            vonrednaProverkaZadovoluva.prop("disabled", false);
+            vonrednaProverkaNezadovoluva.prop("disabled", false);
+            vonrednaProverkaOstanato.prop("disabled", false);
+
+            pochetnaProverkaZadovoluva.prop('checked', false);
+            pochetnaProverkaNezadovoluva.prop('checked', false);
+            pochetnaProverkaAdr.prop('checked', false);
+            periodichnaProverkaZadovoluva.prop('checked', false);
+            periodichnaProverkaNezadovoluva.prop('checked', false);
+            periodichnaProverkaRid.prop('checked', false);
+            megjuperiodichnaProverkaZadovoluva.prop('checked', false);
+            megjuperiodichnaProverkaNezadovoluva.prop('checked', false);
+            megjuperiodichnaProverkaImdg.prop('checked', false);
+
+            pochetnaProverkaZadovoluva.prop("disabled", true);
+            pochetnaProverkaNezadovoluva.prop("disabled", true);
+            pochetnaProverkaAdr.prop("disabled", true);
+            periodichnaProverkaZadovoluva.prop("disabled", true);
+            periodichnaProverkaNezadovoluva.prop("disabled", true);
+            periodichnaProverkaRid.prop("disabled", true);
+            megjuperiodichnaProverkaZadovoluva.prop("disabled", true);
+            megjuperiodichnaProverkaNezadovoluva.prop("disabled", true);
+            megjuperiodichnaProverkaImdg.prop("disabled", true);
+            $('.grupa4-tank-zadovoluva-nezadovoluva').on('change', function () {
+                $('.grupa4-tank-zadovoluva-nezadovoluva').not(this).prop('checked', false);
+            });
+        }
     });
 
     $('.datum-proverka-tank').on('change', function () {
