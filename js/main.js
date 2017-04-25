@@ -271,4 +271,27 @@ $(document).ready(function () {
     });
 
     $('a').tooltip();
+    
+    var rowHtml = '<tr class = "predmetna-cisterna">'
+		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="materija-cisterni form-control" /></div></td>'
+		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="form-control" /></div></td>'
+		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="form-control" /></div></td>'
+	    + '<td>'
+		+ '<div class="tabela-inspekcija-padding"><a href="#" class="btn btn-link btn-link-color btn-link-padding row-delete"><i class="fa fa-trash" aria-hidden="true"></i></a></div>'
+		+ '</td>'
+		+ '</tr>';
+
+    
+
+	$(document).on('click', 'tr.predmetna-cisterna input.materija-cisterni', function () {
+	    // zemi ja cela tabela so selektor i dodaj mu html - ot 
+	    $('#transport-of-dangerous-goods').append(rowHtml);
+	});
+	
+	
+	
+	$(document).on('click', '.row-delete', function(e) {
+		e.preventDefault();
+		$(this).parent().parent().parent().remove();
+	});
 });
