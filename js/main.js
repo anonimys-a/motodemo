@@ -4,6 +4,28 @@ $(document).ready(function () {
     //        $("#page-content-wrapper").load("page-content-template.html");
     //	});
 
+    var rowHtml = '<tr class = "predmetna-cisterna">'
+		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="materija-cisterni form-control" /></div></td>'
+		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="form-control" /></div></td>'
+		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="form-control" /></div></td>'
+	    + '<td>'
+		+ '<div class="tabela-inspekcija-padding"><a href="#" class="btn btn-link btn-link-color row-delete"><i style="font-size: 18px" class="fa fa-trash fa-trash-size" aria-hidden="true"></i></a></div>'
+		+ '</td>'
+		+ '</tr>';
+
+
+
+    $(document).on('click', 'tr.predmetna-cisterna input.materija-cisterni', function () {
+        $('#transport-of-dangerous-goods').append(rowHtml);
+    });
+
+
+
+    $(document).on('click', '.row-delete', function (e) {
+        e.preventDefault();
+        $(this).parent().parent().parent().remove();
+    });
+
     //show the proccess content on click
     $('#load-template').click(function (e) {
         $('#proccess-container').show();
@@ -185,6 +207,8 @@ $(document).ready(function () {
                 $("#marka-vozilo-tabela").val(markaPodatociVozilo);
                 var tipPodatociVozilo = $("#input-type").val();
                 $("#tip-vozilo-tabela").val(tipPodatociVozilo);
+                var vidPodatociVozilo = $("#input-type-vehicle").val();
+                $("#vid-vozilo-tabela").val(vidPodatociVozilo);
                 var shasijaPodatociVozilo = $("#input-chassis-number").val();
                 $("#vin-vozilo-tabela").val(shasijaPodatociVozilo);
                 var registerskiBrojPodatociVozilo = $("#input-registration-number-of-the-vehicle").val();
@@ -194,7 +218,7 @@ $(document).ready(function () {
                 $("#proizveduvach-rezervoar-tabela").val(proizveduvachPodatociRezervoar);
                 var seriskibrojPodatociRezervoar = $("#input-serial-number-of-the-tank").val();
                 $("#seriski-br-rezervoar-tabela").val(seriskibrojPodatociRezervoar);
-                var datumPodatociRezervoar = $("#input-date-of-previous-inspection").val();
+                var datumPodatociRezervoar = $("#datepicker-date-of-previous-inspection").val();
                 $("#datum-rezervoar-tabela").val(datumPodatociRezervoar);
                 var tankPodatociRezervoar = $("#input-tank-code-on-tank").val();
                 $("#kod-rezervoar-rezervoar-tabela").val(tankPodatociRezervoar);
@@ -230,7 +254,7 @@ $(document).ready(function () {
                     $(".liquid-compressed-gas-wrapper").show();
                     $(".izveshtaj-za-pregledano-vozilo-tabela").hide();
                 }
-                
+
             } else {
                 //what we going to show if non of the three links from the first view is chosen>??
             }
@@ -270,28 +294,15 @@ $(document).ready(function () {
         autoclose: true
     });
 
+    $('#datepicker-date-of-next-check').datepicker({
+        autoclose: true
+    });
+
+    $('#datepicker-date-of-previous-inspection').datepicker({
+        autoclose: true
+    });
+
     $('a').tooltip();
-    
-    var rowHtml = '<tr class = "predmetna-cisterna">'
-		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="materija-cisterni form-control" /></div></td>'
-		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="form-control" /></div></td>'
-		+ '<td><div class="col-sm-12 tabela-inspekcija-padding"><input name="" type="text" class="form-control" /></div></td>'
-	    + '<td>'
-		+ '<div class="tabela-inspekcija-padding"><a href="#" class="btn btn-link btn-link-color btn-link-padding row-delete"><i class="fa fa-trash" aria-hidden="true"></i></a></div>'
-		+ '</td>'
-		+ '</tr>';
 
     
-
-	$(document).on('click', 'tr.predmetna-cisterna input.materija-cisterni', function () {
-	    // zemi ja cela tabela so selektor i dodaj mu html - ot 
-	    $('#transport-of-dangerous-goods').append(rowHtml);
-	});
-	
-	
-	
-	$(document).on('click', '.row-delete', function(e) {
-		e.preventDefault();
-		$(this).parent().parent().parent().remove();
-	});
 });

@@ -892,3 +892,7 @@ table.table-transport-of-dangerous-goods th {
 #submitter-user-legal-entity {
     display: none;
 }
+
+label.col-sm-4.izvestaj-v-offset.el-otpor-float {
+    float: right;
+}

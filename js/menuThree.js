@@ -110,7 +110,7 @@ $(document).ready(function () {
         var vonrednaProverkaZadovoluva = $("#vonredna-proverka-zadovoluva");
         var vonrednaProverkaNezadovoluva = $("#vonredna-proverka-nezadovoluva");
         var vonrednaProverkaOstanato = $("#vonredna-proverka-ostanato");
-        
+
         if ($("#pochetna-proverka-tank").is(':checked')) {
             pochetnaProverkaZadovoluva.prop("disabled", false);
             pochetnaProverkaNezadovoluva.prop("disabled", false);
@@ -272,7 +272,8 @@ function changeFormLayoutForVehicleData(chosenView) {
 
     } else if (chosenView === "АДР") {
         manufacturerOfVehicle.show();
-        typeOfEngine.insertAfter(chassisNumber);
+        typeOfEngine.insertBefore(numberOfEngine);
+        typeVehicle.show();
         numberOfEngine.show();
         vehicleCategory.show();
         registrationNumberOfTheVehicle.show();

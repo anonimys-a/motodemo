@@ -2438,7 +2438,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group input-copy-of-the-driving-license-wrapper">
-                                            <label for="input-copy-of-the-driving-license" class="col-sm-9 control-label">Фотокопија од сообраќајна дозвола за возилото:</label>
+                                            <label for="checkbox-fotokopija-soobrakjajna-dozvola-first-box" class="col-sm-9 control-label">Фотокопија од сообраќајна дозвола за возилото:</label>
                                             <div class="col-sm-1">
                                                 <div class="input-group">
                                                     <div class="checkbox checkbox-margin">
@@ -2772,12 +2772,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group input-other-documentation-fourth-box-wrapper">
-                                            <label for="input-other-documentation-fourth-box" class="col-sm-5 control-label">Останата документација:</label>
-                                            <div class="col-sm-6">
-                                                <textarea class="form-control" rows="2" id="input-other-documentation-fourth-box"></textarea>
-                                            </div>
-                                        </div>
                                         <div class="form-group input-earlier-certificate-wrapper">
                                             <label for="input-earlier-certificate" class="col-sm-9 control-label">Претходно издаден сертификат:</label>
                                             <div class="col-sm-1">
@@ -2787,6 +2781,25 @@
                                                         <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                     </label>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-previously-issued-certificate-wrapper">
+                                            <label for="input-previously-issued-certificate" class="col-sm-9 control-label">Претходно издадено уверение:</label>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <div class="checkbox checkbox-margin">
+                                                        <label>
+                                                            <input id="checkbox-izdadeno-uverenie" type="checkbox" value="">
+                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-other-documentation-fourth-box-wrapper">
+                                            <label for="input-other-documentation-fourth-box" class="col-sm-5 control-label">Останата документација:</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control" rows="2" id="input-other-documentation-fourth-box"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -2805,19 +2818,7 @@
                                 <!-- form start -->
                                 <form class="form-horizontal">
                                     <div class="box-body">
-                                        <div class="form-group input-previously-issued-certificate-wrapper">
-                                            <label for="input-previously-issued-certificate" class="col-sm-9 control-label">Претходно издадено уверение:</label>
-                                            <div class="col-sm-1">
-                                                <div class="input-group">
-                                                    <div class="checkbox checkbox-margin">
-                                                        <label>
-                                                            <input id="checkbox-izdadeno-uverenie" type="checkbox" value="">
-                                                            <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="form-group input-checked-reservoir-wrapper">
                                             <label for="input-checked-reservoir" class="col-sm-9 control-label">Извештај/сертификат за проверка на резервоар:</label>
                                             <div class="col-sm-1">
@@ -2831,12 +2832,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group input-technical-documentation-wrapper">
-                                            <label for="input-technical-documentation-fourth-box" class="col-sm-5 control-label">Техничка документација:</label>
-                                            <div class="col-sm-6">
-                                                <textarea class="form-control" rows="2" id="input-technical-documentation-fourth-box"></textarea>
-                                            </div>
-                                        </div>
                                         <div class="form-group input-vehicle-review-wrapper">
                                             <label for="input-vehicle-review" class="col-sm-9 control-label">Возило на увид/преглед:</label>
                                             <div class="col-sm-1">
@@ -2848,6 +2843,12 @@
                                                         </label>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-technical-documentation-wrapper">
+                                            <label for="input-technical-documentation-fourth-box" class="col-sm-5 control-label">Техничка документација:</label>
+                                            <div class="col-sm-6">
+                                                <textarea class="form-control" rows="2" id="input-technical-documentation-fourth-box"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -2948,9 +2949,14 @@
                                             </div>
                                         </div>
                                         <div class="form-group input-date-of-previous-inspection-wrapper">
-                                            <label for="input-date-of-previous-inspection" class="col-sm-6 control-label">Датум на претходна проверка:</label>
+                                            <label for="datepicker-date-of-previous-inspection" class="col-sm-6 control-label">Датум на претходна проверка:</label>
                                             <div class="col-sm-6">
-                                                <input type="text" class="form-control" id="input-date-of-previous-inspection">
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon addon-color">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control pull-right input-addon-border-left" id="datepicker-date-of-previous-inspection">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -3009,16 +3015,16 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
+                                                <tr class="potvrda-za-tehnicki-karakteristiki-row">
+                                                    <td class="potvrda-za-tehnicki-karakteristiki-reden-broj">1</td>
                                                     <td id="vrednost-za-ime-tehnicki-karakteristiki" class="ime-tehnicki-karakteristiki">Ana</td>
                                                     <td id="vrednost-za-prezime-tehnicki-karakteristiki" class="prezime-tehnicki-karakteristiki">Ангеловски</td>
                                                     <td id="vrednost-za-naziv-tehnicki-karakteristiki" class="naziv-tehnicki-karakteristiki">Назив тест</td>
                                                     <td class="br-na-predmet-tehnicki-karakteristiki">123456</td>
                                                     <td class="br-na-predmet-edinecno-tehnicki-karakteristiki">123456</td>
-                                                    <td id="marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki">Honda</td>
-                                                    <td id="tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki">Accord</td>
-                                                    <td id="broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki">Vin707EH704158417</td>
+                                                    <td id="marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki" class="marka-tehnichki-karakteristiki">Honda</td>
+                                                    <td id="tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki" class="tip-tehnichki-karakteristiki">Accord</td>
+                                                    <td id="broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki" class="vin-tehnichki-karakteristiki">Vin707EH704158417</td>
                                                     <td>
                                                         <div class="form-group odberi-dobavuvac-kolona-wrapper dropdown">
                                                             <button class="btn btn-default dropdown-toggle button-supplier-style" type="button" data-toggle="dropdown">
@@ -4080,77 +4086,77 @@
                                     <div class="box-body table-responsive no-padding">
                                         <table class="table table-hover table-bordered table-submitter-user" id="submitter-user">
                                             <thead>
-                                            <tr class="tabele-header-color">
-                                                <th colspan="5">Поднесувач/Корисник</th>
-                                            </tr>
+                                                <tr class="tabele-header-color">
+                                                    <th colspan="5">Поднесувач/Корисник</th>
+                                                </tr>
                                             </thead>
                                             <tbody>
-                                            <tr class="row">
-                                                <td colspan="2">
-                                                    <label for="agent-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Агент</label>
+                                                <tr class="row">
+                                                    <td colspan="2">
+                                                        <label for="agent-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Агент</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="agent-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="row">
-                                                <td colspan="2">
-                                                    <label for="lice-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Лице</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="agent-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row">
+                                                    <td colspan="2">
+                                                        <label for="lice-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Лице</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="lice-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="row">
-                                                <td>
-                                                    <label for="embg-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">ЕМБГ</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="lice-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row">
+                                                    <td>
+                                                        <label for="embg-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">ЕМБГ</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="embg-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <label for="adresa-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Адреса</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="embg-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="adresa-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Адреса</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="adresa-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="row">
-                                                <td>
-                                                    <label for="opshtina-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Општина</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="adresa-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row">
+                                                    <td>
+                                                        <label for="opshtina-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Општина</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="opshtina-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <label for="mesto-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Место</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="opshtina-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="mesto-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Место</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="mesto-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="row">
-                                                <td>
-                                                    <label for="tel-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Телефон</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="mesto-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="row">
+                                                    <td>
+                                                        <label for="tel-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">Телефон</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="tel-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <label for="email-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">E-mail</label>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="tel-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <label for="email-podnesuvach-korisnik-tabela" class="col-sm-4 izvestaj-v-offset">E-mail</label>
 
-                                                    <div class="col-sm-8 tabela-inspekcija-padding">
-                                                        <input type="text" id="email-podnesuvach-korisnik-tabela" class="form-control" readonly="">
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                        <div class="col-sm-8 tabela-inspekcija-padding">
+                                                            <input type="text" id="email-podnesuvach-korisnik-tabela" class="form-control" readonly="">
+                                                        </div>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                         <table class="table table-hover table-bordered table-submitter-user" id="submitter-user-legal-entity">
@@ -4722,7 +4728,7 @@
                                                 <tr>
                                                     <td>Електричен отпор :</td>
                                                     <td>
-                                                        <label for="el-otpor-rezervoar-tabela" class="col-sm-4 izvestaj-v-offset">(Ω)</label>
+                                                        <label for="el-otpor-rezervoar-tabela" class="col-sm-4 izvestaj-v-offset el-otpor-float">(Ω)</label>
 
                                                         <div class="col-sm-8 tabela-inspekcija-padding">
                                                             <input type="text" id="el-otpor-rezervoar-tabela" class="form-control">
@@ -4926,12 +4932,19 @@
                                         <table class="table table-hover table-bordered table-date-of-next-check" id="date-of-next-check">
                                             <thead>
                                                 <tr class="tabele-header-color">
-                                                    <th colspan="5">Датум на следна проверка</th>
+                                                    <th colspan="5" style="text-align: left">Датум на следна проверка</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="col-sm-2"></td>
+                                                    <td class="col-sm-2">
+                                                        <div class="input-group date">
+                                                            <div class="input-group-addon addon-color">
+                                                                <i class="fa fa-calendar"></i>
+                                                            </div>
+                                                            <input type="text" class="form-control pull-right input-addon-border-left" id="datepicker-date-of-next-check">
+                                                        </div>
+                                                    </td>
                                                     <td class="col-sm-4">Периодична проверка</td>
                                                     <td class="col-sm-1">
                                                         <div class="checkbox checkbox-margin">
@@ -4972,13 +4985,14 @@
                                                     <th colspan="4">Предметната цистерна е одобрена за транспорт за опасни материи според нејзиното одобрение. Дополнителни опасни материи смеат да се превезуваат само доколку цистерната се подлежи на вонреден преглед во согласност се EN 12972:2015, 4.5.7.</th>
                                                 </tr>
                                                 <tr>
-                                                    <th>UN-Број</th>
-                                                    <th>Име на материјата (на наменски цистерни)</th>
-                                                    <th colspan="2">Група на метерии (за цистерни со повеќе одобренија)</th>
+                                                    <th class="col-sm-2">UN-Број</th>
+                                                    <th class="col-sm-4">Име на материјата (на наменски цистерни)</th>
+                                                    <th class="col-sm-5">Група на метерии (за цистерни со повеќе одобренија)</th>
+                                                    <th class="col-sm-1"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class = "predmetna-cisterna">
+                                                <tr class="predmetna-cisterna">
                                                     <td>
                                                         <div class="col-sm-12 tabela-inspekcija-padding">
                                                             <input type="text" id="un-broj-transport-opasni-materii-tabela" class="form-control materija-cisterni">
@@ -4995,8 +5009,8 @@
                                                         </div>
                                                     </td>
                                                     <td>
-                                                    	<div class="tabela-inspekcija-padding">
-                                                            
+                                                        <div class="tabela-inspekcija-padding">
+
                                                         </div>
                                                     </td>
                                                 </tr>
