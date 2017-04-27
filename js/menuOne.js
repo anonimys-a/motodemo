@@ -33,13 +33,16 @@ $(document).ready(function () {
         clearSecondCircleForm();
         clearThirdCircleForm();
         $("li").removeClass("active");
-        resetTablePotvrdaZaTehnickiKarakteristiki();
         
         //if we click on discard from the third menu
         var chosenView = $("p#subject-type").text();
         if($(this).hasClass('discard-from-menu3') && (chosenView === 'Единечно одобрување и преправки' || chosenView === "Потврда за технички карактеристики")) {
 	        $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to reset all the space for the table
 	        $('#proccess-container').removeClass("container-fluid").addClass("container"); //reset space with fluid class
+        }
+        
+        if(chosenView === 'Единечно одобрување и преправки') {
+        	 resetTablePotvrdaZaTehnickiKarakteristiki();
         }
     });
 });
