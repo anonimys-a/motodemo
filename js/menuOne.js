@@ -32,5 +32,6 @@ $(document).ready(function () {
     $(".discard-all-button").click(function () {
         clearSecondCircleForm();
         clearThirdCircleForm();
+        $("li").removeClass("active");
     });
 });
