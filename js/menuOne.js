@@ -33,5 +33,12 @@ $(document).ready(function () {
         clearSecondCircleForm();
         clearThirdCircleForm();
         $("li").removeClass("active");
+        resetTablePotvrdaZaTehnickiKarakteristiki();
+        
+        //if we click on discard from the third menu
+        if($(this).hasClass('discard-from-menu3')) {
+	        $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to reset all the space for the table
+	        $('#proccess-container').removeClass("container-fluid").addClass("container"); //reset space with fluid class
+        }
     });
 });

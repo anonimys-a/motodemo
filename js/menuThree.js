@@ -3,7 +3,7 @@
 $(document).ready(function () {
     /*==========================FIRST VIEW=======*/
 
-    //going from first view to fifth view by clicking the link
+    //going from first view to fifth view by clicking the link(show the table)
     $("#potvrda-tehnicki-karakteristiki").click(function (e) {
         e.preventDefault();
         //hide all elements for the first view and show the table from the fifth view.
@@ -11,6 +11,7 @@ $(document).ready(function () {
         $(".data-entry-vehicle-header").hide();
         $(".content-header-recording-of-contributions").hide();
         $(".content-recording-of-contributions-first-view").hide();
+        
         $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
         $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
         $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
@@ -43,7 +44,7 @@ $(document).ready(function () {
         $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16] });
 
     });
-
+    
     /*==========================FIFTH VIEW=======*/
 
     //hide or show columns when user is swithcing between legal entity or individual person
@@ -813,6 +814,15 @@ function clearAllTablesFromFirstView() {
     $('.grupa2-tabela-vid-na-prepravka-checkbox').prop("checked", false);
     $('.grupa3-tabela-vid-na-prepravka-checkbox').prop("checked", false);
     $('.grupa4-tabela-vid-na-prepravka-checkbox').prop("checked", false);
+}
+
+function resetTablePotvrdaZaTehnickiKarakteristiki() {
+	$(".data-entry-vehicle").show();
+    $(".data-entry-vehicle-header").show();
+    $(".content-header-recording-of-contributions").show();
+    $(".content-recording-of-contributions-first-view").show();
+    
+    $(".confirmation-of-the-technical-characteristics-wrapper").hide(); //hide the table
 }
 
 
