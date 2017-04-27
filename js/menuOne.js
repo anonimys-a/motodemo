@@ -42,7 +42,7 @@ $(document).ready(function () {
         }
         
         if(chosenView === 'Единечно одобрување и преправки') {
-        	 resetTablePotvrdaZaTehnickiKarakteristiki();
-        }
+        	resetTablePotvrdaZaTehnickiKarakteristiki();
+        } 
     });
 });

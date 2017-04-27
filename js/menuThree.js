@@ -281,6 +281,10 @@ function changeFormLayoutForVehicleData(chosenView) {
         numberOfAdrCertificate.show();
     } else if (chosenView === "Потврда за технички карактеристики") {
         potvrdaZaTehnickiKarakteristiki.show();
+        $(".data-entry-vehicle").hide();
+        $(".data-entry-vehicle-header").hide();
+        $(".content-header-recording-of-contributions").hide();
+        $(".content-recording-of-contributions-first-view").hide();
         $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
     } else if (chosenView === "ЦЕМТ") {
         typeVehicle.show();
