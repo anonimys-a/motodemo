@@ -34,6 +34,8 @@ $(document).ready(function () {
         clearThirdCircleForm();
         $("li").removeClass("active");
         
+        resetLayoutMenu3();//create this new functon and show and hide all the elements like on a refresh
+        
         //if we click on discard from the third menu
         var chosenView = $("p#subject-type").text();
         if($(this).hasClass('discard-from-menu3') && (chosenView === 'Единечно одобрување и преправки' || chosenView === "Потврда за технички карактеристики")) {
