@@ -251,7 +251,7 @@ function changeFormLayoutForVehicleData(chosenView) {
     var examinationForClass = $(".input-examination-for-class-wrapper");
     var type = $(".input-type-wrapper");
     var markVehicle = $(".input-mark-vehicle-wrapper");
-    var potvrdaZaTehnickiKarakteristiki = $(".confirmation-of-the-technical-characteristics-wrapper");
+    var tabelaPotvrdaZaTehnickiKarakteristiki = $(".confirmation-of-the-technical-characteristics-wrapper");
 
     //common input fields
     var chassisNumber = $(".input-chassis-number-wrapper");
@@ -280,12 +280,12 @@ function changeFormLayoutForVehicleData(chosenView) {
         registrationNumberOfTheVehicle.show();
         numberOfAdrCertificate.show();
     } else if (chosenView === "Потврда за технички карактеристики") {
-        potvrdaZaTehnickiKarakteristiki.show();
+    	tabelaPotvrdaZaTehnickiKarakteristiki.show();
         $(".data-entry-vehicle").hide();
         $(".data-entry-vehicle-header").hide();
         $(".content-header-recording-of-contributions").hide();
         $(".content-recording-of-contributions-first-view").hide();
-        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 12, 13, 14] });
     } else if (chosenView === "ЦЕМТ") {
         typeVehicle.show();
         typeOfEngine.show();
