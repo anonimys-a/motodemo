@@ -896,3 +896,8 @@ table.table-transport-of-dangerous-goods th {
 label.col-sm-4.izvestaj-v-offset.el-otpor-float {
     float: right;
 }
+
+.box-body.table-responsive.table-potvrda-za-tehnicki-karakteristiki-noscroll.no-padding {
+    min-height: .01%;
+    overflow-x: visible;
+}
