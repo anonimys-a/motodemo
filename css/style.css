@@ -901,3 +901,30 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
     min-height: .01%;
     overflow-x: visible;
 }
+
+.checkbox.checkbox-margin.checkbox-teh-karakteristiki {
+    float: left!important;
+}
+
+.checkbox-margin-teh-karakteristiki {
+    margin-left: -11px;
+}
+
+.btn-border-teh-karakteristiki {
+	border: 0!important;
+	background-color: #eeeeee!important;
+    margin-left: 12px!important;
+    padding-left: 0px!important;
+}
+
+.soobrakjajna-teh-karakteristiki-width {
+    min-width: 148px;
+}
+
+.sertifikat-teh-karakteristiki-width {
+	min-width: 148px;
+}
+
+.zabeleshki-teh-karakteristiki-width {
+    min-width: 187px;
+}
