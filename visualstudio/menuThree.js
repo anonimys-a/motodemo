@@ -6,6 +6,10 @@ $(document).ready(function () {
     //going from first view to fifth view by clicking the link
     $("#potvrda-tehnicki-karakteristiki").click(function (e) {
         e.preventDefault();
+
+        //flag to know that we are showing the table from the first view link
+        $("p#show-the-table-from-link").text('tabela od prvo view');
+
         //hide all elements for the first view and show the table from the fifth view.
         $(".data-entry-vehicle").hide();
         $(".data-entry-vehicle-header").hide();
@@ -16,7 +20,7 @@ $(document).ready(function () {
         $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
         //	    $("p#subject-type").text('Потврда за технички карактеристики');
 
-        //take all field values that we need for the fifth box view table
+        //take all field values that we need for the table Potvrda za tehnicki karakteristiki
         var name = $('#input-name').val();
         var surname = $('#input-surname').val();
         var inputChassisNumber = $("#input-chassis-number").val();
@@ -32,7 +36,7 @@ $(document).ready(function () {
         $("#marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(markaNaVozilo);
         $("#vrednost-za-naziv-tehnicki-karakteristiki").html(naziv);
 
-        //broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie - skrij edna kolona i pojavi druga kolona(po default skriena so css)
+        //broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie
         $('.br-na-predmet-tehnicki-karakteristiki').hide();
         $('.br-na-predmet-edinecno-tehnicki-karakteristiki').show();
 
@@ -40,7 +44,7 @@ $(document).ready(function () {
             $("#legal-entity-tehnicki-karakteristiki-radio-button").trigger("click");
         }
 
-        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16] });
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] });
 
     });
 
@@ -226,6 +230,17 @@ $(document).ready(function () {
         $('.datum-proverka-tank').not(this).prop('checked', false);
     });
 });
+
+function returnMenu3ForFirstViewToInnitialCondition() {
+    $(".data-entry-vehicle").show();
+    $(".data-entry-vehicle-header").show();
+    $(".content-header-recording-of-contributions").show();
+    $(".content-recording-of-contributions-first-view").show();
+    $(".confirmation-of-the-technical-characteristics-wrapper").hide(); //show the table
+    //reset the columns
+    $('.br-na-predmet-tehnicki-karakteristiki').show();
+    $('.br-na-predmet-edinecno-tehnicki-karakteristiki').hide();
+};
 
 //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
 function changeFormLayoutForVehicleData(chosenView) {

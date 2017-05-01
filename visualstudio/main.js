@@ -74,6 +74,8 @@
         //reset the div container
         $('#proccess-container').removeClass("container-fluid").addClass("container");
 
+        $('html,body').animate({ scrollTop: 0 });
+
         hideErrorMessagesForValidation();
         hideErrorMessagesForVehicleDataValidation();
 
@@ -132,6 +134,23 @@
             }
 
         } else {
+            //functionality for reseting the menu 3 from the first view when the table is opened from the link
+            if (chosenView === 'Единечно одобрување и преправки') {
+                //call function for resseting menu 3 for the first view
+                returnMenu3ForFirstViewToInnitialCondition();
+                if (activeTabId === "menu3") {
+                    var fromTheFirstViewLinkForTable = $("p#show-the-table-from-link").text() === 'tabela od prvo view';
+                    if(fromTheFirstViewLinkForTable) {
+                        $("p#show-the-table-from-link").text('');//reset the flag
+
+                        //set the third circle to be active
+                        $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
+                        $('.btn-menu3').addClass('btn-info').removeClass('btn-default').blur();
+                        return;
+                    }
+                }
+            }
+
             var prevTab = activeTab.prev('.tab-pane').attr('id');
             $('[href="#' + prevTab + '"]').addClass('btn-info').removeClass('btn-default');
             $('[href="#' + prevTab + '"]').tab('show');
@@ -139,10 +158,12 @@
                 clearSecondCircleForm();
             }
 
-            if (prevTab === "menu3" && chosenView === 'Потврда за технички карактеристики') {
-                //make the main div fluid because we need more space for the table from fifth table box view
-                $('#proccess-container').removeClass("container").addClass("container-fluid");
-                $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+            if (prevTab === "menu3") {
+                if (chosenView === 'Потврда за технички карактеристики') {
+                    //make the main div fluid because we need more space for the table from fifth table box view
+                    $('#proccess-container').removeClass("container").addClass("container-fluid");
+                    $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+                }
             }
         }
     });
