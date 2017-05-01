@@ -900,6 +900,7 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
 .box-body.table-responsive.table-potvrda-za-tehnicki-karakteristiki-noscroll.no-padding {
     min-height: .01%;
     overflow-x: visible;
+    overflow-y: visible;
 }
 
 .checkbox.checkbox-margin.checkbox-teh-karakteristiki {
@@ -928,3 +929,5 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
 .zabeleshki-teh-karakteristiki-width {
     min-width: 187px;
 }
+
+
