@@ -781,7 +781,7 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form role="form">
+                                <form class="form-horizontal">
                                     <div class="box-body">
                                         <div class="form-group">
                                             <label id="individual-person-label" class="radio-inline">
@@ -794,107 +794,73 @@
                                             </label>
                                         </div>
                                         <div class="form-group input-name-of-agent-wrapper">
-                                            <label for="input-name-of-agent">Агент - Подносител на барањето:</label>
-
-                                            <div class="input-group">
-                                                <input type="text" class="form-control input-addon-border-right" id="input-name-of-agent">
-                                                <a href="#nameAgent" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                            <label for="input-name-of-agent" class="col-sm-6 control-label">Агент - Подносител на барањето:</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control input-addon-border-right" id="input-name-of-agent">
+                                                    <a href="#nameAgent" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                </div>
                                             </div>
-                                            <!-- Modal -->
-                                            <div id="nameAgent" class="modal fade" role="dialog">
-                                                <div class="modal-dialog">
+                                                <!-- Modal -->
+                                                <div id="nameAgent" class="modal fade" role="dialog">
+                                                    <div class="modal-dialog">
 
-                                                    <!-- Modal content-->
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            <h4 class="modal-title">Агент - Подносител на барањето</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="row">
-                                                                <label for="input-name" class="col-md-offset-1 col-md-5">Име:</label>
-                                                                <input type="text" class="col-md-5" id="input-name-modal-agent-podnositel">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Агент - Подносител на барањето</h4>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-surname" class="col-md-offset-1 col-md-5">Презиме:</label>
-                                                                <input type="text" class="col-md-5" id="input-surname-modal-agent-podnositel">
-                                                            </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-embg" class="col-md-offset-1 col-md-5">ЕМБГ:</label>
-                                                                <input type="text" class="col-md-5" id="input-embg-modal-agent-podnositel">
-                                                            </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-active" class="col-md-offset-1 col-md-5">Активен:</label>
-                                                                <label id="active-person-label" class="radio-inline">
-                                                                    <input id="active-person" type="radio" name="optradio" checked>
-                                                                    Да
-                                                                </label>
-                                                                <label id="inactive-person-label" class="radio-inline">
-                                                                    <input id="inactive-person" type="radio" name="optradio">
-                                                                    Не
-                                                                </label>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <label for="input-name" class="col-md-offset-1 col-md-5">Име:</label>
+                                                                    <input type="text" class="col-md-5" id="input-name-modal-agent-podnositel">
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="input-surname" class="col-md-offset-1 col-md-5">Презиме:</label>
+                                                                    <input type="text" class="col-md-5" id="input-surname-modal-agent-podnositel">
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="input-embg" class="col-md-offset-1 col-md-5">ЕМБГ:</label>
+                                                                    <input type="text" class="col-md-5" id="input-embg-modal-agent-podnositel">
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="input-active" class="col-md-offset-1 col-md-5">Активен:</label>
+                                                                    <label id="active-person-label" class="radio-inline">
+                                                                        <input id="active-person" type="radio" name="optradio" checked>
+                                                                        Да
+                                                                    </label>
+                                                                    <label id="inactive-person-label" class="radio-inline">
+                                                                        <input id="inactive-person" type="radio" name="optradio">
+                                                                        Не
+                                                                    </label>
 
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="input-rate" class="col-md-offset-1 col-md-5">Процент:</label>
+                                                                    <input type="text" class="col-md-5" id="input-rate">
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="input-fixed-amount-commission" class="col-md-offset-1 col-md-5">Фиксен износ Провизија:</label>
+                                                                    <input type="text" class="col-md-5" id="input-fixed-amount-commission">
+                                                                </div>
+                                                                <br>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-rate" class="col-md-offset-1 col-md-5">Процент:</label>
-                                                                <input type="text" class="col-md-5" id="input-rate">
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                                <button type="button" class="btn btn-success" id="agent-podnositel-modal-button" data-dismiss="modal">Сними</button>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-fixed-amount-commission" class="col-md-offset-1 col-md-5">Фиксен износ Провизија:</label>
-                                                                <input type="text" class="col-md-5" id="input-fixed-amount-commission">
-                                                            </div>
-                                                            <br>
+                                                            <div class="col-md-offset-1"></div>
                                                         </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-                                                            <button type="button" class="btn btn-success" id="agent-podnositel-modal-button" data-dismiss="modal">Сними</button>
-                                                        </div>
-                                                        <div class="col-md-offset-1"></div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group name-legal-entity-wrapper">
-                                            <label for="name-legal-entity">Назив:</label>
-                                            <input type="text" class="form-control" id="name-legal-entity">
-                                        </div>
-                                        <div class="form-group input-name-wrapper">
-                                            <label for="input-name">Име:</label>
-                                            <input type="text" class="form-control" id="input-name">
-                                        </div>
-                                        <div class="form-group input-surname-wrapper">
-                                            <label for="input-surname">Презиме:</label>
-                                            <input type="text" class="form-control" id="input-surname">
-                                        </div>
-                                        <div class="form-group embg-legal-entity-wrapper">
-                                            <label id="embg-legal-entity" for="input-embg">ЕМБГ:</label>
-                                            <input type="text" class="form-control" id="input-embg">
-                                        </div>
-                                        <div class="form-group input-tax-identification-number-wrapper">
-                                            <label id="tax-identification-number" for="input-tax-identification-number">ЕДБ(даночен број):</label>
-                                            <input type="text" class="form-control" id="input-tax-identification-number">
-
-                                        </div>
-                                        <div class="form-group emb-legal-entity-wrapper">
-                                            <label for="emb-legal-entity">ЕМБ:</label>
-                                            <input type="text" class="form-control" id="emb-legal-entity">
-
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="input-address">Адреса:</label>
-                                            <input type="text" class="form-control" id="input-address">
-
-                                        </div>
-                                        <div class="form-group municipality-of-residence">
-                                            <label for="input-municipality-of-residence">Општина:</label>
-                                            <input type="text" class="form-control" id="input-municipality-of-residence">
-                                        </div>
+                                        
                                     </div>
                                     <!-- /.box-body -->
                                 </form>
@@ -910,35 +876,93 @@
                                 </div>
                                 <!-- /.box-header -->
                                 <!-- form start -->
-                                <form id="second-part-of-applicant-data-form" role="form">
+                                <form id="second-part-of-applicant-data-form" class="form-horizontal">
                                     <div class="box-body">
-                                        <div class="form-group input-place-of-residence-wrapper">
-                                            <label for="input-place-of-residence">Место:</label>
-                                            <input type="text" class="form-control" id="input-place-of-residence">
-                                        </div>
-                                        <div class="form-group state-of-residence">
-                                            <label for="input-country-of-residence">Држава:</label>
-                                            <input type="text" class="form-control" id="input-country-of-residence">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="input-number">Контакт телефон:</label>
-                                            <input type="text" id="input-number" class="form-control">
+                                        <div class="form-group input-name-of-person-wrapper">
+                                            <label for="input-name-of-person" class="col-sm-6 control-label">Лице</label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control input-addon-border-right" id="input-name-of-person">
+                                                    <a href="#namePerson" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div id="namePerson" class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
 
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="input-contact-person">Контакт лице:</label>
-                                            <input type="text" class="form-control" id="input-contact-person">
-
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="input-fax">Факс:</label>
-                                            <input type="text" class="form-control" id="input-fax">
-
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="input-email">E-mail:</label>
-                                            <input type="email" class="form-control" id="input-email">
-
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Лице</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                                                                                                                               
+                                                            <div class="form-group name-legal-entity-wrapper">
+                                                                <label for="name-legal-entity" class="col-md-offset-1 col-md-5">Назив:</label>
+                                                                <input type="text" class="col-md-5" id="name-legal-entity">
+                                                            </div>
+                                                            <div class="form-group input-name-wrapper">
+                                                                <label for="input-name" class="col-md-offset-1 col-md-5">Име:</label>
+                                                                <input type="text" class="col-md-5" id="input-name">
+                                                            </div>
+                                                            <div class="form-group input-surname-wrapper">
+                                                                <label for="input-surname" class="col-md-offset-1 col-md-5">Презиме:</label>
+                                                                <input type="text" class="col-md-5" id="input-surname">
+                                                            </div>
+                                                            <div class="form-group embg-legal-entity-wrapper">
+                                                                <label id="embg-legal-entity" for="input-embg" class="col-md-offset-1 col-md-5">ЕМБГ:</label>
+                                                                <input type="text" class="col-md-5" id="input-embg">
+                                                            </div>
+                                                            <div class="form-group input-tax-identification-number-wrapper">
+                                                                <label id="tax-identification-number" for="input-tax-identification-number" class="col-md-offset-1 col-md-5">ЕДБ(даночен број):</label>
+                                                                <input type="text" class="col-md-5" id="input-tax-identification-number">
+                                                            </div>
+                                                            <div class="form-group emb-legal-entity-wrapper">
+                                                                <label for="emb-legal-entity" class="col-md-offset-1 col-md-5">ЕМБ:</label>
+                                                                <input type="text" class="col-md-5" id="emb-legal-entity">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="input-address" class="col-md-offset-1 col-md-5">Адреса:</label>
+                                                                <input type="text" class="col-md-5" id="input-address">
+                                                            </div>
+                                                            <div class="form-group municipality-of-residence">
+                                                                <label for="input-municipality-of-residence" class="col-md-offset-1 col-md-5">Општина:</label>
+                                                                <input type="text" class="col-md-5" id="input-municipality-of-residence">
+                                                            </div>
+                                                            <div class="form-group input-place-of-residence-wrapper">
+                                                                <label for="input-place-of-residence" class="col-md-offset-1 col-md-5">Место:</label>
+                                                                <input type="text" class="col-md-5" id="input-place-of-residence">
+                                                            </div>
+                                                            <div class="form-group state-of-residence">
+                                                                <label for="input-country-of-residence" class="col-md-offset-1 col-md-5">Држава:</label>
+                                                                <input type="text" class="col-md-5" id="input-country-of-residence">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="input-number" class="col-md-offset-1 col-md-5">Контакт телефон:</label>
+                                                                <input type="text" id="input-number" class="col-md-5">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="input-contact-person" class="col-md-offset-1 col-md-5">Контакт лице:</label>
+                                                                <input type="text" class="col-md-5" id="input-contact-person">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="input-fax" class="col-md-offset-1 col-md-5">Факс:</label>
+                                                                <input type="text" class="col-md-5" id="input-fax">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="input-email" class="col-md-offset-1 col-md-5">E-mail:</label>
+                                                                <input type="email" class="col-md-5" id="input-email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                            <button type="button" class="btn btn-success" id="agent-podnositel-modal-button" data-dismiss="modal">Сними</button>
+                                                        </div>
+                                                        <div class="col-md-offset-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /.box-body -->
