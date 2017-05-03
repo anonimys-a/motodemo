@@ -140,7 +140,7 @@
                 returnMenu3ForFirstViewToInnitialCondition();
                 if (activeTabId === "menu3") {
                     var fromTheFirstViewLinkForTable = $("p#show-the-table-from-link").text() === 'tabela od prvo view';
-                    if(fromTheFirstViewLinkForTable) {
+                    if (fromTheFirstViewLinkForTable) {
                         $("p#show-the-table-from-link").text('');//reset the flag
 
                         //set the third circle to be active

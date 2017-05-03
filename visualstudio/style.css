@@ -141,7 +141,7 @@ a.dropdown-link-color:hover {
 }
 
 label#individual-person-label {
-    margin-left: 219px;
+    margin-left: 323px;
 }
 
 #input-name::-webkit-input-placeholder { 
@@ -652,7 +652,7 @@ label.earlier-certificate-label {
 }
 
 .form-group.input-name-of-person-wrapper {
-    margin-top: 37px;
+    margin-top: 43px;
 }
 
 /*tabela vid na prepravki*/
@@ -903,9 +903,6 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
     overflow-y: visible;
 }
 
-.checkbox.checkbox-margin.checkbox-teh-karakteristiki {
-    float: left!important;
-}
 
 .checkbox-margin-teh-karakteristiki {
     margin-left: -11px;
@@ -919,7 +916,7 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
 }
 
 .soobrakjajna-teh-karakteristiki-width {
-    min-width: 148px;
+    min-width: 120px;
 }
 
 .sertifikat-teh-karakteristiki-width {
@@ -928,4 +925,23 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
 
 .zabeleshki-teh-karakteristiki-width {
     min-width: 187px;
+}
+
+.textarea-style {
+    resize: none;
+}
+
+#file-name-prilog-kopija {
+    white-space: nowrap; 
+    width: 114px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+#delete-prilog-kopija-file {
+    display:none;
+}
+
+.fa-times-circle:hover {
+    color: red !important;
 }

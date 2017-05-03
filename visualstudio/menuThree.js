@@ -48,6 +48,36 @@ $(document).ready(function () {
 
     });
 
+    $(document).on('change', '#upload-prilog-kopija', function () {
+        $('#file-name-prilog-kopija').html('');
+        var filename = $(this).val().replace(/.*(\/|\\)/, '');
+        $('#file-name-prilog-kopija').html(filename);
+        if (filename !== '') {
+            $('#delete-prilog-kopija-file').show();
+        } else {
+            $('#delete-prilog-kopija-file').hide();
+        }
+
+    });
+
+    $(document).on('click', '#delete-prilog-kopija-file', function () {
+        $('#file-name-prilog-kopija').html('');
+        $('#upload-prilog-kopija').val('');//reset the upload input value
+        $('#delete-prilog-kopija-file').hide();
+    });
+
+    /*==========================FOURTH VIEW=======*/
+
+    $(document).on('keyup paste', '.kapacitet-rezervoar-komori', function () {
+        console.log("ova pecati");
+        
+      
+        var kapacitetPrvaKomora = $("#kapacitet-1-rezervoar-tabela").val() || 0;
+        var kapacitetVtoraKomora = $("#kapacitet-2-rezervoar-tabela").val() || 0;
+        var rezultat = parseInt(kapacitetPrvaKomora) + parseInt(kapacitetVtoraKomora);
+        $("#kapacitet-9-rezervoar-tabela").val(rezultat);
+    });
+
     /*==========================FIFTH VIEW=======*/
 
     //hide or show columns when user is swithcing between legal entity or individual person
@@ -97,6 +127,11 @@ $(document).ready(function () {
 
     $('.grupa3-samo-digitalni-tahografi-checkbox').on('change', function () {
         $('.grupa3-samo-digitalni-tahografi-checkbox').not(this).prop('checked', false);
+    });
+
+    //only one checkbox can be checked from Вид на резервоарот table from the fourth box view, menu 3
+    $('.tabela-rezervoar-checkbox').on('change', function () {
+        $('.tabela-rezervoar-checkbox').not(this).prop('checked', false);
     });
 
     //only one checkbox can be checked from the tank table from the fourth box view, menu 4
@@ -299,7 +334,7 @@ function changeFormLayoutForVehicleData(chosenView) {
         $(".data-entry-vehicle-header").hide();
         $(".content-header-recording-of-contributions").hide();
         $(".content-recording-of-contributions-first-view").hide();
-        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 12, 13, 14] });
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [10, 11, 12, 13, 14] });
 
         //make the main div fluid because we need more space for the table from fifth table box view
         $('#proccess-container').removeClass("container").addClass("container-fluid");
