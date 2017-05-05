@@ -52,6 +52,8 @@ $(document).ready(function () {
         $('#file-name-prilog-kopija').html('');
         var filename = $(this).val().replace(/.*(\/|\\)/, '');
         $('#file-name-prilog-kopija').html(filename);
+        $('#display-success').html('Успешно прикачивте фајл');
+        $('#display-success').fadeIn().delay(800).fadeOut();
         if (filename !== '') {
             $('#delete-prilog-kopija-file').show();
         } else {
@@ -64,19 +66,47 @@ $(document).ready(function () {
         $('#file-name-prilog-kopija').html('');
         $('#upload-prilog-kopija').val('');//reset the upload input value
         $('#delete-prilog-kopija-file').hide();
+        $('#display-success').html('Успешно избришавте фајл');
+        $('#display-success').fadeIn().delay(800).fadeOut();
     });
 
-    /*==========================FOURTH VIEW=======*/
+    $(document).on('change', '#upload-prilog-kopija-2', function () {
+        $('#file-name-prilog-kopija-2').html('');
+        var filenameVtor = $(this).val().replace(/.*(\/|\\)/, '');
+        $('#file-name-prilog-kopija-2').html(filenameVtor);
+        $('#display-success-2').html('Успешно прикачивте фајл');
+        $('#display-success-2').fadeIn().delay(800).fadeOut();
+        if (filenameVtor !== '') {
+            $('#delete-prilog-kopija-file-2').show();
+        } else {
+            $('#delete-prilog-kopija-file-2').hide();
+        }
+
+    });
+
+    $(document).on('click', '#delete-prilog-kopija-file-2', function () {
+        $('#file-name-prilog-kopija-2').html('');
+        $('#upload-prilog-kopija-2').val('');//reset the upload input value
+        $('#delete-prilog-kopija-file-2').hide();
+        $('#display-success-2').html('Успешно избришавте фајл');
+        $('#display-success-2').fadeIn().delay(800).fadeOut();
+    });
+
+   /*==========================FOURTH VIEW=======*/
 
     $(document).on('keyup paste', '.kapacitet-rezervoar-komori', function () {
-        console.log("ova pecati");
-        
-      
         var kapacitetPrvaKomora = $("#kapacitet-1-rezervoar-tabela").val() || 0;
         var kapacitetVtoraKomora = $("#kapacitet-2-rezervoar-tabela").val() || 0;
-        var rezultat = parseInt(kapacitetPrvaKomora) + parseInt(kapacitetVtoraKomora);
+        var kapacitetTretaKomora = $("#kapacitet-3-rezervoar-tabela").val() || 0;
+        var kapacitetChetvrtaKomora = $("#kapacitet-4-rezervoar-tabela").val() || 0;
+        var kapacitetPetataKomora = $("#kapacitet-5-rezervoar-tabela").val() || 0;
+        var kapacitetShestaKomora = $("#kapacitet-6-rezervoar-tabela").val() || 0;
+        var kapacitetSedmaKomora = $("#kapacitet-7-rezervoar-tabela").val() || 0;
+        var kapacitetOsmaKomora = $("#kapacitet-8-rezervoar-tabela").val() || 0;
+        var rezultat = parseInt(kapacitetPrvaKomora) + parseInt(kapacitetVtoraKomora) + parseInt(kapacitetTretaKomora) + parseInt(kapacitetChetvrtaKomora) + parseInt(kapacitetPetataKomora) + parseInt(kapacitetShestaKomora) + parseInt(kapacitetSedmaKomora) + parseInt(kapacitetOsmaKomora);
         $("#kapacitet-9-rezervoar-tabela").val(rezultat);
     });
+
 
     /*==========================FIFTH VIEW=======*/
 
@@ -94,6 +124,51 @@ $(document).ready(function () {
             $('.naziv-tehnicki-karakteristiki').hide();
         }
     });
+
+    /*==========================SIXTH VIEW=======*/
+    $("#potvrda-tehnicki-karakteristiki-cemt").click(function (e) {
+        e.preventDefault();
+
+        //flag to know that we are showing the table from the sixth view link
+        $("p#show-the-table-from-link").text('tabela od shesto view');
+
+        //hide all elements for the first view and show the table from the fifth view.
+        $(".data-entry-vehicle").hide();
+        $(".data-entry-vehicle-header").hide();
+        $(".content-header-recording-of-contributions").hide();
+        $(".content-recording-of-contributions-sixth-view").hide();
+        $(".confirmation-of-the-technical-characteristics-wrapper").show(); //show the table
+        $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
+        $('#proccess-container').removeClass("container").addClass("container-fluid"); //get more space with fluid class
+       
+        //take all field values that we need for the table Potvrda za tehnicki karakteristiki
+        var name = $('#input-name').val();
+        var surname = $('#input-surname').val();
+        var inputChassisNumber = $("#input-chassis-number").val();
+        var tipNaVozilo = $("#input-type").val();
+        var markaNaVozilo = $('#description-podatoci-vozilo-modal').val();
+        var naziv = $('#name-legal-entity').val();
+
+
+        $('#broj-na-sasija-tabela-potvrda-tehnicki-karakteristiki').html(inputChassisNumber);
+        $("#vrednost-za-ime-tehnicki-karakteristiki").html(name);
+        $("#vrednost-za-prezime-tehnicki-karakteristiki").html(surname);
+        $("#tip-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(tipNaVozilo);
+        $("#marka-na-vozilo-tabela-potvrda-tehnicki-karakteristiki").html(markaNaVozilo);
+        $("#vrednost-za-naziv-tehnicki-karakteristiki").html(naziv);
+
+        //broj na predmet se krie i se pojavuva broj na predmet od edinecno odobrenie
+        $('.br-na-predmet-tehnicki-karakteristiki').hide();
+        $('.br-na-predmet-edinecno-tehnicki-karakteristiki').show();
+
+        if ($("#legal-entity-radio-button").is(':checked')) {
+            $("#legal-entity-tehnicki-karakteristiki-radio-button").trigger("click");
+        }
+
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] });
+
+    });
+
 
     //make custom columns to be editable
     //	$('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [1, 10, 11, 14, 15, 16] });
@@ -277,6 +352,17 @@ function returnMenu3ForFirstViewToInnitialCondition() {
     $('.br-na-predmet-edinecno-tehnicki-karakteristiki').hide();
 };
 
+function returnMenu3ForSixthViewToInnitialCondition() {
+    $(".data-entry-vehicle").show();
+    $(".data-entry-vehicle-header").show();
+    $(".content-header-recording-of-contributions").show();
+    $(".content-recording-of-contributions-sixth-view").show();
+    $(".confirmation-of-the-technical-characteristics-wrapper").hide(); //show the table
+    //reset the columns
+    $('.br-na-predmet-tehnicki-karakteristiki').show();
+    $('.br-na-predmet-edinecno-tehnicki-karakteristiki').hide();
+};
+
 //here we creating the wanted layout of the first part of the third circle view (Vnesuvanje na podatoci za voziloto)
 function changeFormLayoutForVehicleData(chosenView) {
     //create the appropriate form layout
@@ -334,7 +420,7 @@ function changeFormLayoutForVehicleData(chosenView) {
         $(".data-entry-vehicle-header").hide();
         $(".content-header-recording-of-contributions").hide();
         $(".content-recording-of-contributions-first-view").hide();
-        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [10, 11, 12, 13, 14] });
+        $('#table-potvrda-za-tehnicki-karakteristiki').editableTableWidget({ editor: $('<input>'), preventColumns: [9, 10, 11, 12, 13] });
 
         //make the main div fluid because we need more space for the table from fifth table box view
         $('#proccess-container').removeClass("container").addClass("container-fluid");

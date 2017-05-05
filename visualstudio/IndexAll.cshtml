@@ -812,23 +812,26 @@
                                                             <h4 class="modal-title">Агент - Подносител на барањето</h4>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <div class="row">
-                                                                <label for="input-name" class="col-md-offset-1 col-md-5">Име:</label>
-                                                                <input type="text" class="col-md-5" id="input-name-modal-agent-podnositel">
+                                                            <div class="form-group">
+                                                                <label for="input-name" class="control-label col-sm-offset-1 col-sm-5">Име:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-name-modal-agent-podnositel">
+                                                                </div>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-surname" class="col-md-offset-1 col-md-5">Презиме:</label>
-                                                                <input type="text" class="col-md-5" id="input-surname-modal-agent-podnositel">
+                                                            <div class="form-group">
+                                                                <label for="input-surname" class="control-label col-sm-offset-1 col-sm-5">Презиме:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-surname-modal-agent-podnositel">
+                                                                </div>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-embg" class="col-md-offset-1 col-md-5">ЕМБГ:</label>
-                                                                <input type="text" class="col-md-5" id="input-embg-modal-agent-podnositel">
+                                                            <div class="form-group">
+                                                                <label for="input-embg" class="control-label col-sm-offset-1 col-sm-5">ЕМБГ:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-embg-modal-agent-podnositel">
+                                                                </div>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-active" class="col-md-offset-1 col-md-5">Активен:</label>
+                                                            <div class="form-group">
+                                                                <label for="input-active" class="control-label col-sm-offset-1 col-sm-5">Активен:</label>
                                                                 <label id="active-person-label" class="radio-inline">
                                                                     <input id="active-person" type="radio" name="optradio" checked>
                                                                     Да
@@ -837,30 +840,28 @@
                                                                     <input id="inactive-person" type="radio" name="optradio">
                                                                     Не
                                                                 </label>
-
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-rate" class="col-md-offset-1 col-md-5">Процент:</label>
-                                                                <input type="text" class="col-md-5" id="input-rate">
+                                                            <div class="form-group">
+                                                                <label for="input-rate" class="control-label col-sm-offset-1 col-sm-5">Процент:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-rate">
+                                                                </div>
                                                             </div>
-                                                            <br>
-                                                            <div class="row">
-                                                                <label for="input-fixed-amount-commission" class="col-md-offset-1 col-md-5">Фиксен износ Провизија:</label>
-                                                                <input type="text" class="col-md-5" id="input-fixed-amount-commission">
+                                                            <div class="form-group">
+                                                                <label for="input-fixed-amount-commission" class="control-label col-sm-offset-1 col-sm-5">Фиксен износ Провизија:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-fixed-amount-commission">
+                                                                </div>
                                                             </div>
-                                                            <br>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-                                                            <button type="button" class="btn btn-success" id="agent-podnositel-modal-button" data-dismiss="modal">Сними</button>
+                                                            <button type="button" class="btn btn-success" id="agent-podnositel-modal-button">Сними</button>
                                                         </div>
-                                                        <div class="col-md-offset-1"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <!-- /.box-body -->
                                 </form>
@@ -897,69 +898,165 @@
                                                             <h4 class="modal-title">Лице</h4>
                                                         </div>
                                                         <div class="modal-body">
-
                                                             <div class="form-group name-legal-entity-wrapper">
-                                                                <label for="name-legal-entity" class="col-md-offset-1 col-md-5">Назив:</label>
-                                                                <input type="text" class="col-md-5" id="name-legal-entity">
+                                                                <label for="name-legal-entity" class="control-label col-sm-offset-1 col-sm-5">Назив:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="name-legal-entity">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group input-name-wrapper">
-                                                                <label for="input-name" class="col-md-offset-1 col-md-5">Име:</label>
-                                                                <input type="text" class="col-md-5" id="input-name">
+                                                                <label for="input-name" class="control-label col-sm-offset-1 col-sm-5">Име:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-name">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group input-surname-wrapper">
-                                                                <label for="input-surname" class="col-md-offset-1 col-md-5">Презиме:</label>
-                                                                <input type="text" class="col-md-5" id="input-surname">
+                                                                <label for="input-surname" class="control-label col-sm-offset-1 col-sm-5">Презиме:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-surname">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group embg-legal-entity-wrapper">
-                                                                <label id="embg-legal-entity" for="input-embg" class="col-md-offset-1 col-md-5">ЕМБГ:</label>
-                                                                <input type="text" class="col-md-5" id="input-embg">
+                                                                <label id="embg-legal-entity" for="input-embg" class="control-label col-sm-offset-1 col-sm-5">ЕМБГ:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-embg">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group input-tax-identification-number-wrapper">
-                                                                <label id="tax-identification-number" for="input-tax-identification-number" class="col-md-offset-1 col-md-5">ЕДБ(даночен број):</label>
-                                                                <input type="text" class="col-md-5" id="input-tax-identification-number">
+                                                                <label id="tax-identification-number" for="input-tax-identification-number" class="control-label col-sm-offset-1 col-sm-5">ЕДБ(даночен број):</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-tax-identification-number">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group emb-legal-entity-wrapper">
-                                                                <label for="emb-legal-entity" class="col-md-offset-1 col-md-5">ЕМБ:</label>
-                                                                <input type="text" class="col-md-5" id="emb-legal-entity">
+                                                                <label for="emb-legal-entity" class="control-label col-sm-offset-1 col-sm-5">ЕМБ:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="emb-legal-entity">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="input-address" class="col-md-offset-1 col-md-5">Адреса:</label>
-                                                                <input type="text" class="col-md-5" id="input-address">
+                                                                <label for="input-address" class="control-label col-sm-offset-1 col-sm-5">Адреса:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-address">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group municipality-of-residence">
-                                                                <label for="input-municipality-of-residence" class="col-md-offset-1 col-md-5">Општина:</label>
-                                                                <input type="text" class="col-md-5" id="input-municipality-of-residence">
+                                                                <label for="input-municipality-of-residence" class="control-label col-sm-offset-1 col-sm-5">Општина:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-municipality-of-residence">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group input-place-of-residence-wrapper">
-                                                                <label for="input-place-of-residence" class="col-md-offset-1 col-md-5">Место:</label>
-                                                                <input type="text" class="col-md-5" id="input-place-of-residence">
+                                                                <label for="input-place-of-residence" class="control-label col-sm-offset-1 col-sm-5">Место:</label>
+                                                                <div class="col-sm-5">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control input-addon-border-right" id="input-place-of-residence">
+                                                                        <a href="#placeResidence" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                
                                                             </div>
                                                             <div class="form-group state-of-residence">
-                                                                <label for="input-country-of-residence" class="col-md-offset-1 col-md-5">Држава:</label>
-                                                                <input type="text" class="col-md-5" id="input-country-of-residence">
+                                                                <label for="input-country-of-residence" class="control-label col-sm-offset-1 col-sm-5">Држава:</label>
+                                                                <div class="col-sm-5">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control input-addon-border-right" id="input-country-of-residence">
+                                                                        <a href="#country" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="input-number" class="col-md-offset-1 col-md-5">Контакт телефон:</label>
-                                                                <input type="text" id="input-number" class="col-md-5">
+                                                                <label for="input-number" class="control-label col-sm-offset-1 col-sm-5">Контакт телефон:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" id="input-number" class="form-control">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="input-contact-person" class="col-md-offset-1 col-md-5">Контакт лице:</label>
-                                                                <input type="text" class="col-md-5" id="input-contact-person">
+                                                                <label for="input-contact-person" class="control-label col-sm-offset-1 col-sm-5">Контакт лице:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-contact-person">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="input-fax" class="col-md-offset-1 col-md-5">Факс:</label>
-                                                                <input type="text" class="col-md-5" id="input-fax">
+                                                                <label for="input-fax" class="control-label col-sm-offset-1 col-sm-5">Факс:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="input-fax">
+                                                                </div>
                                                             </div>
                                                             <div class="form-group">
-                                                                <label for="input-email" class="col-md-offset-1 col-md-5">E-mail:</label>
-                                                                <input type="email" class="col-md-5" id="input-email">
+                                                                <label for="input-email" class="control-label col-sm-offset-1 col-sm-5">E-mail:</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="email" class="form-control" id="input-email">
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-                                                            <button type="button" class="btn btn-success" id="lice-komintent-modal-button-save" data-dismiss="modal">Сними</button>
+                                                            <button type="button" class="btn btn-success" id="lice-komintent-modal-button-save">Сними</button>
                                                         </div>
-                                                        <div class="col-md-offset-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div id="placeResidence" class="modal fade" role="dialog">
+                                                <div class="modal-dialog modal-sm">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Mesto</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group place-name-wrapper">
+                                                                <label for="input-place-name" class="control-label col-sm-6">Име на место:</label>
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control" id="input-place-name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group post-code-wrapper">
+                                                                <label for="input-post-code" class="control-label col-sm-6">Поштенски број:</label>
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control" id="input-post-code">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                            <button type="button" class="btn btn-success" id="lice-komintent-mesto-modal-button-save">Сними</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div id="country" class="modal fade" role="dialog">
+                                                <div class="modal-dialog modal-sm">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <h4 class="modal-title">Држава</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form-group country-name-wrapper">
+                                                                <label for="input-country-name" class="control-label col-sm-6">Име на држава:</label>
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control" id="input-country-name">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group short-name-wrapper">
+                                                                <label for="input-short-name" class="control-label col-sm-6">Скратен Назив:</label>
+                                                                <div class="col-sm-6">
+                                                                    <input type="text" class="form-control" id="input-short-name">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                                                            <button type="button" class="btn btn-success" id="lice-komintent-drzava-modal-button-save">Сними</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1087,20 +1184,22 @@
                                                             <h4 class="modal-title">Марка на возило</h4>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <div class="row">
-                                                                <label for="identification" class="col-md-offset-1 col-md-5">Шифра</label>
-                                                                <input type="text" class="col-md-5" id="identification" />
+                                                            <div class="form-group">
+                                                                <label for="identification" class="control-label col-sm-offset-1 col-sm-5">Шифра</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="identification" />
+                                                                </div>
                                                             </div>
-                                                            <br />
-                                                            <div class="row">
-                                                                <label for="description-podatoci-vozilo-modal" class="col-md-offset-1 col-md-5">Опис</label>
-                                                                <input type="text" class="col-md-5" id="description-podatoci-vozilo-modal" />
+                                                            <div class="form-group">
+                                                                <label for="description-podatoci-vozilo-modal" class="control-label col-sm-offset-1 col-sm-5">Опис</label>
+                                                                <div class="col-sm-5">
+                                                                    <input type="text" class="form-control" id="description-podatoci-vozilo-modal" />
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-offset-1"></div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-                                                            <button type="button" class="btn btn-success" id="podatoci-vozilo-marka-modal-button" data-dismiss="modal">Сними</button>
+                                                            <button type="button" class="btn btn-success" id="podatoci-vozilo-marka-modal-button">Сними</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1111,10 +1210,10 @@
                                             <div class="col-sm-6">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control input-addon-border-right" id="model-of-the-vehicle">
-                                                    <a href="#tipVozilo" type="button" class="input-group-addon btn btn-default addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                    <a href="#modelVehicle" type="button" class="input-group-addon btn btn-default addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
                                                 </div>
                                                 <!-- Modal -->
-                                                <div class="modal fade" id="tipVozilo" role="dialog">
+                                                <div class="modal fade" id="modelVehicle" role="dialog">
                                                     <div class="modal-dialog">
 
                                                         <!-- Modal content-->
@@ -1124,45 +1223,53 @@
                                                                 <h4 class="modal-title">Тип на возило</h4>
                                                             </div>
                                                             <div id="kom-oz-mod" class="modal-body">
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-vid-vozilo" class="col-md-offset-1 col-md-5">Вид возило</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-vid-vozilo" name="modal-vid-vozilo" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-marka" class="col-md-offset-1 col-md-5">(D.1) Марка</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-marka" name="modal-marka" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka" class="col-md-offset-1 col-md-5">(D3) Комерцијална ознака</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka" name="modal-kom-oznaka" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-tip-vozilo" class="col-md-offset-1 col-md-5">(D2) Тип возило</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-tip-vozilo" name="modal-tip-vozilo" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-varijanta" class="col-md-offset-1 col-md-5">(D2) Варијанта</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-varijanta" name="modal-varijanta" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-izvedba" class="col-md-offset-1 col-md-5">(D2) Изведба</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-izvedba" name="modal-izvedba" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-forma" class="col-md-offset-1 col-md-5">Форма</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-forma" name="modal-forma" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="modal-komercijalna-oznaka-namena" class="col-md-offset-1 col-md-5">Намена</label>
-                                                                    <input type="text" id="modal-komercijalna-oznaka-namenaa" name="modal-namena" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-vid-vozilo" class="control-label col-sm-offset-1 col-sm-5">Вид возило</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-vid-vozilo" name="modal-komercijalna-oznaka-vid-vozilo" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-marka" class="control-label col-sm-offset-1 col-sm-5">(D.1) Марка</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-marka" name="modal-komercijalna-oznaka-marka" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka" class="control-label col-sm-offset-1 col-sm-5">(D3) Комерцијална ознака</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka" name="modal-komercijalna-oznaka" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-tip-vozilo" class="control-label col-sm-offset-1 col-sm-5">(D2) Тип возило</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-tip-vozilo" name="modal-komercijalna-oznaka-tip-vozilo" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-varijanta" class="control-label col-sm-offset-1 col-sm-5">(D2) Варијанта</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-varijanta" name="modal-komercijalna-oznaka-varijanta" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-izvedba" class="control-label col-sm-offset-1 col-sm-5">(D2) Изведба</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-izvedba" name="modal-komercijalna-oznaka-izvedba" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-forma" class="control-label col-sm-offset-1 col-sm-5">Форма</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-forma" name="modal-komercijalna-oznaka-forma" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="modal-komercijalna-oznaka-namena" class="control-label col-sm-offset-1 col-sm-5">Намена</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input type="text" id="modal-komercijalna-oznaka-namenaa" name="modal-komercijalna-oznaka-namena" class="form-control" />
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
@@ -1213,9 +1320,9 @@
                                             <div class="col-sm-6">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control input-addon-border-right" id="input-type-of-engine">
-                                                    <a href="#tipMotor" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
+                                                    <a href="#tipEngine" type="button" class="btn btn-default input-group-addon addon-color" data-toggle="modal"><i class="fa fa-folder-open"></i></a>
                                                 </div>
-                                                <div class="modal fade" id="tipMotor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal fade" id="tipEngine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
@@ -1223,40 +1330,46 @@
                                                                 <h4 class="modal-title" id="myModalLabel">Тип мотор</h4>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <div class="row">
-                                                                    <label class="col-md-offset-1 col-md-5">(21) Тип мотор</label>
-                                                                    <input id="podatoci-vozilo-tip-motor-modal" type="text" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label class="col-md-offset-1 col-md-5">(P2) Снага</label>
-                                                                    <input id="podatoci-vozilo-snaga-modal" type="text" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label class="col-md-offset-1 col-md-5">(P1) Зафатнина</label>
-                                                                    <input id="podatoci-vozilo-zafatnina-modal" type="text" class="col-md-5" />
-                                                                    <div class="col-md-offset-1"></div>
-                                                                </div><br />
-                                                                <div class="row">
-                                                                    <label for="fuel" class="col-md-offset-1 col-md-5">(P3) Гориво</label>
-                                                                    <div class="input-group dropdown col-md-5">
-                                                                        <input type="text" class="form-control input-addon-border-right" id="fuel" name="fuel" placeholder="Изберете вид на гориво" required>
-                                                                        <a href="#" id="fuel" class="btn btn-default input-group-addon addon-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-chevron-down"></i></a>
-                                                                        <div class="col-md-offset-1"></div>
-                                                                        <ul class="dropdown-menu" aria-labelledby="fuel">
-                                                                            <li><a href="">Не користи</a></li>
-                                                                            <li><a href="">Бензин</a></li>
-                                                                            <li><a href="">Нафта</a></li>
-                                                                            <li><a href="">Мешавина</a></li>
-                                                                            <li><a href="">Гас</a></li>
-                                                                            <li><a href="">Електрична енергија</a></li>
-                                                                            <li><a href="">Алкохол</a></li>
-                                                                            <li><a href="">Дизел</a></li>
-                                                                        </ul>
+                                                                <div class="form-group">
+                                                                    <label for="podatoci-vozilo-tip-motor-modal" class="control-label col-sm-offset-1 col-sm-5">(21) Тип мотор</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input id="podatoci-vozilo-tip-motor-modal" type="text" class="form-control" />
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                                <div class="form-group">
+                                                                    <label for="podatoci-vozilo-snaga-modal" class="control-label col-sm-offset-1 col-sm-5">(P2) Снага</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input id="podatoci-vozilo-snaga-modal" type="text" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="podatoci-vozilo-zafatnina-modal" class="control-label col-sm-offset-1 col-sm-5">(P1) Зафатнина</label>
+                                                                    <div class="col-sm-5">
+                                                                        <input id="podatoci-vozilo-zafatnina-modal" type="text" class="form-control" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="modal-fuel" class="control-label col-sm-offset-1 col-sm-5">(P3) Гориво</label>
+                                                                        <div class="col-sm-5">
+                                                                            <div class="input-group dropdown">
+                                                                                <input type="text" class="form-control " id="modal-fuel" name="modal-fuel" placeholder="Изберете вид на гориво" required="">
+                                                                                <a data-target="#" id="modal-fuel" class="btn btn-default input-group-addon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" data-original-title="" title=""><i class="fa fa-chevron-down"></i></a>
+
+                                                                                <ul class="dropdown-menu" aria-labelledby="modal-fuel">
+                                                                                    <li><a href="" data-original-title="" title="">Не користи</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Бензин</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Нафта</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Мешавина</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Гас</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Електрична енергија</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Алкохол</a></li>
+                                                                                    <li><a href="" data-original-title="" title="">Дизел</a></li>
+                                                                                </ul>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
                                                                 <button type="button" id="podatoci-vozilo-tip-motor-modal-button" class="btn btn-success">Сними</button>
@@ -2989,15 +3102,15 @@
                                         <table class="table table-hover table-bordered table-potvrda-za-tehnicki-karakteristiki" id="table-potvrda-za-tehnicki-karakteristiki">
                                             <thead>
                                                 <tr>
-                                                    
+
                                                     <th class="ime-tehnicki-karakteristiki">Име</th>
                                                     <th class="prezime-tehnicki-karakteristiki">Презиме</th>
                                                     <th class="naziv-tehnicki-karakteristiki">Назив</th>
                                                     <th class="br-na-predmet-tehnicki-karakteristiki">Бр. на предмет</th>
-                                                    <th class="br-na-predmet-edinecno-tehnicki-karakteristiki">Бр. на предмет од ед. одобр</th>
-                                                    <th>Марка на возило</th>
-                                                    <th>Тип на возило</th>
-                                                    <th>Бр. на шасија</th>
+                                                    <th class="br-na-predmet-edinecno-tehnicki-karakteristiki br-predmet-edinecno">Бр. на предмет од ед. одобр</th>
+                                                    <th class="marka-tehnicki-karakteristiki">Марка на возило</th>
+                                                    <th class="tip-vozilo-tehnicki-karakteristiki">Тип на возило</th>
+                                                    <th class="shasija-tehnicki-karakteristiki">Бр. на шасија</th>
                                                     <th>Добавувач Потврда</th>
                                                     <th>Статус на предметот</th>
                                                     <th class="soobrakjajna-teh-karakteristiki-width">Прилог-копија сообраќајна</th>
@@ -3007,7 +3120,7 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    
+
                                                     <td id="vrednost-za-ime-tehnicki-karakteristiki" class="ime-tehnicki-karakteristiki"></td>
                                                     <td id="vrednost-za-prezime-tehnicki-karakteristiki" class="prezime-tehnicki-karakteristiki"></td>
                                                     <td id="vrednost-za-naziv-tehnicki-karakteristiki" class="naziv-tehnicki-karakteristiki"></td>
@@ -3050,6 +3163,7 @@
                                                         </div>
                                                     </td>
                                                     <td>
+                                                        <div id="display-success"></div>
                                                         <div class="checkbox checkbox-margin checkbox-teh-karakteristiki checkbox-margin-teh-karakteristiki">
                                                             <label>
                                                                 <input type="checkbox" value="">
@@ -3060,10 +3174,11 @@
                                                             <i class="fa fa-paperclip fa-lg"></i> Прикачи
                                                             <input type="file" name="attachment" id="upload-prilog-kopija">
                                                         </div>
-                                                        <div id="file-name-prilog-kopija"></div>
                                                         <span id="delete-prilog-kopija-file"><i class='fa fa-times-circle fa-lg closeBtn' aria-hidden='true'></i></span>
+                                                        <div id="file-name-prilog-kopija"></div>
                                                     </td>
                                                     <td>
+                                                        <div id="display-success-2"></div>
                                                         <div class="checkbox checkbox-margin checkbox-teh-karakteristiki checkbox-margin-teh-karakteristiki">
                                                             <label>
                                                                 <input type="checkbox" value="">
@@ -3072,9 +3187,10 @@
                                                         </div>
                                                         <div class="btn btn-default btn-file btn-border-teh-karakteristiki">
                                                             <i class="fa fa-paperclip fa-lg"></i> Прикачи
-                                                            <input type="file" name="attachment" >
+                                                            <input type="file" name="attachment" id="upload-prilog-kopija-2">
                                                         </div>
-                                                        
+                                                        <span id="delete-prilog-kopija-file-2"><i class='fa fa-times-circle fa-lg closeBtn' aria-hidden='true'></i></span>
+                                                        <div id="file-name-prilog-kopija-2"></div>
                                                         <textarea class="form-control textarea-style" rows="4" id="remarks"></textarea>
                                                     </td>
                                                     <td>
@@ -3120,10 +3236,15 @@
                                             </div>
                                         </div>
                                         <div class="form-group input-certificate-of-conformity-wrapper">
-                                            <label for="input-certificate-of-conformity" class="col-sm-7 control-label">Сертификат за сообразност бр.:</label>
+                                            <label for="input-certificate-of-conformity" class="col-sm-6 control-label">Сертификат за сообразност бр.:</label>
                                             <div class="col-sm-4">
                                                 <div class="input-group">
                                                     <input type="text" class="form-control" id="input-certificate-of-conformity">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <div class="input-group">
+                                                    <a href="#" type="button" id="potvrda-tehnicki-karakteristiki-cemt" class="btn btn-default input-group-addon file-border" data-original-title="" title=""><i class="fa fa-file-text fa-file-text-size" aria-hidden="true"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -4040,7 +4161,6 @@
                         </div>
                     </div>
                 </section>
-
                 <div class="inspection-of-tanks-wrapper">
 
                     <section class="content-header content-header-inspection-of-tanks">
@@ -4387,7 +4507,7 @@
                                                                 <input type="checkbox" value="" class="tabela-rezervoar-checkbox">
                                                                 <span class="cr"><i class="cr-icon fa fa-check fa-check-color" aria-hidden="true"></i></span>
                                                             </label>
-                                                        </div> 
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -5428,51 +5548,51 @@
                     <section class="">
 
                         <div>
-                            <select id="naodi" class="selectpicker btn btn-flat btn-info" style="margin: 20px; padding: 10px; border-radius: 4px; font-size: 16px;">
+                            <select id="naodi" class="selectpicker btn btn-flat btn-info" style="margin: 20px; padding: 10px; border-radius: 4px; font-size:16px;">
                                 <option selected disabled hidden>Изберете наод за возило - за категорија на возила:</option>
                                 <option value="ML">Наод за возило - за американски возила M1 и L</option>
                                 <option value="SV">Наод за возило - за специјални возила со снижени критериуми и донирани возила</option>
                                 <optgroup label="Наод за возило - за категории на возила C">
-                                    <option id="naodC1" value="C1">Наод за возило - за категории на возила C1</option>
-                                    <option id="naodC2" value="C2">Наод за возило - за категории на возила C2</option>
-                                    <option id="naodC3" value="C3">Наод за возило - за категории на возила C3</option>
-                                    <option id="naodC4" value="C4">Наод за возило - за категории на возила C4</option>
+                                    <option id="naodC1" value="C1" data-naod-url="/Home/PrikaziNaodSoTraktor">Наод за возило - за категории на возила C1</option>
+                                    <option id="naodC2" value="C2" data-naod-url="">Наод за возило - за категории на возила C2</option>
+                                    <option id="naodC3" value="C3" data-naod-url="">Наод за возило - за категории на возила C3</option>
+                                    <option id="naodC4" value="C4" data-naod-url="">Наод за возило - за категории на возила C4</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила L">
-                                    <option id="naodL1L3" value="L1">Наод за возило - за категории на возила L1 и L3</option>
-                                    <option id="naodL24567" value="L2">Наод за возило - за категории на возила L2, L4, L5, L6 и L7</option>
+                                    <option id="naodL1L3" value="L1" data-naod-url="">Наод за возило - за категории на возила L1 и L3</option>
+                                    <option id="naodL24567" value="L2" data-naod-url="">Наод за возило - за категории на возила L2, L4, L5, L6 и L7</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила М">
-                                    <option id="naodM1" value="M1">Наод за возило - за категории на возила М1</option>
-                                    <option id="naodM2" value="M2">Наод за возило - за категории на возила M2</option>
-                                    <option id="naodM3" value="M3">Наод за возило - за категории на возила M3</option>
+                                    <option id="naodM1" value="M1" data-naod-url="/Home/PrikaziNaodBezTraktor">Наод за возило - за категории на возила М1</option>
+                                    <option id="naodM2" value="M2" data-naod-url="">Наод за возило - за категории на возила M2</option>
+                                    <option id="naodM3" value="M3" data-naod-url="">Наод за возило - за категории на возила M3</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила N">
-                                    <option id="naodN1" value="N1">Наод за возило - за категории на возила N1</option>
-                                    <option id="naodN23" value="N2">Наод за возило - за категории на возила N2, N3</option>
+                                    <option id="naodN1" value="N1" data-naod-url="">Наод за возило - за категории на возила N1</option>
+                                    <option id="naodN23" value="N2" data-naod-url="">Наод за возило - за категории на возила N2, N3</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила O">
-                                    <option id="naodO12" value="O1">Наод за возило - за категории на возила O1 и O2</option>
-                                    <option id="naodO34" value="O3">Наод за возило - за категории на возила O3 и O4</option>
+                                    <option id="naodO12" value="O1" data-naod-url="">Наод за возило - за категории на возила O1 и O2</option>
+                                    <option id="naodO34" value="O3" data-naod-url="">Наод за возило - за категории на возила O3 и O4</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила R">
-                                    <option id="naodR" value="R">Наод за возило - за категории на возила R1, R2, R3 и R4</option>
+                                    <option id="naodR" value="R" data-naod-url="">Наод за возило - за категории на возила R1, R2, R3 и R4</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила S">
-                                    <option id="naodS" value="S">Наод за возило - за категории на возила S1 и S2</option>
+                                    <option id="naodS" value="S" data-naod-url="">Наод за возило - за категории на возила S1 и S2</option>
                                 </optgroup>
                                 <optgroup label="Наод за возило - за категории на возила Т">
-                                    <option id="naodT1" value="T1">Наод за возило - за категории на возила Т1</option>
-                                    <option id="naodT2" value="T2">Наод за возило - за категории на возила Т2</option>
-                                    <option id="naodT3" value="T3">Наод за возило - за категории на возила Т3</option>
-                                    <option id="naodT4" value="T4">Наод за возило - за категории на возила Т4</option>
-                                    <option id="naodT5" value="T5">Наод за возило - за категории на возила Т5</option>
+                                    <option id="naodT1" value="T1" data-naod-url="">Наод за возило - за категории на возила Т1</option>
+                                    <option id="naodT2" value="T2" data-naod-url="">Наод за возило - за категории на возила Т2</option>
+                                    <option id="naodT3" value="T3" data-naod-url="">Наод за возило - за категории на возила Т3</option>
+                                    <option id="naodT4" value="T4" data-naod-url="">Наод за возило - за категории на возила Т4</option>
+                                    <option id="naodT5" value="T5" data-naod-url="">Наод за возило - за категории на возила Т5</option>
                                 </optgroup>
                             </select>
                         </div>
 
 
-                        <div class="box box-info box-naodi">
+                        @*<div class="box box-info box-naodi">
                             <div class="box-header with-border ">
                                 <heading class="naod-L-header">
                                     <h3 class="box-title naod-header"></h3>
@@ -7909,6 +8029,22 @@
                             <!-- /.box-body -->
                             <div class="box-footer clearfix">
                                 <button type="button" class="btn btn-success pull-right">Зачувај</button>
+                            </div>
+                        </div>*@
+
+                        <div class="box box-info box-naodi">
+                            <div class="box-header with-border ">
+                                <heading>
+                                    <h3 class="box-title naod-header"></h3>
+                                </heading>
+                            </div>
+                            <div class="box-body">
+
+                                <table id="naodiDataTable" class="table table-bordered table-hover"></table>
+
+                            </div>
+                            <div class="box-footer clearfix">
+                                <button id="zacuvajNaod" type="button" class="btn btn-success pull-right">Зачувај</button>
                             </div>
                         </div>
 

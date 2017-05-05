@@ -688,6 +688,11 @@ label.earlier-certificate-label {
 
 .br-na-predmet-edinecno-tehnicki-karakteristiki {
 	display: none;
+   
+}
+
+.naziv-tehnicki-karakteristiki {
+    min-width: 90px;
 }
 
 table.table-potvrda-za-tehnicki-karakteristiki tr:nth-of-type(odd) { 
@@ -915,16 +920,40 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
     padding-left: 0px!important;
 }
 
+.ime-tehnicki-karakteristiki {
+    min-width: 90px;
+}
+
+.prezime-tehnicki-karakteristiki {
+    min-width: 90px;
+}
+
+.br-predmet-edinecno {
+    min-width: 90px;
+}
+
+.marka-tehnicki-karakteristiki {
+    min-width: 110px;
+}
+
+.tip-vozilo-tehnicki-karakteristiki {
+     min-width: 70px;
+}
+
+.shasija-tehnicki-karakteristiki {
+    min-width: 110px;
+}
+
 .soobrakjajna-teh-karakteristiki-width {
-    min-width: 120px;
+    min-width: 122px;
 }
 
 .sertifikat-teh-karakteristiki-width {
-	min-width: 148px;
+	min-width: 130px;
 }
 
 .zabeleshki-teh-karakteristiki-width {
-    min-width: 187px;
+    min-width: 130px;
 }
 
 .textarea-style {
@@ -938,10 +967,46 @@ label.col-sm-4.izvestaj-v-offset.el-otpor-float {
     text-overflow: ellipsis; 
 }
 
+#file-name-prilog-kopija-2 {
+    white-space: nowrap; 
+    width: 114px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
 #delete-prilog-kopija-file {
     display:none;
 }
 
-.fa-times-circle:hover {
-    color: red !important;
+#delete-prilog-kopija-file-2 {
+    display:none;
 }
+
+.fa-times-circle:hover {
+    color: #dd4b39 !important;
+}
+
+.fa-paperclip-padding {
+    padding-right: 5px;
+}
+
+#display-success {
+    display: none;
+    background: #00a65a;
+    color: #fff;
+}
+
+#display-success-2 {
+   display: none;
+   background: #00a65a;
+   color: #fff;
+}
+
+ul.ui-autocomplete {
+    z-index: 1100;
+}
+
+label#active-person-label {
+    margin-left: 15px;
+}
+

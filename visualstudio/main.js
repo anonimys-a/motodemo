@@ -151,6 +151,23 @@
                 }
             }
 
+            //functionality for reseting the menu 3 from the sixst view when the table is opened from the link
+            if (chosenView === 'ЦЕМТ') {
+                //call function for resseting menu 3 for the sixth view
+                returnMenu3ForSixthViewToInnitialCondition();
+                if (activeTabId === "menu3") {
+                    var fromTheSixthViewLinkForTable = $("p#show-the-table-from-link").text() === 'tabela od shesto view';
+                    if (fromTheSixthViewLinkForTable) {
+                        $("p#show-the-table-from-link").text('');//reset the flag
+
+                        //set the third circle to be active
+                        $('.btn-circle.btn-info').removeClass('btn-info').addClass('btn-default');
+                        $('.btn-menu3').addClass('btn-info').removeClass('btn-default').blur();
+                        return;
+                    }
+                }
+            }
+
             var prevTab = activeTab.prev('.tab-pane').attr('id');
             $('[href="#' + prevTab + '"]').addClass('btn-info').removeClass('btn-default');
             $('[href="#' + prevTab + '"]').tab('show');
@@ -165,6 +182,7 @@
                     $("a.sidebar-toggle").trigger("click"); // we trigger a click on the sidebar button in order to get all space for the table
                 }
             }
+  
         }
     });
 
